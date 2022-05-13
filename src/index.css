@@ -1,4 +1,11 @@
-body {
-  overflow-x: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --main-clr: hsla(162, 51%, 65%);
 }
 
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+}
