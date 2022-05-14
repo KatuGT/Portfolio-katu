@@ -42,6 +42,7 @@ const Menu = styled.ul`
   left: ${({ open }) => (open ? "0" : "-100%")};
   background-color: var(--main-clr);
   transition: left 1s ease;
+  z-index: 20000;
 
   @media screen and (min-width: 600px) {
     position: relative;

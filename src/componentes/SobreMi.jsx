@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const WrapperSobreMi = styled.div``;
+const WrapperSobreMi = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`;
 
 const WrapperTituloRedes = styled.div`
   margin-top: 3em;
@@ -92,7 +96,12 @@ const Redes = styled.div`
   }
 `;
 
-const Presentacion = styled.div``;
+const Presentacion = styled.p`
+    text-align: center;
+    width: 80%;
+    font-size: 1.2em;
+    margin: 0;
+`;
 
 const SobreMi = () => {
   return (
