@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const WrapperSobreMi = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const WrapperTituloRedes = styled.div`
@@ -21,7 +21,7 @@ const Titulo = styled.div`
   cursor: default;
 `;
 const Katu = styled.h1`
-  font-size: 3.2em;
+  font-size: 3em;
   margin-bottom: 0;
   span {
     color: transparent;
@@ -97,10 +97,10 @@ const Redes = styled.div`
 `;
 
 const Presentacion = styled.p`
-    text-align: center;
-    width: 80%;
-    font-size: 1.2em;
-    margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2em;
+  margin: 0;
 `;
 
 const SobreMi = () => {
