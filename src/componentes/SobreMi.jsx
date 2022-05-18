@@ -4,6 +4,7 @@ const WrapperSobreMi = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5em;
 `;
 
 const WrapperTituloRedes = styled.div`
@@ -28,7 +29,6 @@ const Katu = styled.h1`
     -webkit-text-stroke: 0.8px var(--main-clr);
     position: relative;
   }
-
   span::after {
     content: "Katu";
     position: absolute;
@@ -37,6 +37,20 @@ const Katu = styled.h1`
     left: 5%;
     top: -5%;
     z-index: -100;
+    clip-path: circle(170% at 0% 0%);
+    transition: clip-path 0.5s ease;
+  }
+
+  span:hover {
+    color: #000;
+  }
+
+  span:hover::after {
+    clip-path: circle(0% at 100% 100%);
+  }
+
+  @media screen and (min-width: 800px) {
+    font-size: 5em;
   }
 `;
 const FrontEnd = styled.h2`
@@ -44,6 +58,9 @@ const FrontEnd = styled.h2`
   color: var(--main-clr);
   font-size: 2em;
   font-weight: 400;
+  @media screen and (min-width: 800px) {
+    font-size: 3em;
+  }
 `;
 
 const Redes = styled.div`
@@ -51,6 +68,7 @@ const Redes = styled.div`
   flex-direction: column;
   font-size: 2em;
   margin: 1em;
+
   i {
     margin-bottom: 1em;
     color: transparent;
@@ -98,7 +116,7 @@ const Redes = styled.div`
 
 const Presentacion = styled.p`
   text-align: center;
-  width: 100%;
+  width: min(100%, 500px);
   font-size: 1.2em;
   margin: 0;
 `;
@@ -109,32 +127,32 @@ const SobreMi = () => {
       <WrapperTituloRedes>
         <Titulo>
           <Katu>
-            Hola, soy <span>Katu</span>{" "}
+            Hola, soy <span>Katu</span>
           </Katu>
           <FrontEnd>Front-end developer</FrontEnd>
         </Titulo>
-        <Redes>
-          <a
-            href="https://github.com/KatuGT"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <i className="fa-brands fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/cintiajimenamartinez/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <i className="fa-brands fa-linkedin-in"></i>
-          </a>
-        </Redes>
       </WrapperTituloRedes>
       <Presentacion>
         Ese es mi apodo, mi nombre es Cintia Jimena Martínez, vivo en Tucumán,
         Argentina y actualmente me encuentro en la búsqueda de mi primera
         experiencia profesional como desarrolladora front-end.
       </Presentacion>
+      <Redes>
+        <a
+          href="https://github.com/KatuGT"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i className="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/cintiajimenamartinez/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i className="fa-brands fa-linkedin-in"></i>
+        </a>
+      </Redes>
     </WrapperSobreMi>
   );
 };

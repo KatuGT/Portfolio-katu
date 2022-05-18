@@ -16,7 +16,7 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     justify-content: space-around;
   }
 `;
@@ -25,7 +25,7 @@ const LogoContainer = styled.h2`
   color: #c3c3c3;
   margin-left: 1em;
   cursor: default;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     margin: 0;
   }
 `;
@@ -36,7 +36,7 @@ const MenuIconMobil = styled.div`
   cursor: pointer;
   padding: 0.8em 1em;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     display: none;
   }
 `;
@@ -53,7 +53,7 @@ const Menu = styled.ul`
   transition: left 1s ease;
   z-index: 20000;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     position: relative;
     display: flex;
     color: var(--main-clr);
