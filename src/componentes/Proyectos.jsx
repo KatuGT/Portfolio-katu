@@ -12,16 +12,18 @@ const Proyecto = styled.div`
 `;
 const TituloProyecto = styled.h3`
   font-weight: bold;
+  font-size: 1.5em;
   margin-bottom: 0;
   color: var(--main-clr);
 `;
 
 const DescProyecto = styled.p`
-  margin-top: 0;
+  margin-top: 0.2em;
+  margin-bottom:0.4em;
 `;
 
 const ImgProyecto = styled.img`
-  width: 80%;
+  width: 100%;
 `;
 
 const Proyectos = () => {
