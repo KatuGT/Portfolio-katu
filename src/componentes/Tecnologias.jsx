@@ -11,7 +11,7 @@ import LogoFigma from "../imagenes/logo-figma.svg";
 import LogoPS from "../imagenes/logo-ps.png";
 import LogoAI from "../imagenes/logo-ai.png";
 
-const WrapperTecnologias = styled.div``;
+const WrapperTecnologias = styled.section``;
 
 const WrapperLogos = styled.div`
   display: flex;
@@ -32,6 +32,10 @@ const InfoExtra = styled.p`
   margin-top: 0;
 `;
 
+const NuevoTituloSeccion = styled(TituloSecciones)`
+  margin-bottom: 0.5em;
+`
+
 const Tecnologias = () => {
   return (
     <WrapperTecnologias>
@@ -48,7 +52,7 @@ const Tecnologias = () => {
         <Logo src={LogoPS} />
         <Logo src={LogoAI} />
       </WrapperLogos>
-      <TituloSecciones>Info extra</TituloSecciones>
+      <NuevoTituloSeccion>Info extra</NuevoTituloSeccion>
       <InfoExtra>
         Poseo experiencia trabajando con la metodología ágil SCRUM y mi nivel de
         inglés es A2.

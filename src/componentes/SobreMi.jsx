@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WrapperSobreMi = styled.div`
+const WrapperSobreMi = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
