@@ -28,13 +28,13 @@ const ImgProyecto = styled.img`
 
 const Proyectos = () => {
   return (
-    <>
+    <section  id="proyectos">
       <TituloSecciones>Proyectos</TituloSecciones>
       <WrapperProyectos>
         <Proyecto>
           <TituloProyecto>Rollflix</TituloProyecto>
           <DescProyecto>
-            Clone de Netflix, fue mi proyecto final en el curso FullStack (MERN)
+            Clon de Netflix, fue mi proyecto final en el curso FullStack (MERN)
             de RollingCode School.
           </DescProyecto>
           <a
@@ -47,7 +47,7 @@ const Proyectos = () => {
         </Proyecto>
         <Proyecto>
           <TituloProyecto>MoviePop</TituloProyecto>
-          <DescProyecto>Otra pagina de peliculas, lo hice como parte de una entrevista</DescProyecto>
+          <DescProyecto>Otra página de películas, lo hice como parte de una entrevista.</DescProyecto>
           <a
             href="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
             rel="noopener noreferrer"
@@ -60,8 +60,8 @@ const Proyectos = () => {
           <TituloProyecto>CV Falso</TituloProyecto>
 
           <DescProyecto>
-            Realizado para un concurso durante mi cursado ( el cual gane :) ),
-            por lo que algo de la información que verán ahí es ficticia.)
+            Realizado para un concurso durante mi cursado ( el cual gane &#128512; ),
+            por lo que algo de la información que verán ahí es ficticia.
           </DescProyecto>
           <a
             href="https://vigorous-darwin-6aa540.netlify.app/"
@@ -72,7 +72,7 @@ const Proyectos = () => {
           </a>
         </Proyecto>
       </WrapperProyectos>
-    </>
+    </section>
   );
 };
 

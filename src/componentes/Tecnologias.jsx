@@ -38,7 +38,7 @@ const NuevoTituloSeccion = styled(TituloSecciones)`
 
 const Tecnologias = () => {
   return (
-    <WrapperTecnologias>
+    <WrapperTecnologias id="tecno">
       <TituloSecciones>Herramientas y Tecnologias</TituloSecciones>
       <WrapperLogos>
         <Logo src={LogoHTML} />

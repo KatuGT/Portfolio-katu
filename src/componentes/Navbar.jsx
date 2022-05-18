@@ -1,22 +1,31 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+const Header = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30000;
+  scroll-behavior: smooth;
+`;
+
 const NavBar = styled.nav`
   background-color: black;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (min-width: 600px){
-  justify-content: space-around;
 
+  @media screen and (min-width: 600px) {
+    justify-content: space-around;
   }
 `;
 
 const LogoContainer = styled.h2`
   color: #c3c3c3;
   margin-left: 1em;
-  @media screen and (min-width: 600px){
+  cursor: default;
+  @media screen and (min-width: 600px) {
     margin: 0;
   }
 `;
@@ -57,6 +66,8 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   font-weight: 700;
+  scroll-behavior: smooth;
+
 `;
 
 const MenuLink = styled.a`
@@ -67,6 +78,7 @@ const MenuLink = styled.a`
   text-decoration: none;
   font-size: 1.5em;
   color: inherit;
+
   &:hover {
     background-color: #000;
     color: #fff;
@@ -84,25 +96,29 @@ const Navbar = () => {
   const [ShowMenu, setShowMenu] = useState(false);
 
   return (
-    <NavBar>
-      <LogoContainer>Katu</LogoContainer>
-      <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
-        <i className={!ShowMenu ? "fa-solid fa-bars" : "fa-solid fa-xmark"}></i>
-      </MenuIconMobil>
-      <Menu open={ShowMenu}>
-        <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-          <MenuLink href="/">Sobre mi</MenuLink>
-        </MenuItem>
+    <Header>
+      <NavBar>
+        <LogoContainer>Katu</LogoContainer>
+        <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
+          <i
+            className={!ShowMenu ? "fa-solid fa-bars" : "fa-solid fa-xmark"}
+          ></i>
+        </MenuIconMobil>
+        <Menu open={ShowMenu}>
+          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+            <MenuLink href="#sobreMi">Sobre mi</MenuLink>
+          </MenuItem>
 
-        <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-          <MenuLink href="/">Tecnologias</MenuLink>
-        </MenuItem>
+          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+            <MenuLink href="#tecno">Tecnologias</MenuLink>
+          </MenuItem>
 
-        <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-          <MenuLink href="/">Proyectos</MenuLink>
-        </MenuItem>
-      </Menu>
-    </NavBar>
+          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+            <MenuLink href="#proyectos">Proyectos</MenuLink>
+          </MenuItem>
+        </Menu>
+      </NavBar>
+    </Header>
   );
 };
 

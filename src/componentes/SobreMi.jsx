@@ -105,7 +105,7 @@ const Presentacion = styled.p`
 
 const SobreMi = () => {
   return (
-    <WrapperSobreMi>
+    <WrapperSobreMi id="sobreMi">
       <WrapperTituloRedes>
         <Titulo>
           <Katu>
