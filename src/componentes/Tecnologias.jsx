@@ -11,14 +11,22 @@ import LogoFigma from "../imagenes/logo-figma.svg";
 import LogoPS from "../imagenes/logo-ps.png";
 import LogoAI from "../imagenes/logo-ai.png";
 
-const WrapperTecnologias = styled.section``;
+const WrapperTecnologias = styled.section`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+`;
 
 const WrapperLogos = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 4em;
+
+  @media screen and (min-width: 566px) {
+    width: 450px;
+  }
 `;
 
 const Logo = styled.img`

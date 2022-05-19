@@ -10,8 +10,7 @@ const WrapperLineas = styled.div`
 
 const LineaNegra = styled.div`
   height: 1px;
-  max-width: 70%;
-  width: 70%;
+  width: min(300px, 100%);
   position: relative;
   background-color: black;
   top: 0;
@@ -19,8 +18,7 @@ const LineaNegra = styled.div`
 
 const LineaVerde = styled.div`
   height: 1px;
-  width: 70%;
-  max-width: 70%;
+  width: min(300px, 100%);
   position: relative;
   top: 2px;
   left: 10px;
