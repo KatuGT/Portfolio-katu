@@ -4,6 +4,7 @@ import Divisor from "./componentes/Divisor";
 import Tecnologias from "./componentes/Tecnologias";
 import Main from "./componentes/Main";
 import Proyectos from "./componentes/Proyectos";
+import Footer from "./componentes/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Divisor />
         <Proyectos/>
       </Main>
+      <Footer/>
     </div>
   );
 }
