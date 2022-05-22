@@ -8,15 +8,54 @@ import ImgCVMobile from "../imagenes/pr-cvMobile.jpg";
 import ImgCV from "../imagenes/pr-cv.jpg";
 
 const WrapperProyectos = styled.section`
-  width: 70%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1400px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 85%;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 80%;
+  }
+
+  @media screen and (min-width: 1800px) {
+    width: 65%;
+  }
 `;
 
 const Proyecto = styled.div`
   text-align: center;
-  margin-bottom: 9em;
-  height: 500px;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 9em;
+    width: 80%;
+  }
+
   @media screen and (min-width: 900px) {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    place-items: center;
+    gap: 2em;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    &:nth-child(even) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    height: 500px;
     display: grid;
     place-items: center;
     gap: 2em;
@@ -28,6 +67,11 @@ const Proyecto = styled.div`
 const InfoProyecto = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 900px) {
+    &.order-dos {
+      order: 2;
+    }
+  }
 `;
 const TituloProyecto = styled.h3`
   font-weight: bold;
@@ -43,19 +87,20 @@ const DescProyecto = styled.p`
 
 const LinkImagenes = styled.a`
   position: relative;
-  height: 500px;
+  @media screen and (min-width: 700px) {
+    height: 500px;
+  }
 `;
 
 const ImgProyectoMobile = styled.img`
   border-radius: 1em;
   position: relative;
+  width: 100%;
   box-shadow: 0px 0px 0 4px var(--main-clr), 20px 15px 50px rgba(0, 0, 0, 0.5);
-
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 700px) {
     display: none;
   }
-
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1300px) {
     display: block;
     height: 80%;
     width: auto;
@@ -64,20 +109,30 @@ const ImgProyectoMobile = styled.img`
   }
 
   &.right {
-    @media screen and (min-width: 900px) {
-      right: -20%;
+    @media screen and (min-width: 700px) {
+      right: 80%;
     }
   }
 
   &.left {
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 700px) {
       left: 80%;
     }
   }
 `;
 
 const ImgProyecto = styled.img`
-  height: 100%;
+  display: none;
+  @media screen and (min-width: 700px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+
+  @media screen and (min-width: 900px) {
+  }
 `;
 
 const Proyectos = () => {
@@ -103,6 +158,13 @@ const Proyectos = () => {
           </LinkImagenes>
         </Proyecto>
         <Proyecto>
+          <InfoProyecto className="order-dos">
+            <TituloProyecto>MoviePop</TituloProyecto>
+            <DescProyecto>
+              Otra página de películas, lo hice como parte de una entrevista. La
+              data la consumi de la api TVmaze.
+            </DescProyecto>
+          </InfoProyecto>
           <LinkImagenes
             href="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
             rel="noopener noreferrer"
@@ -111,12 +173,6 @@ const Proyectos = () => {
             <ImgProyectoMobile src={ImgMoviePopMobile} className="right" />
             <ImgProyecto src={ImgMoviePop} />
           </LinkImagenes>
-          <InfoProyecto>
-            <TituloProyecto>MoviePop</TituloProyecto>
-            <DescProyecto>
-              Otra página de películas, lo hice como parte de una entrevista.
-            </DescProyecto>
-          </InfoProyecto>
         </Proyecto>
         <Proyecto>
           <InfoProyecto>
@@ -132,7 +188,7 @@ const Proyectos = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <ImgProyectoMobile src={ImgCVMobile}  className="left" />
+            <ImgProyectoMobile src={ImgCVMobile} className="left" />
             <ImgProyecto src={ImgCV} />
           </LinkImagenes>
         </Proyecto>
