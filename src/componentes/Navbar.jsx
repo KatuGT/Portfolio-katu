@@ -21,10 +21,13 @@ const NavBar = styled.nav`
   }
 `;
 
-const LogoContainer = styled.h2`
-  color: #c3c3c3;
+const LogoContainer = styled.a`
+  color: #fff;
   margin-left: 1em;
-  cursor: default;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bolder;
+  text-decoration: none;
   @media screen and (min-width: 800px) {
     margin: 0;
   }
@@ -67,7 +70,6 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   font-weight: 700;
   scroll-behavior: smooth;
-
 `;
 
 const MenuLink = styled.a`
@@ -98,7 +100,7 @@ const Navbar = () => {
   return (
     <Header>
       <NavBar>
-        <LogoContainer>Katu</LogoContainer>
+        <LogoContainer href="#sobreMi">Katu</LogoContainer>
         <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
           <i
             className={!ShowMenu ? "fa-solid fa-bars" : "fa-solid fa-xmark"}
