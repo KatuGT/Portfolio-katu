@@ -38,7 +38,7 @@ const Katu = styled.h1`
     top: -5%;
     z-index: -100;
     clip-path: circle(170% at 0% 0%);
-    transition: clip-path 0.5s ease;
+    transition: clip-path 0.3s ease;
   }
 
   span:hover {
@@ -70,47 +70,65 @@ const Redes = styled.div`
   margin: 1em;
 
   i {
-    margin-bottom: 1em;
+    margin-right: 0.5em;
     color: transparent;
     -webkit-text-stroke: 0.8px var(--main-clr);
     position: relative;
   }
-
-  .fa-github::after {
-    content: "\f09b";
+  /* Estilos a iconos redes */
+  .fa-github::after,
+  .fa-linkedin-in::after,
+  .fa-file::after {
     position: absolute;
     -webkit-text-stroke: 0;
     color: #000;
-    left: 15%;
-    top: 10%;
     z-index: -100;
     clip-path: circle(140.7% at 100% 100%);
     transition: clip-path 1s ease;
   }
 
-  .fa-github:hover::after {
-    clip-path: circle(0% at 100% 100%);
+  .fa-github::after {
+    content: "\f09b";
+    left: 15%;
+    top: 10%;
   }
 
   .fa-linkedin-in::after {
     content: "\f0e1";
-    position: absolute;
-    -webkit-text-stroke: 0;
-    color: #000;
     right: 20%;
     top: -10%;
-    z-index: -100;
-    clip-path: circle(140.7% at 100% 100%);
-    transition: clip-path 1s ease;
   }
 
-  .fa-linkedin-in:hover::after {
+  .fa-file::after {
+    content: "\f15b";
+    right: -20%;
+    top: 10%;
+  }
+
+  .fa-github:hover::after,
+  .fa-linkedin-in:hover::after,
+  .fa-file:hover::after {
     clip-path: circle(0% at 100% 100%);
   }
 
   .fa-github:hover,
-  .fa-linkedin-in:hover {
+  .fa-linkedin-in:hover,
+  .fa-file:hover {
     color: #000;
+  }
+
+  /* estilos a texto */
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1em;
+  }
+  p {
+    margin: 0;
+    font-size: 0.8em;
   }
 `;
 
@@ -139,18 +157,30 @@ const SobreMi = () => {
       </Presentacion>
       <Redes>
         <a
-          href="https://github.com/KatuGT"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <i className="fa-brands fa-github"></i>
-        </a>
-        <a
           href="https://www.linkedin.com/in/cintiajimenamartinez/"
           target="_blank"
           rel="noreferrer noopener"
         >
           <i className="fa-brands fa-linkedin-in"></i>
+          <p>Linkedin</p>
+        </a>
+        <a
+          href="https://github.com/KatuGT"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <i className="fa-brands fa-github"></i>
+          <p>Github</p>
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1enZpviAl6BdfYvAKmUb_eihvUk7TWqlv/view?usp=sharing"
+          target="_blank"
+          download="CV - Cintia Jimena Martinez"
+          rel="noreferrer noopener"
+        >
+          <i className="fa-solid fa-file"></i>
+          <p>CV</p>
         </a>
       </Redes>
     </WrapperSobreMi>
