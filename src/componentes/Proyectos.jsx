@@ -67,6 +67,7 @@ const Proyecto = styled.div`
 const InfoProyecto = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5em;
   @media screen and (min-width: 900px) {
     &.order-dos {
       order: 2;
@@ -83,6 +84,12 @@ const TituloProyecto = styled.h3`
 const DescProyecto = styled.p`
   margin-top: 0.2em;
   margin-bottom: 0.4em;
+`;
+
+const VerEnGithub = styled.a`
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 0.3em;
 `;
 
 const LinkImagenes = styled.a`
@@ -147,6 +154,18 @@ const Proyectos = () => {
               Clon de Netflix, fue mi proyecto final en el curso FullStack
               (MERN) de RollingCode School.
             </DescProyecto>
+            <VerEnGithub
+              href="https://github.com/KatuGT/Proyecto-Final-FrontEnd"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i> Front-end
+            </VerEnGithub>
+            <VerEnGithub
+              href="https://github.com/KatuGT/Proyecto-Final-BackEnd"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i> Back-end
+            </VerEnGithub>
           </InfoProyecto>
           <LinkImagenes
             href="https://effortless-centaur-f31ca1.netlify.app/"
@@ -164,6 +183,18 @@ const Proyectos = () => {
               Otra página de películas, lo hice como parte de una entrevista. La
               data la consumi de la api TVmaze.
             </DescProyecto>
+            <VerEnGithub
+              href="https://github.com/KatuGT/MoviePop-front"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i> Front-end
+            </VerEnGithub>
+            <VerEnGithub
+              href="https://github.com/KatuGT/MoviePop-back"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i> Back-end
+            </VerEnGithub>
           </InfoProyecto>
           <LinkImagenes
             href="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
@@ -182,6 +213,12 @@ const Proyectos = () => {
               &#128512; ), por lo que algo de la información que verán ahí es
               ficticia.
             </DescProyecto>
+            <VerEnGithub
+              href="https://github.com/KatuGT/CV-CINTIA-MARTINEZ"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i> Front-end
+            </VerEnGithub>
           </InfoProyecto>
           <LinkImagenes
             href="https://vigorous-darwin-6aa540.netlify.app/"
