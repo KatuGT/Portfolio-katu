@@ -103,6 +103,7 @@ const ImgProyectoMobile = styled.img`
   border-radius: 1em;
   position: relative;
   width: 100%;
+  height: 100%;
   box-shadow: 0px 0px 0 4px var(--main-clr), 20px 15px 50px rgba(0, 0, 0, 0.5);
   @media screen and (min-width: 700px) {
     display: none;
