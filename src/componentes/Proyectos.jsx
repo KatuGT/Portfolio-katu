@@ -173,8 +173,8 @@ const Proyectos = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <ImgProyectoMobile src={ImgRollflixMobile} className="left" />
-            <ImgProyecto src={ImgRollflix} />
+            <ImgProyectoMobile src={ImgRollflixMobile} alt="Captura pantalla Rollflix"  className="left" />
+            <ImgProyecto src={ImgRollflix}  alt="Captura pantalla Rollflix" />
           </LinkImagenes>
         </Proyecto>
         <Proyecto>
@@ -202,8 +202,8 @@ const Proyectos = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <ImgProyectoMobile src={ImgMoviePopMobile} className="right" />
-            <ImgProyecto src={ImgMoviePop} />
+            <ImgProyectoMobile src={ImgMoviePopMobile} className="right" alt="Captura pantalla MoviePop"  />
+            <ImgProyecto src={ImgMoviePop} alt="Captura pantalla MoviePop"  />
           </LinkImagenes>
         </Proyecto>
         <Proyecto>
@@ -226,8 +226,8 @@ const Proyectos = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <ImgProyectoMobile src={ImgCVMobile} className="left" />
-            <ImgProyecto src={ImgCV} />
+            <ImgProyectoMobile src={ImgCVMobile} className="left"  alt="Captura pantalla CV"   />
+            <ImgProyecto src={ImgCV} alt="Captura pantalla CV"  />
           </LinkImagenes>
         </Proyecto>
       </WrapperProyectos>

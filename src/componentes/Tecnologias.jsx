@@ -49,16 +49,16 @@ const Tecnologias = () => {
     <WrapperTecnologias id="tecno">
       <TituloSecciones>Herramientas y Tecnologias</TituloSecciones>
       <WrapperLogos>
-        <Logo src={LogoHTML} />
-        <Logo src={LogoCSS} />
-        <Logo src={LogoJS} />
-        <Logo src={LogoBoots} />
-        <Logo src={LogoReact} />
-        <Logo src={LogoStyled} />
-        <Logo src={LogoVS} />
-        <Logo src={LogoFigma} />
-        <Logo src={LogoPS} />
-        <Logo src={LogoAI} />
+        <Logo src={LogoHTML} alt="Logo HTML" />
+        <Logo src={LogoCSS} alt="Logo CSS" />
+        <Logo src={LogoJS} alt="Logo Javascript" />
+        <Logo src={LogoBoots} alt="Logo Bootstrap" />
+        <Logo src={LogoReact} alt="Logo React" />
+        <Logo src={LogoStyled} alt="Logo styled Components" />
+        <Logo src={LogoVS} alt="Logo VisualStudio Code" />
+        <Logo src={LogoFigma} alt="Logo Figma" />
+        <Logo src={LogoPS} alt="Logo Photoshop" />
+        <Logo src={LogoAI} alt="Logo Illustrator" />
       </WrapperLogos>
       <NuevoTituloSeccion>Info extra</NuevoTituloSeccion>
       <InfoExtra>
