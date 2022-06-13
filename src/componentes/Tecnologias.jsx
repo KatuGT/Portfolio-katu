@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import TituloSecciones from "./TituloSecciones";
-import LogoHTML from "../imagenes/logo-html.png";
-import LogoCSS from "../imagenes/logo-css3.png";
-import LogoJS from "../imagenes/logo-js.png";
-import LogoBoots from "../imagenes/logo-bootstrap.png";
-import LogoReact from "../imagenes/logo-react.png";
-import LogoStyled from "../imagenes/logo-styledcomp.png";
-import LogoVS from "../imagenes/logo-vscode.png";
-import LogoFigma from "../imagenes/logo-figma.svg";
-import LogoPS from "../imagenes/logo-ps.png";
-import LogoAI from "../imagenes/logo-ai.png";
+import LogoHTML from "../imagenes/logo-html.webp";
+import LogoCSS from "../imagenes/logo-css3.webp";
+import LogoJS from "../imagenes/logo-js.webp";
+import LogoBoots from "../imagenes/logo-bootstrap.webp";
+import LogoReact from "../imagenes/logo-react.webp";
+import LogoStyled from "../imagenes/logo-styledcomp.webp";
+import LogoVS from "../imagenes/logo-vscode.webp";
+import LogoFigma from "../imagenes/logo-figma.webp";
+import LogoPS from "../imagenes/logo-ps.webp";
+import LogoAI from "../imagenes/logo-ai.webp";
 
 const WrapperTecnologias = styled.section`
  display: flex;

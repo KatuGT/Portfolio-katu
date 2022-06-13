@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import TituloSecciones from "./TituloSecciones";
-import ImgRollflixMobile from "../imagenes/pr-rollflixMobile.jpg";
-import ImgRollflix from "../imagenes/pr-rollflix.jpg";
-import ImgMoviePopMobile from "../imagenes/pr-moviepopMobile.jpg";
-import ImgMoviePop from "../imagenes/pr-moviepop.jpg";
-import ImgCVMobile from "../imagenes/pr-cvMobile.jpg";
-import ImgCV from "../imagenes/pr-cv.jpg";
+import ImgRollflixMobile from "../imagenes/pr-rollflixMobile.webp";
+import ImgRollflix from "../imagenes/pr-rollflix.webp";
+import ImgMoviePopMobile from "../imagenes/pr-moviepopMobile.webp";
+import ImgMoviePop from "../imagenes/pr-moviepop.webp";
+import ImgCVMobile from "../imagenes/pr-cvMobile.webp";
+import ImgCV from "../imagenes/pr-cv.webp";
 
 const WrapperProyectos = styled.section`
   margin: 0 auto;
