@@ -1,11 +1,12 @@
-import styled from "styled-components";
-import TituloSecciones from "./TituloSecciones";
-import ImgRollflixMobile from "../imagenes/pr-rollflixMobile.webp";
-import ImgRollflix from "../imagenes/pr-rollflix.webp";
-import ImgMoviePopMobile from "../imagenes/pr-moviepopMobile.webp";
-import ImgMoviePop from "../imagenes/pr-moviepop.webp";
-import ImgCVMobile from "../imagenes/pr-cvMobile.webp";
-import ImgCV from "../imagenes/pr-cv.webp";
+import styled from 'styled-components';
+import TituloSecciones from './TituloSecciones';
+import ImgRollflixMobile from '../imagenes/pr-rollflixMobile.webp';
+import ImgRollflix from '../imagenes/pr-rollflix.webp';
+import ImgMoviePopMobile from '../imagenes/pr-moviepopMobile.webp';
+import ImgMoviePop from '../imagenes/pr-moviepop.webp';
+import ImgAtlasMobile from '../imagenes/pr-atlasMobile.webp';
+import ImgAtlas from '../imagenes/pr-atlas.webp';
+import ProyectoTemplate from './ProyectoTemplate';
 
 const WrapperProyectos = styled.section`
   margin: 0 auto;
@@ -31,205 +32,49 @@ const WrapperProyectos = styled.section`
   }
 `;
 
-const Proyecto = styled.div`
-  text-align: center;
-  margin-bottom: 5em;
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: 600px) {
-    margin-bottom: 9em;
-    width: 80%;
-  }
-
-  @media screen and (min-width: 900px) {
-    width: 100%;
-    height: 500px;
-    display: grid;
-    place-items: center;
-    gap: 2em;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    &:nth-child(even) {
-      grid-template-columns: 2fr 1fr;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    height: 500px;
-    display: grid;
-    place-items: center;
-    gap: 2em;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-  }
-`;
-
-const InfoProyecto = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5em;
-  @media screen and (min-width: 900px) {
-    &.order-dos {
-      order: 2;
-    }
-  }
-`;
-const TituloProyecto = styled.h3`
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-bottom: 0;
-  color: var(--main-clr);
-`;
-
-const DescProyecto = styled.p`
-  margin-top: 0.2em;
-  margin-bottom: 0.4em;
-`;
-
-const VerEnGithub = styled.a`
-  color: inherit;
-  text-decoration: none;
-  margin-bottom: 0.3em;
-`;
-
-const LinkImagenes = styled.a`
-  position: relative;
-  @media screen and (min-width: 700px) {
-    height: 500px;
-  }
-`;
-
-const ImgProyectoMobile = styled.img`
-  border-radius: 1em;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 0 4px var(--main-clr), 20px 15px 50px rgba(0, 0, 0, 0.5);
-  @media screen and (min-width: 700px) {
-    display: none;
-  }
-  @media screen and (min-width: 1300px) {
-    display: block;
-    height: 80%;
-    width: auto;
-    position: absolute;
-    top: 40%;
-  }
-
-  &.right {
-    @media screen and (min-width: 700px) {
-      right: 80%;
-    }
-  }
-
-  &.left {
-    @media screen and (min-width: 700px) {
-      left: 80%;
-    }
-  }
-`;
-
-const ImgProyecto = styled.img`
-  display: none;
-  @media screen and (min-width: 700px) {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top left;
-  }
-
-  @media screen and (min-width: 900px) {
-  }
-`;
-
 const Proyectos = () => {
   return (
-    <section id="proyectos">
+    <section id='proyectos'>
       <TituloSecciones>Proyectos</TituloSecciones>
       <WrapperProyectos>
-        <Proyecto>
-          <InfoProyecto>
-            <TituloProyecto>Rollflix</TituloProyecto>
-            <DescProyecto>
-              Clon de Netflix, fue mi proyecto final en el curso FullStack
-              (MERN) de RollingCode School.
-            </DescProyecto>
-            <VerEnGithub
-              href="https://github.com/KatuGT/Proyecto-Final-FrontEnd"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i> Front-end
-            </VerEnGithub>
-            <VerEnGithub
-              href="https://github.com/KatuGT/Proyecto-Final-BackEnd"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i> Back-end
-            </VerEnGithub>
-          </InfoProyecto>
-          <LinkImagenes
-            href="https://effortless-centaur-f31ca1.netlify.app/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <ImgProyectoMobile src={ImgRollflixMobile} alt="Captura pantalla Rollflix"  className="left" />
-            <ImgProyecto src={ImgRollflix}  alt="Captura pantalla Rollflix" />
-          </LinkImagenes>
-        </Proyecto>
-        <Proyecto>
-          <InfoProyecto className="order-dos">
-            <TituloProyecto>MoviePop</TituloProyecto>
-            <DescProyecto>
-              Otra página de películas, lo hice como parte de una entrevista. La
-              data la consumi de la api TVmaze.
-            </DescProyecto>
-            <VerEnGithub
-              href="https://github.com/KatuGT/MoviePop-front"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i> Front-end
-            </VerEnGithub>
-            <VerEnGithub
-              href="https://github.com/KatuGT/MoviePop-back"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i> Back-end
-            </VerEnGithub>
-          </InfoProyecto>
-          <LinkImagenes
-            href="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <ImgProyectoMobile src={ImgMoviePopMobile} className="right" alt="Captura pantalla MoviePop"  />
-            <ImgProyecto src={ImgMoviePop} alt="Captura pantalla MoviePop"  />
-          </LinkImagenes>
-        </Proyecto>
-        <Proyecto>
-          <InfoProyecto>
-            <TituloProyecto>CV Falso</TituloProyecto>
-            <DescProyecto>
-              Realizado para un concurso durante mi cursado ( el cual gane
-              &#128512; ), por lo que algo de la información que verán ahí es
-              ficticia.
-            </DescProyecto>
-            <VerEnGithub
-              href="https://github.com/KatuGT/CV-CINTIA-MARTINEZ"
-              rel="noopener noreferrer"
-            >
-              <i className="fa-brands fa-github"></i> Front-end
-            </VerEnGithub>
-          </InfoProyecto>
-          <LinkImagenes
-            href="https://vigorous-darwin-6aa540.netlify.app/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <ImgProyectoMobile src={ImgCVMobile} className="left"  alt="Captura pantalla CV"   />
-            <ImgProyecto src={ImgCV} alt="Captura pantalla CV"  />
-          </LinkImagenes>
-        </Proyecto>
+        <ProyectoTemplate
+          titulo='Rollflix'
+          descripcion='Clon de Netflix, fue mi proyecto final en el curso FullStack
+          (MERN) de RollingCode School.'
+          githubFront='https://github.com/KatuGT/Proyecto-Final-FrontEnd'
+          githubBack='https://github.com/KatuGT/Proyecto-Final-BackEnd'
+          imgMobile={ImgRollflixMobile}
+          altMobile='Caputa de pantalla de celular sitio Rollflix'
+          imgDesktop={ImgRollflix}
+          altDesktop='Caputa de pantalla de escritorio sitio Rollflix'
+          linkDeploy='https://effortless-centaur-f31ca1.netlify.app/'
+          imgPsition='left'
+        />
+        <ProyectoTemplate
+          titulo='MoviePop'
+          descripcion=' Otra página de películas, lo hice como parte de una entrevista. La
+          data la consumi de la api TVmaze.'
+          githubFront='https://github.com/KatuGT/MoviePop-front'
+          githubBackt='https://github.com/KatuGT/MoviePop-back'
+          imgMobile={ImgMoviePopMobile}
+          altMobile='Caputa de pantalla de celular sitio MoviePop'
+          imgDesktop={ImgMoviePop}
+          altDesktop='Caputa de pantalla de escritorio sitio MoviePop'
+          linkDeploy='https://incandescent-taffy-ad42eb.netlify.app/peliculas'
+          imgPsition='right'
+          orderDos='order-dos'
+        />
+        <ProyectoTemplate
+          titulo='Atlas'
+          descripcion='Proyecto realizado para challange usando la Rest API themoviedb'
+          githubFront='https://github.com/KatuGT/atlas-cine'
+          imgMobile={ImgAtlasMobile}
+          altMobile='Caputa de pantalla de celular sitio MoviePop'
+          imgDesktop={ImgAtlas}
+          altDesktop='Caputa de pantalla de escritorio sitio Atlas'
+          linkDeploy='https://helpful-fenglisu-56d94c.netlify.app/'
+          imgPsition='left'
+        />
       </WrapperProyectos>
     </section>
   );
