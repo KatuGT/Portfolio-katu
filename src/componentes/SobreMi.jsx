@@ -5,6 +5,7 @@ const WrapperSobreMi = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: 5em;
+  color: ${({ theme }) => theme.text};
 `;
 
 const WrapperTituloRedes = styled.div`
@@ -33,7 +34,7 @@ const Katu = styled.h1`
     content: "Katu";
     position: absolute;
     -webkit-text-stroke: 0;
-    color: #000;
+  color: ${({ theme }) => theme.text};
     left: 5%;
     top: -5%;
     z-index: -100;
@@ -42,7 +43,7 @@ const Katu = styled.h1`
   }
 
   span:hover {
-    color: #000;
+    color: ${({ theme }) => theme.text};
   }
 
   span:hover::after {
@@ -81,7 +82,7 @@ const Redes = styled.div`
   .fa-file::after {
     position: absolute;
     -webkit-text-stroke: 0;
-    color: #000;
+    color: ${({ theme }) => theme.text};
     z-index: -100;
     clip-path: circle(140.7% at 100% 100%);
     transition: clip-path 1s ease;
@@ -128,7 +129,7 @@ const Link = styled.a`
   &:hover .fa-linkedin-in,
   &:hover .fa-github,
   &:hover .fa-file {
-    color: #000;
+    color: ${({ theme }) => theme.text};
   }
 `;
 

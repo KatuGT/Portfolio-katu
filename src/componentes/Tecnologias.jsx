@@ -38,6 +38,8 @@ const Logo = styled.img`
 const InfoExtra = styled.p`
   text-align: center;
   margin-top: 0;
+  color: ${({theme}) => theme.text};
+
 `;
 
 const NuevoTituloSeccion = styled(TituloSecciones)`

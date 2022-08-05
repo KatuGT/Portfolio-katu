@@ -10,7 +10,7 @@ const Header = styled.header`
 `;
 
 const NavBar = styled.nav`
-  background-color: black;
+  background-color: #000;
   position: relative;
   display: flex;
   justify-content: space-between;

@@ -37,6 +37,8 @@ const InfoProyecto = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5em;
+  color: ${({ theme }) => theme.text};
+
   @media screen and (min-width: 900px) {
     &.order-dos {
       order: 2;
@@ -47,7 +49,7 @@ const TituloProyecto = styled.h3`
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 0;
-  color: var(--main-clr);
+  color: ${({ theme }) => theme.subText};
 `;
 
 const DescProyecto = styled.p`
