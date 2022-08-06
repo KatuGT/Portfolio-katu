@@ -7,20 +7,24 @@ import Main from './componentes/Main';
 import Proyectos from './componentes/Proyectos';
 import Footer from './componentes/Footer';
 import Themes from './componentes/Themes';
+import { useState } from 'react';
 
 const MyGlobalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.bg};
+    transition: background-color ease 0.5s;
   }
 `;
 
 function App() {
+  const [theme, setTheme] = useState('dark')
+
   return (
     <>
-      <ThemeProvider theme={Themes['dark']}>
+      <ThemeProvider theme={Themes[theme]}>
         <MyGlobalStyle />
         <div className='App'>
-          <Navbar />
+          <Navbar setTheme = { setTheme } />
           <Main>
             <SobreMi />
             <Divisor />

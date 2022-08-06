@@ -1,5 +1,5 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useState } from 'react';
+import styled from 'styled-components';
 
 const Header = styled.header`
   position: fixed;
@@ -51,7 +51,7 @@ const Menu = styled.ul`
   padding: 0;
   position: absolute;
   top: 100%;
-  left: ${({ open }) => (open ? "0" : "-100%")};
+  left: ${({ open }) => (open ? '0' : '-100%')};
   background-color: var(--main-clr);
   transition: left 1s ease;
   z-index: 20000;
@@ -93,32 +93,79 @@ const MenuLink = styled.a`
     padding: 0.99em 0.5em;
   }
 `;
+const SwitchWrapper = styled.div``;
+const SwitchLabel = styled.label`
+  display: flex;
+  height: 2em;
+  width: 5em;
+  border-radius: 2em;
+  background-color: var(--main-clr);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+    top: -0.25em;
+    background-color: var(--main-clr);
+    border-radius: 100vh;
+    transition: transform 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    outline: 3px solid black;
+  }
+`;
+const SwitchInput = styled.input`
+  display: none;
+  &[type='checkbox']:checked + ${SwitchLabel}::before {
+    background-color: var(--main-clr);
+    transform: translateX(100%);
+  }
+`;
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [ShowMenu, setShowMenu] = useState(false);
+
+  const changeTheme = (e) => {
+    let target = e.target.checked;
+
+    if (target) {
+      props.setTheme('dark');
+    } else {
+      props.setTheme('light');
+    }
+  };
 
   return (
     <Header>
       <NavBar>
-        <LogoContainer href="#sobreMi">Katu</LogoContainer>
+        <LogoContainer href='#sobreMi'>Katu</LogoContainer>
+        
         <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
           <i
-            className={!ShowMenu ? "fa-solid fa-bars" : "fa-solid fa-xmark"}
+            className={!ShowMenu ? 'fa-solid fa-bars' : 'fa-solid fa-xmark'}
           ></i>
         </MenuIconMobil>
         <Menu open={ShowMenu}>
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href="#sobreMi">Sobre mi</MenuLink>
+            <MenuLink href='#sobreMi'>Sobre mi</MenuLink>
           </MenuItem>
 
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href="#tecno">Tecnologias</MenuLink>
+            <MenuLink href='#tecno'>Tecnologias</MenuLink>
           </MenuItem>
 
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href="#proyectos">Proyectos</MenuLink>
+            <MenuLink href='#proyectos'>Proyectos</MenuLink>
           </MenuItem>
         </Menu>
+        <SwitchWrapper>
+          <SwitchInput
+            type='checkbox'
+            id='switch'
+            onChange={(e) => changeTheme(e)}
+          />
+          <SwitchLabel htmlFor='switch'></SwitchLabel>
+        </SwitchWrapper>
       </NavBar>
     </Header>
   );
