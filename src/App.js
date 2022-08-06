@@ -19,12 +19,13 @@ const MyGlobalStyle = createGlobalStyle`
 function App() {
   const [theme, setTheme] = useState('dark')
 
+  
   return (
     <>
       <ThemeProvider theme={Themes[theme]}>
         <MyGlobalStyle />
         <div className='App'>
-          <Navbar setTheme = { setTheme } theme = { theme } />
+          <Navbar setTheme = { setTheme } theme = { theme }  />
           <Main>
             <SobreMi />
             <Divisor />

@@ -53,7 +53,7 @@ const Menu = styled.ul`
   top: 100%;
   left: ${({ open }) => (open ? '0' : '-100%')};
   background-color: var(--main-clr);
-  transition: left 1s ease;
+  transition: left .5s ease-out;
   z-index: 20000;
 
   @media screen and (min-width: 800px) {
@@ -161,9 +161,12 @@ const Navbar = (props) => {
 
   let isChecked = useRef(false)
 
+  let navElement = useRef('')
+  let navHeight = navElement.current.offsetHeight;
+  document.documentElement.style.setProperty('--navigation-height', navHeight + 'px')
   return (
-    <Header>
-      <NavBar>
+    <Header ref={navElement}>
+      <NavBar >
         <LogoContainer href='#sobreMi'>Katu</LogoContainer>
         
         <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
