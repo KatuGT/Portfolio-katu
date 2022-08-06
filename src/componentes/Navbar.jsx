@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styled from 'styled-components';
 
 const Header = styled.header`
@@ -93,7 +93,10 @@ const MenuLink = styled.a`
     padding: 0.99em 0.5em;
   }
 `;
-const SwitchWrapper = styled.div``;
+const SwitchWrapper = styled.div`
+position: relative;
+margin-right: 2em;
+`;
 const SwitchLabel = styled.label`
   display: flex;
   height: 2em;
@@ -101,6 +104,7 @@ const SwitchLabel = styled.label`
   border-radius: 2em;
   background-color: var(--main-clr);
   position: relative;
+  cursor: pointer;
   &::before {
     content: '';
     position: absolute;
@@ -111,14 +115,34 @@ const SwitchLabel = styled.label`
     border-radius: 100vh;
     transition: transform 0.2s ease;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    outline: 3px solid black;
+    cursor: pointer;
+
   }
+
+  &::after{
+    content:'${({theme}) => theme.icon}';
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.7em;
+    top:${({isChecked}) => (isChecked.current.checked ? '.07em' : '0')};
+    left: ${({isChecked}) => (isChecked.current.checked ? '.37em' : '.25em')} ;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-weight: 900;
+  }
+
+  
+
 `;
 const SwitchInput = styled.input`
   display: none;
   &[type='checkbox']:checked + ${SwitchLabel}::before {
     background-color: var(--main-clr);
     transform: translateX(100%);
+  }
+  &[type='checkbox']:checked + ${SwitchLabel}::after {
+    transform: translateX(135%) rotate(0.5turn);
+    
   }
 `;
 
@@ -128,12 +152,14 @@ const Navbar = (props) => {
   const changeTheme = (e) => {
     let target = e.target.checked;
 
-    if (target) {
+    if (!target) {
       props.setTheme('dark');
     } else {
       props.setTheme('light');
     }
   };
+
+  let isChecked = useRef(false)
 
   return (
     <Header>
@@ -162,9 +188,12 @@ const Navbar = (props) => {
           <SwitchInput
             type='checkbox'
             id='switch'
+            ref={isChecked}
             onChange={(e) => changeTheme(e)}
           />
-          <SwitchLabel htmlFor='switch'></SwitchLabel>
+          <SwitchLabel htmlFor='switch' 
+          isChecked ={ isChecked }
+            ></SwitchLabel>
         </SwitchWrapper>
       </NavBar>
     </Header>

@@ -24,7 +24,7 @@ function App() {
       <ThemeProvider theme={Themes[theme]}>
         <MyGlobalStyle />
         <div className='App'>
-          <Navbar setTheme = { setTheme } />
+          <Navbar setTheme = { setTheme } theme = { theme } />
           <Main>
             <SobreMi />
             <Divisor />
