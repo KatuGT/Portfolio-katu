@@ -175,7 +175,7 @@ const SobreMi = () => {
         </Link>
 
         <Link
-          href="https://drive.google.com/file/d/1Z4bn9SCuaACubeYWNILYHIwrXrZjfq4V/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Cw3je7nWwGJLA3Buh71opgU2zfYAKhix/view?usp=sharing"
           target="_blank"
           download="CV - Cintia Jimena Martinez"
           rel="noreferrer noopener"
