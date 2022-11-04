@@ -49,7 +49,7 @@ const NuevoTituloSeccion = styled(TituloSecciones)`
 const Tecnologias = () => {
   return (
     <WrapperTecnologias id="tecno">
-      <TituloSecciones>Herramientas y Tecnologias</TituloSecciones>
+      <TituloSecciones>Herramientas y Tecnologías</TituloSecciones>
       <WrapperLogos>
         <Logo src={LogoHTML} alt="Logo HTML" />
         <Logo src={LogoCSS} alt="Logo CSS" />
@@ -65,7 +65,7 @@ const Tecnologias = () => {
       <NuevoTituloSeccion>Info extra</NuevoTituloSeccion>
       <InfoExtra>
         Poseo experiencia trabajando con la metodología ágil SCRUM y mi nivel de
-        inglés es A2.
+        inglés intermedio.
       </InfoExtra>
     </WrapperTecnologias>
   );
