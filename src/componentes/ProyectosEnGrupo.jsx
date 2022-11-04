@@ -2,8 +2,8 @@ import React from 'react'
 import ProyectoTemplate from './ProyectoTemplate'
 import ImgPetSpaceMobile from '../imagenes/pr-petSpaceMobile.webp';
 import ImgPetSpace from '../imagenes/pr-petSpace.webp';
-import ImEstafaMLibre from '../imagenes/pr-estafaMLibre.PNG';
-import ImEstafaMLibreMobile from '../imagenes/pr-estafaMLibreMobile.PNG';
+import ImEstafaMLibre from '../imagenes/pr-estafaMLibre.webp';
+import ImEstafaMLibreMobile from '../imagenes/pr-estafaMLibreMobile.webp';
 import ImgRollflixMobile from '../imagenes/pr-rollflixMobile.webp';
 import ImgRollflix from '../imagenes/pr-rollflix.webp';
 
