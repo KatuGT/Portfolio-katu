@@ -4,7 +4,6 @@ import SobreMi from './componentes/SobreMi';
 import Divisor from './componentes/Divisor';
 import Tecnologias from './componentes/Tecnologias';
 import Main from './componentes/Main';
-import Proyectos from './componentes/Proyectos';
 import Footer from './componentes/Footer';
 import Themes from './componentes/Themes';
 import { useState } from 'react';
