@@ -1,10 +1,10 @@
-import ImgCardMobile from '../imagenes/pr-interactiveCardMovile.webp';
-import ImgCard from '../imagenes/pr-interactiveCard.webp';
-import ImgMoviePopMobile from '../imagenes/pr-moviepopMobile.webp';
-import ImgMoviePop from '../imagenes/pr-moviepop.webp';
-import ImgAtlasMobile from '../imagenes/pr-atlasMobile.webp';
-import ImgAtlas from '../imagenes/pr-atlas.webp';
 import ProyectoTemplate from './ProyectoTemplate';
+import ImgCardMobile from '../assets/imagenes/pr-interactiveCardMovile.webp';
+import ImgCard from '../assets/imagenes/pr-interactiveCard.webp';
+import ImgMoviePopMobile from '../assets/imagenes/pr-moviepopMobile.webp';
+import ImgMoviePop from '../assets/imagenes/pr-moviepop.webp';
+import ImgAtlasMobile from '../assets/imagenes/pr-atlasMobile.webp';
+import ImgAtlas from '../assets/imagenes/pr-atlas.webp';
 
 const ProyectosIndividuales = () => {
   return (

@@ -1,11 +1,11 @@
 import React from 'react'
 import ProyectoTemplate from './ProyectoTemplate'
-import ImgPetSpaceMobile from '../imagenes/pr-petSpaceMobile.webp';
-import ImgPetSpace from '../imagenes/pr-petSpace.webp';
-import ImEstafaMLibre from '../imagenes/pr-estafaMLibre.webp';
-import ImEstafaMLibreMobile from '../imagenes/pr-estafaMLibreMobile.webp';
-import ImgRollflixMobile from '../imagenes/pr-rollflixMobile.webp';
-import ImgRollflix from '../imagenes/pr-rollflix.webp';
+import ImgPetSpaceMobile from '../assets/imagenes/pr-petSpaceMobile.webp';
+import ImgPetSpace from '../assets/imagenes/pr-petSpace.webp';
+import ImEstafaMLibre from '../assets/imagenes/pr-estafaMLibre.webp';
+import ImEstafaMLibreMobile from '../assets/imagenes/pr-estafaMLibreMobile.webp';
+import ImgRollflixMobile from '../assets/imagenes/pr-rollflixMobile.webp';
+import ImgRollflix from '../assets/imagenes/pr-rollflix.webp';
 
 
 const ProyectosEnGrupo = () => {
