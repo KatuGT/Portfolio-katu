@@ -53,7 +53,7 @@ const Menu = styled.ul`
   top: 100%;
   left: ${({ open }) => (open ? '0' : '-100%')};
   background-color: var(--main-clr);
-  transition: left .5s ease-out;
+  transition: left 0.5s ease-out;
   z-index: 20000;
 
   @media screen and (min-width: 800px) {
@@ -94,8 +94,8 @@ const MenuLink = styled.a`
   }
 `;
 const SwitchWrapper = styled.div`
-position: relative;
-margin-right: 2em;
+  position: relative;
+  display: flex;
 `;
 const SwitchLabel = styled.label`
   display: flex;
@@ -116,23 +116,19 @@ const SwitchLabel = styled.label`
     transition: transform 0.2s ease;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
-
   }
 
-  &::after{
-    content:'${({theme}) => theme.icon}';
-    font-family: "Font Awesome 5 Free";
+  &::after {
+    content: '${({ theme }) => theme.icon}';
+    font-family: 'Font Awesome 5 Free';
     font-size: 1.7em;
-    top:${({isChecked}) => (isChecked.current.checked ? '.07em' : '0')};
-    left: ${({isChecked}) => (isChecked.current.checked ? '.37em' : '.25em')} ;
+    top: ${({ isChecked }) => (isChecked.current.checked ? '.07em' : '0')};
+    left: ${({ isChecked }) => (isChecked.current.checked ? '.37em' : '.25em')};
     position: absolute;
     cursor: pointer;
     transition: transform 0.2s ease;
     font-weight: 900;
   }
-
-  
-
 `;
 const SwitchInput = styled.input`
   display: none;
@@ -142,7 +138,32 @@ const SwitchInput = styled.input`
   }
   &[type='checkbox']:checked + ${SwitchLabel}::after {
     transform: translateX(135%) rotate(0.5turn);
-    
+  }
+`;
+
+const SwitchLenguaje = styled.div`
+  position: relative;
+  display: flex;
+  gap: 0.8rem;
+`;
+
+const InputLenguaje = styled.input`
+  display: none;
+`;
+
+const Lenguaje = styled.label`
+  position: relative;
+  color: ${({ theme }) => theme.text};
+`;
+
+const TextLenguaje = styled.p`
+  position: relative;
+  display: flex;
+  gap: 0.8rem;
+
+  ${InputLenguaje}:checked + && {
+    font-weight: 700;
+    color: #fff;
   }
 `;
 
@@ -159,16 +180,18 @@ const Navbar = (props) => {
     }
   };
 
-  let isChecked = useRef(false)
+  let isChecked = useRef(false);
 
-  let navElement = useRef('')
+  let navElement = useRef('');
   let navHeight = navElement.current.offsetHeight;
-  document.documentElement.style.setProperty('--navigation-height', navHeight + 'px')
+  document.documentElement.style.setProperty(
+    '--navigation-height',
+    navHeight + 'px'
+  );
   return (
     <Header ref={navElement}>
-      <NavBar >
+      <NavBar>
         <LogoContainer href='#sobreMi'>Katu</LogoContainer>
-        
         <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
           <i
             className={!ShowMenu ? 'fa-solid fa-bars' : 'fa-solid fa-xmark'}
@@ -194,10 +217,18 @@ const Navbar = (props) => {
             ref={isChecked}
             onChange={(e) => changeTheme(e)}
           />
-          <SwitchLabel htmlFor='switch' 
-          isChecked ={ isChecked }
-            ></SwitchLabel>
+          <SwitchLabel htmlFor='switch' isChecked={isChecked}></SwitchLabel>
         </SwitchWrapper>
+        <SwitchLenguaje>
+          <Lenguaje>
+            <InputLenguaje type='radio' name='lenguaje' value='es' />
+            <TextLenguaje>Español</TextLenguaje>
+          </Lenguaje>
+          <Lenguaje>
+            <InputLenguaje type='radio' name='lenguaje' value='en' />
+            <TextLenguaje>English</TextLenguaje>
+          </Lenguaje>
+        </SwitchLenguaje>
       </NavBar>
     </Header>
   );
