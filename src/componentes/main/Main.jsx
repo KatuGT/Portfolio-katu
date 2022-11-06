@@ -1,9 +1,4 @@
-import styled from "styled-components";
-
-
-const MainWrapper = styled.main`
-    margin: 0 2em;
-`
+import { MainWrapper } from './main.styled'
 
 const Main = ({children}) => {
   return (

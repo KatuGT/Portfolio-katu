@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Navbar from './componentes/navbar/Navbar';
-import SobreMi from './componentes/SobreMi';
-import Divisor from './componentes/Divisor';
-import Tecnologias from './componentes/Tecnologias';
-import Main from './componentes/Main';
-import Footer from './componentes/Footer';
+import SobreMi from './componentes/sobreMi/SobreMi';
+import Divisor from './componentes/divisor/Divisor';
+import Tecnologias from './componentes/tecnologias/Tecnologias';
+import Main from './componentes/main/Main';
+import Footer from './componentes/footer/Footer';
 import Themes from './componentes/Themes';
 import { useState } from 'react';
 import { RouterProvider } from 'react-router-dom';

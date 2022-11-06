@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WrapperLineas = styled.div`
+export const WrapperLineas = styled.div`
   margin: 3em 0;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@ const WrapperLineas = styled.div`
   align-items: center;
 `;
 
-const LineaNegra = styled.div`
+export const LineaNegra = styled.div`
   height: 1px;
   width: min(300px, 100%);
   position: relative;
@@ -16,7 +16,7 @@ const LineaNegra = styled.div`
   top: 0;
 `;
 
-const LineaVerde = styled.div`
+export const LineaVerde = styled.div`
   height: 1px;
   width: min(300px, 100%);
   position: relative;
@@ -24,14 +24,3 @@ const LineaVerde = styled.div`
   left: 10px;
   background-color: var(--main-clr);
 `;
-
-const Divisor = () => {
-  return (
-    <WrapperLineas>
-      <LineaNegra />
-      <LineaVerde />
-    </WrapperLineas>
-  );
-};
-
-export default Divisor;
