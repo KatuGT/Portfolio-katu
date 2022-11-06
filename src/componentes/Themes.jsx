@@ -7,7 +7,7 @@ const LightTheme = {
 }
 
 const DarkTheme = {
-    text: '#b1b1b1',
+    text: '#e3e3e3',
     textProject: '#b1b1b1',
     subText: 'hsla(162, 51%, 65%)',
     bg:'#131313',

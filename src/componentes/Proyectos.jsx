@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Outlet, NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 
 export const WrapperProyectos = styled.section`
   margin: 0 auto;
@@ -43,6 +45,8 @@ const WrapperTipoProyecto = styled.div`
 `;
 
 const Proyectos = () => {
+  const  { t } = useTranslation(['projects'])
+
   return (
     <section id='proyectos'>
       <WrapperTipoProyecto>
@@ -50,13 +54,13 @@ const Proyectos = () => {
           to={'/'}
           className='linkProyectos'
         >
-          Proyectos personales
+          {t('personalProjects')}
         </NavLink>
         <NavLink
           to={'en-grupo'}
           className='linkProyectos'
         >
-          Proyectos grupales
+          {t('groupProjects')}
         </NavLink>
       </WrapperTipoProyecto>
       <WrapperProyectos>

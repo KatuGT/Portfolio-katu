@@ -1,0 +1,11 @@
+{
+    "petSpace" :{
+        "desc": "This website is the result of a challenge organized for the 'No Country' organization, I was in charge of the front end. The main target of this project is reunite lost pets with their owners. Tools and libraries used: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios"
+    },
+    "estafaMLibre" :{
+        "desc": "This is the Mercado Libre´s evil version. Build by a team of 3/4 persons, my tasks were create the landing page and footer. Testing up to 80%. Tools and libraries used: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap"
+    },
+    "rollflix" :{
+        "desc": "Just a Netflix clone, final project for the full stack course in 'Rolling Code School' using MERN stack"
+    }
+}

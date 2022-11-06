@@ -1,3 +1,4 @@
+import  { Suspense  } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Navbar from './componentes/Navbar';
 import SobreMi from './componentes/SobreMi';
@@ -24,7 +25,7 @@ function App() {
 
   
   return (
-    <>
+    <Suspense fallback={null}>
       <ThemeProvider theme={Themes[theme]}>
         <MyGlobalStyle />
         <div className='App'>
@@ -39,7 +40,7 @@ function App() {
           <Footer />
         </div>
       </ThemeProvider>
-    </>
+    </Suspense>
   );
 }
 

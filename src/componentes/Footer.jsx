@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from 'react-i18next';
 
 const WrapperFooter = styled.footer`
   background-color: #000;
@@ -45,9 +46,10 @@ const Contacto = styled.div`
 `;
 
 const Footer = () => {
+  const { t } = useTranslation(['footer'], { useSuspense: false })
   return (
     <WrapperFooter>
-      <p>Contacto</p>
+      <p>{t('contact')}</p>
       <Contacto>
         <a
           href="https://github.com/KatuGT"

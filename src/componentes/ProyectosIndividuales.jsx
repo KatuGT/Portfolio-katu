@@ -1,17 +1,20 @@
-import ImgCardMobile from '../imagenes/pr-interactiveCardMovile.webp';
-import ImgCard from '../imagenes/pr-interactiveCard.webp';
-import ImgMoviePopMobile from '../imagenes/pr-moviepopMobile.webp';
-import ImgMoviePop from '../imagenes/pr-moviepop.webp';
-import ImgAtlasMobile from '../imagenes/pr-atlasMobile.webp';
-import ImgAtlas from '../imagenes/pr-atlas.webp';
 import ProyectoTemplate from './ProyectoTemplate';
+import ImgCardMobile from '../assets/imagenes/pr-interactiveCardMovile.webp';
+import ImgCard from '../assets/imagenes/pr-interactiveCard.webp';
+import ImgMoviePopMobile from '../assets/imagenes/pr-moviepopMobile.webp';
+import ImgMoviePop from '../assets/imagenes/pr-moviepop.webp';
+import ImgAtlasMobile from '../assets/imagenes/pr-atlasMobile.webp';
+import ImgAtlas from '../assets/imagenes/pr-atlas.webp';
+import { useTranslation } from 'react-i18next';
 
 const ProyectosIndividuales = () => {
+  const  { t } = useTranslation(['personalProjects'])
+
   return (
     <>
       <ProyectoTemplate
         titulo='Interactive Card'
-        descripcion='Formulario de tarjeta de credito/debito interactiva, muestra los cambios del formulario en tiempo real'
+        descripcion={t('interactiveCard.desc')}
         githubFront='https://github.com/KatuGT/interactive-card-challange'
         imgMobile={ImgCardMobile}
         altMobile='Caputa de pantalla de celular sitio Interactive Card'
@@ -22,10 +25,9 @@ const ProyectosIndividuales = () => {
       />
       <ProyectoTemplate
         titulo='MoviePop'
-        descripcion=' Otra página de películas, lo hice como parte de una entrevista. La
-          data la consumi de la api TVmaze.'
+        descripcion={t('moviePop.desc')}
         githubFront='https://github.com/KatuGT/MoviePop-front'
-        githubBackt='https://github.com/KatuGT/MoviePop-back'
+        githubBack='https://github.com/KatuGT/MoviePop-back'
         imgMobile={ImgMoviePopMobile}
         altMobile='Caputa de pantalla de celular sitio MoviePop'
         imgDesktop={ImgMoviePop}
@@ -36,7 +38,7 @@ const ProyectosIndividuales = () => {
       />
       <ProyectoTemplate
         titulo='Atlas'
-        descripcion='Proyecto realizado para challange usando la Rest API themoviedb'
+        descripcion={t('atlas.desc')}
         githubFront='https://github.com/KatuGT/atlas-cine'
         imgMobile={ImgAtlasMobile}
         altMobile='Caputa de pantalla de celular sitio MoviePop'
