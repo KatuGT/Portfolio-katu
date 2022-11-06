@@ -1,0 +1,11 @@
+{
+    "petSpace" :{
+        "desc": "Este sitio web es el resultado de un reto organizado por la organización 'No Country', yo estuve a cargo del front end. El objetivo principal de este proyecto es reunir a las mascotas perdidas con sus dueños. Herremiantas and librerias usadas: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios"
+    },
+    "estafaMLibre" :{
+        "desc": "Es la versión malvada de Mercado Libre. Creada por un equipo de 3/4 personas, mis tareas fueron maquetar el footer y landing page. Testing realizado al 80%. Herremiantas and librerias usadas: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap"
+    },
+    "rollflix" :{
+        "desc": "Solo un clon de Netflix, proyecto final para el curso full stack de 'Rolling Code School' usnado MERN stack"
+    }
+}

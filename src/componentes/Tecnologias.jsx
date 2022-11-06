@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import TituloSecciones from "./TituloSecciones";
-import LogoHTML from "../imagenes/logo-html-small.webp";
-import LogoCSS from "../imagenes/logo-css3-small.webp";
-import LogoJS from "../imagenes/logo-js-small.webp";
-import LogoBoots from "../imagenes/logo-bootstrap-small.webp";
-import LogoReact from "../imagenes/logo-react-small.webp";
-import LogoStyled from "../imagenes/logo-styledcomp-small.webp";
-import LogoVS from "../imagenes/logo-vscode-small.webp";
-import LogoFigma from "../imagenes/logo-figma-small.webp";
-import LogoPS from "../imagenes/logo-ps-small.webp";
-import LogoAI from "../imagenes/logo-ai-small.webp";
+import LogoHTML from "../assets/imagenes/logo-html-small.webp";
+import LogoCSS from "../assets/imagenes/logo-css3-small.webp";
+import LogoJS from "../assets/imagenes/logo-js-small.webp";
+import LogoBoots from "../assets/imagenes/logo-bootstrap-small.webp";
+import LogoReact from "../assets/imagenes/logo-react-small.webp";
+import LogoStyled from "../assets/imagenes/logo-styledcomp-small.webp";
+import LogoVS from "../assets/imagenes/logo-vscode-small.webp";
+import LogoFigma from "../assets/imagenes/logo-figma-small.webp";
+import LogoPS from "../assets/imagenes/logo-ps-small.webp";
+import LogoAI from "../assets/imagenes/logo-ai-small.webp";
+import { useTranslation } from 'react-i18next';
 
 const WrapperTecnologias = styled.section`
  display: flex;
@@ -47,9 +48,11 @@ const NuevoTituloSeccion = styled(TituloSecciones)`
 `
 
 const Tecnologias = () => {
+  const  { t } = useTranslation(['tools'])
+
   return (
     <WrapperTecnologias id="tecno">
-      <TituloSecciones>Herramientas y Tecnologias</TituloSecciones>
+      <TituloSecciones>{t('toolsAndTech')}</TituloSecciones>
       <WrapperLogos>
         <Logo src={LogoHTML} alt="Logo HTML" />
         <Logo src={LogoCSS} alt="Logo CSS" />
@@ -62,10 +65,9 @@ const Tecnologias = () => {
         <Logo src={LogoPS} alt="Logo Photoshop" />
         <Logo src={LogoAI} alt="Logo Illustrator" />
       </WrapperLogos>
-      <NuevoTituloSeccion>Info extra</NuevoTituloSeccion>
+      <NuevoTituloSeccion>{t('extraInfo')}</NuevoTituloSeccion>
       <InfoExtra>
-        Poseo experiencia trabajando con la metodología ágil SCRUM y mi nivel de
-        inglés es A2.
+      {t('scrumEnglish')}
       </InfoExtra>
     </WrapperTecnologias>
   );

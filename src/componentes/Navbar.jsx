@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Header = styled.header`
@@ -15,7 +16,7 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  padding-inline: 2rem;
   @media screen and (min-width: 800px) {
     justify-content: space-around;
   }
@@ -23,7 +24,6 @@ const NavBar = styled.nav`
 
 const LogoContainer = styled.a`
   color: #fff;
-  margin-left: 1em;
   cursor: pointer;
   font-size: 2em;
   font-weight: bolder;
@@ -53,7 +53,7 @@ const Menu = styled.ul`
   top: 100%;
   left: ${({ open }) => (open ? '0' : '-100%')};
   background-color: var(--main-clr);
-  transition: left .5s ease-out;
+  transition: left 0.5s ease-out;
   z-index: 20000;
 
   @media screen and (min-width: 800px) {
@@ -70,6 +70,7 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   font-weight: 700;
   scroll-behavior: smooth;
+  text-align: center;
 `;
 
 const MenuLink = styled.a`
@@ -94,8 +95,8 @@ const MenuLink = styled.a`
   }
 `;
 const SwitchWrapper = styled.div`
-position: relative;
-margin-right: 2em;
+  position: relative;
+  display: flex;
 `;
 const SwitchLabel = styled.label`
   display: flex;
@@ -116,23 +117,19 @@ const SwitchLabel = styled.label`
     transition: transform 0.2s ease;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
-
   }
 
-  &::after{
-    content:'${({theme}) => theme.icon}';
-    font-family: "Font Awesome 5 Free";
+  &::after {
+    content: '${({ theme }) => theme.icon}';
+    font-family: 'Font Awesome 5 Free';
     font-size: 1.7em;
-    top:${({isChecked}) => (isChecked.current.checked ? '.07em' : '0')};
-    left: ${({isChecked}) => (isChecked.current.checked ? '.37em' : '.25em')} ;
+    top: ${({ isChecked }) => (isChecked.current.checked ? '.07em' : '0')};
+    left: ${({ isChecked }) => (isChecked.current.checked ? '.37em' : '.25em')};
     position: absolute;
     cursor: pointer;
     transition: transform 0.2s ease;
     font-weight: 900;
   }
-
-  
-
 `;
 const SwitchInput = styled.input`
   display: none;
@@ -142,7 +139,50 @@ const SwitchInput = styled.input`
   }
   &[type='checkbox']:checked + ${SwitchLabel}::after {
     transform: translateX(135%) rotate(0.5turn);
-    
+  }
+`;
+
+const SwitchLenguaje = styled.div`
+  position: relative;
+  display: flex;
+  gap: 0.8rem;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const SwitchLenguajeMobile = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: center;
+  width: 100%;
+  background-color: #000;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+`;
+
+const InputLenguaje = styled.input`
+  display: none;
+`;
+
+const Lenguaje = styled.label`
+  position: relative;
+  color: ${({ theme }) => theme.text};
+  cursor: pointer;
+`;
+
+const TextLenguaje = styled.p`
+  position: relative;
+  display: flex;
+  gap: 0.8rem;
+  font-weight: 300;
+  color: var(--main-clr);;
+  ${InputLenguaje}:checked + && {
+    font-weight: 700;
+    color: #fff;
   }
 `;
 
@@ -159,32 +199,67 @@ const Navbar = (props) => {
     }
   };
 
-  let isChecked = useRef(false)
+  let isChecked = useRef(false);
 
-  let navElement = useRef('')
+  let navElement = useRef('');
   let navHeight = navElement.current.offsetHeight;
-  document.documentElement.style.setProperty('--navigation-height', navHeight + 'px')
+  document.documentElement.style.setProperty(
+    '--navigation-height',
+    navHeight + 'px'
+  );
+
+  const { t, i18n } = useTranslation(['header']);
+
+  const handleLenguaje = (e) => {
+    const lenguaje = e.target.value;
+    i18n.changeLanguage(lenguaje);
+  };
   return (
     <Header ref={navElement}>
-      <NavBar >
+      <NavBar>
         <LogoContainer href='#sobreMi'>Katu</LogoContainer>
-        
         <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
           <i
             className={!ShowMenu ? 'fa-solid fa-bars' : 'fa-solid fa-xmark'}
           ></i>
         </MenuIconMobil>
         <Menu open={ShowMenu}>
+          <MenuItem>
+            <SwitchLenguajeMobile>
+              <Lenguaje>
+                <InputLenguaje
+                  type='radio'
+                  name='lenguaje'
+                  value='es'
+                  onClick={(e) => {
+                    handleLenguaje(e);
+                  }}
+                />
+                <TextLenguaje>Español</TextLenguaje>
+              </Lenguaje>
+              <Lenguaje>
+                <InputLenguaje
+                  type='radio'
+                  name='lenguaje'
+                  value='en'
+                  onClick={(e) => {
+                    handleLenguaje(e);
+                  }}
+                />
+                <TextLenguaje>English</TextLenguaje>
+              </Lenguaje>
+            </SwitchLenguajeMobile>
+          </MenuItem>
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#sobreMi'>Sobre mi</MenuLink>
+            <MenuLink href='#sobreMi'>{t('aboutMe')}</MenuLink>
           </MenuItem>
 
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#tecno'>Tecnologias</MenuLink>
+            <MenuLink href='#tecno'>{t('toolsAndTech')}</MenuLink>
           </MenuItem>
 
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#proyectos'>Proyectos</MenuLink>
+            <MenuLink href='#proyectos'>{t('projects')}</MenuLink>
           </MenuItem>
         </Menu>
         <SwitchWrapper>
@@ -194,10 +269,32 @@ const Navbar = (props) => {
             ref={isChecked}
             onChange={(e) => changeTheme(e)}
           />
-          <SwitchLabel htmlFor='switch' 
-          isChecked ={ isChecked }
-            ></SwitchLabel>
+          <SwitchLabel htmlFor='switch' isChecked={isChecked}></SwitchLabel>
         </SwitchWrapper>
+        <SwitchLenguaje>
+          <Lenguaje>
+            <InputLenguaje
+              type='radio'
+              name='lenguaje'
+              value='es'
+              onClick={(e) => {
+                handleLenguaje(e);
+              }}
+            />
+            <TextLenguaje>Español</TextLenguaje>
+          </Lenguaje>
+          <Lenguaje>
+            <InputLenguaje
+              type='radio'
+              name='lenguaje'
+              value='en'
+              onClick={(e) => {
+                handleLenguaje(e);
+              }}
+            />
+            <TextLenguaje>English</TextLenguaje>
+          </Lenguaje>
+        </SwitchLenguaje>
       </NavBar>
     </Header>
   );

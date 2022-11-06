@@ -1,14 +1,9 @@
 import styled from 'styled-components';
-import TituloSecciones from './TituloSecciones';
-import ImgRollflixMobile from '../imagenes/pr-rollflixMobile.webp';
-import ImgRollflix from '../imagenes/pr-rollflix.webp';
-import ImgMoviePopMobile from '../imagenes/pr-moviepopMobile.webp';
-import ImgMoviePop from '../imagenes/pr-moviepop.webp';
-import ImgAtlasMobile from '../imagenes/pr-atlasMobile.webp';
-import ImgAtlas from '../imagenes/pr-atlas.webp';
-import ProyectoTemplate from './ProyectoTemplate';
+import { Outlet, NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const WrapperProyectos = styled.section`
+
+export const WrapperProyectos = styled.section`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -32,49 +27,44 @@ const WrapperProyectos = styled.section`
   }
 `;
 
+const WrapperTipoProyecto = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  && .linkProyectos{
+    color: ${({ theme }) => theme.textProject};
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  && .linkProyectos.active{
+    color: var(--main-clr);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+`;
+
 const Proyectos = () => {
+  const  { t } = useTranslation(['projects'])
+
   return (
     <section id='proyectos'>
-      <TituloSecciones>Proyectos</TituloSecciones>
+      <WrapperTipoProyecto>
+        <NavLink
+          to={'/'}
+          className='linkProyectos'
+        >
+          {t('personalProjects')}
+        </NavLink>
+        <NavLink
+          to={'en-grupo'}
+          className='linkProyectos'
+        >
+          {t('groupProjects')}
+        </NavLink>
+      </WrapperTipoProyecto>
       <WrapperProyectos>
-        <ProyectoTemplate
-          titulo='Rollflix'
-          descripcion='Clon de Netflix, fue mi proyecto final en el curso FullStack
-          (MERN) de RollingCode School.'
-          githubFront='https://github.com/KatuGT/Proyecto-Final-FrontEnd'
-          githubBack='https://github.com/KatuGT/Proyecto-Final-BackEnd'
-          imgMobile={ImgRollflixMobile}
-          altMobile='Caputa de pantalla de celular sitio Rollflix'
-          imgDesktop={ImgRollflix}
-          altDesktop='Caputa de pantalla de escritorio sitio Rollflix'
-          linkDeploy='https://effortless-centaur-f31ca1.netlify.app/'
-          imgPsition='left'
-        />
-        <ProyectoTemplate
-          titulo='MoviePop'
-          descripcion=' Otra página de películas, lo hice como parte de una entrevista. La
-          data la consumi de la api TVmaze.'
-          githubFront='https://github.com/KatuGT/MoviePop-front'
-          githubBackt='https://github.com/KatuGT/MoviePop-back'
-          imgMobile={ImgMoviePopMobile}
-          altMobile='Caputa de pantalla de celular sitio MoviePop'
-          imgDesktop={ImgMoviePop}
-          altDesktop='Caputa de pantalla de escritorio sitio MoviePop'
-          linkDeploy='https://incandescent-taffy-ad42eb.netlify.app/peliculas'
-          imgPsition='right'
-          orderDos='order-dos'
-        />
-        <ProyectoTemplate
-          titulo='Atlas'
-          descripcion='Proyecto realizado para challange usando la Rest API themoviedb'
-          githubFront='https://github.com/KatuGT/atlas-cine'
-          imgMobile={ImgAtlasMobile}
-          altMobile='Caputa de pantalla de celular sitio MoviePop'
-          imgDesktop={ImgAtlas}
-          altDesktop='Caputa de pantalla de escritorio sitio Atlas'
-          linkDeploy='https://helpful-fenglisu-56d94c.netlify.app/'
-          imgPsition='left'
-        />
+        <Outlet />
       </WrapperProyectos>
     </section>
   );

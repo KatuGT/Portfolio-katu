@@ -1,13 +1,17 @@
+import  { Suspense  } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Navbar from './componentes/Navbar';
 import SobreMi from './componentes/SobreMi';
 import Divisor from './componentes/Divisor';
 import Tecnologias from './componentes/Tecnologias';
 import Main from './componentes/Main';
-import Proyectos from './componentes/Proyectos';
 import Footer from './componentes/Footer';
 import Themes from './componentes/Themes';
 import { useState } from 'react';
+import {
+  RouterProvider,
+} from "react-router-dom";
+import Router from './Router';
 
 const MyGlobalStyle = createGlobalStyle`
   body {
@@ -21,7 +25,7 @@ function App() {
 
   
   return (
-    <>
+    <Suspense fallback={null}>
       <ThemeProvider theme={Themes[theme]}>
         <MyGlobalStyle />
         <div className='App'>
@@ -31,12 +35,12 @@ function App() {
             <Divisor />
             <Tecnologias />
             <Divisor />
-            <Proyectos />
+            <RouterProvider router={Router} />
           </Main>
           <Footer />
         </div>
       </ThemeProvider>
-    </>
+    </Suspense>
   );
 }
 
