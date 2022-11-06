@@ -1,5 +1,5 @@
 import React from 'react'
-import ProyectoTemplate from './ProyectoTemplate'
+import ProyectoTemplate from '../componentes/proyectosTemplate/ProyectoTemplate';
 import ImgPetSpaceMobile from '../assets/imagenes/pr-petSpaceMobile.webp';
 import ImgPetSpace from '../assets/imagenes/pr-petSpace.webp';
 import ImEstafaMLibre from '../assets/imagenes/pr-estafaMLibre.webp';

@@ -1,4 +1,4 @@
-import ProyectoTemplate from './ProyectoTemplate';
+import ProyectoTemplate from '../componentes/proyectosTemplate/ProyectoTemplate';
 import ImgCardMobile from '../assets/imagenes/pr-interactiveCardMovile.webp';
 import ImgCard from '../assets/imagenes/pr-interactiveCard.webp';
 import ImgMoviePopMobile from '../assets/imagenes/pr-moviepopMobile.webp';
