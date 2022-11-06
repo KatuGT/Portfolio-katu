@@ -1,7 +1,23 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Header, InputLenguaje, Lenguaje, LogoContainer, Menu, MenuIconMobil, MenuItem, MenuLink, NavBar, SwitchInput, SwitchLabel, SwitchLenguaje, SwitchLenguajeMobile, SwitchWrapper, TextLenguaje } from './navbar.styled';
-
+import {
+  Header,
+  InputLenguaje,
+  Lenguaje,
+  LogoContainer,
+  Menu,
+  MenuIconMobil,
+  MenuItem,
+  // MenuLink,
+  NavBar,
+  SwitchInput,
+  SwitchLabel,
+  SwitchLenguaje,
+  SwitchLenguajeMobile,
+  SwitchWrapper,
+  TextLenguaje,
+} from './navbar.styled';
+import { Link } from 'react-scroll';
 
 const Navbar = (props) => {
   const [ShowMenu, setShowMenu] = useState(false);
@@ -68,15 +84,18 @@ const Navbar = (props) => {
             </SwitchLenguajeMobile>
           </MenuItem>
             <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-              <MenuLink href='#sobreMi'>{t('aboutMe')}</MenuLink>
+              <Link to='sobreMi' spy={true} smooth={true} offset={-150} duration={100}>{t('aboutMe')}</Link>
             </MenuItem>
-          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#tecno'>{t('toolsAndTech')}</MenuLink>
-          </MenuItem>
-
-          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#proyectos'>{t('projects')}</MenuLink>
-          </MenuItem>
+          <Link>
+            <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+              <Link to='tecno' spy={true} smooth={true} offset={-150} duration={100}>{t('toolsAndTech')}</Link>
+            </MenuItem>
+          </Link>
+          <Link>
+            <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+              <Link to='proyectos' spy={true} smooth={true} offset={-150} duration={100}>{t('projects')}</Link>
+            </MenuItem>
+          </Link>
         </Menu>
         <SwitchWrapper>
           <SwitchInput
