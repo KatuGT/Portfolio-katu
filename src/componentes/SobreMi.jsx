@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from 'react-i18next';
 
 const WrapperSobreMi = styled.section`
   display: flex;
@@ -141,20 +142,19 @@ const Presentacion = styled.p`
 `;
 
 const SobreMi = () => {
+  const { t } = useTranslation(['aboutMe'], { useSuspense: false })
   return (
     <WrapperSobreMi id="sobreMi">
       <WrapperTituloRedes>
         <Titulo>
           <Katu>
-            Hola, soy <span>Katu</span>
+            {t("hiIam")} <span>Katu</span>
           </Katu>
           <FrontEnd>Front-end developer</FrontEnd>
         </Titulo>
       </WrapperTituloRedes>
       <Presentacion>
-        Ese es mi apodo, mi nombre es Cintia Jimena Martínez, vivo en Tucumán,
-        Argentina y actualmente me encuentro en la búsqueda de mi primera
-        experiencia profesional como desarrolladora front-end.
+      {t("desc")}
       </Presentacion>
       <Redes>
         <Link

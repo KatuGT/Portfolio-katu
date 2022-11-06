@@ -1,0 +1,11 @@
+{
+    "interactiveCard" :{
+        "desc": "This card form allows you to see your data reflected in real time on both sides of the card. Tools and libraries used: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb"
+    },
+    "moviePop" :{
+        "desc": "Movie Catalogue made as part of a job opportunity, using the TVmaze API, back and front end were realiced by me."
+    },
+    "atlas" :{
+        "desc": "Movie Catalogue made for a job opportunity, this time just front end was made,with the themoviedb API "
+    }
+}

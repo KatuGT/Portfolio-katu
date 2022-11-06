@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Header = styled.header`
@@ -15,7 +16,7 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  padding-inline: 2rem;
   @media screen and (min-width: 800px) {
     justify-content: space-around;
   }
@@ -23,7 +24,6 @@ const NavBar = styled.nav`
 
 const LogoContainer = styled.a`
   color: #fff;
-  margin-left: 1em;
   cursor: pointer;
   font-size: 2em;
   font-weight: bolder;
@@ -70,6 +70,7 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   font-weight: 700;
   scroll-behavior: smooth;
+  text-align: center;
 `;
 
 const MenuLink = styled.a`
@@ -145,6 +146,22 @@ const SwitchLenguaje = styled.div`
   position: relative;
   display: flex;
   gap: 0.8rem;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
+const SwitchLenguajeMobile = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: center;
+  width: 100%;
+  background-color: #000;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
 `;
 
 const InputLenguaje = styled.input`
@@ -154,13 +171,15 @@ const InputLenguaje = styled.input`
 const Lenguaje = styled.label`
   position: relative;
   color: ${({ theme }) => theme.text};
+  cursor: pointer;
 `;
 
 const TextLenguaje = styled.p`
   position: relative;
   display: flex;
   gap: 0.8rem;
-
+  font-weight: 300;
+  color: var(--main-clr);;
   ${InputLenguaje}:checked + && {
     font-weight: 700;
     color: #fff;
@@ -188,6 +207,13 @@ const Navbar = (props) => {
     '--navigation-height',
     navHeight + 'px'
   );
+
+  const { t, i18n } = useTranslation(['header']);
+
+  const handleLenguaje = (e) => {
+    const lenguaje = e.target.value;
+    i18n.changeLanguage(lenguaje);
+  };
   return (
     <Header ref={navElement}>
       <NavBar>
@@ -198,16 +224,42 @@ const Navbar = (props) => {
           ></i>
         </MenuIconMobil>
         <Menu open={ShowMenu}>
+          <MenuItem>
+            <SwitchLenguajeMobile>
+              <Lenguaje>
+                <InputLenguaje
+                  type='radio'
+                  name='lenguaje'
+                  value='es'
+                  onClick={(e) => {
+                    handleLenguaje(e);
+                  }}
+                />
+                <TextLenguaje>Español</TextLenguaje>
+              </Lenguaje>
+              <Lenguaje>
+                <InputLenguaje
+                  type='radio'
+                  name='lenguaje'
+                  value='en'
+                  onClick={(e) => {
+                    handleLenguaje(e);
+                  }}
+                />
+                <TextLenguaje>English</TextLenguaje>
+              </Lenguaje>
+            </SwitchLenguajeMobile>
+          </MenuItem>
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#sobreMi'>Sobre mi</MenuLink>
+            <MenuLink href='#sobreMi'>{t('aboutMe')}</MenuLink>
           </MenuItem>
 
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#tecno'>Tecnologias</MenuLink>
+            <MenuLink href='#tecno'>{t('toolsAndTech')}</MenuLink>
           </MenuItem>
 
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <MenuLink href='#proyectos'>Proyectos</MenuLink>
+            <MenuLink href='#proyectos'>{t('projects')}</MenuLink>
           </MenuItem>
         </Menu>
         <SwitchWrapper>
@@ -221,11 +273,25 @@ const Navbar = (props) => {
         </SwitchWrapper>
         <SwitchLenguaje>
           <Lenguaje>
-            <InputLenguaje type='radio' name='lenguaje' value='es' />
+            <InputLenguaje
+              type='radio'
+              name='lenguaje'
+              value='es'
+              onClick={(e) => {
+                handleLenguaje(e);
+              }}
+            />
             <TextLenguaje>Español</TextLenguaje>
           </Lenguaje>
           <Lenguaje>
-            <InputLenguaje type='radio' name='lenguaje' value='en' />
+            <InputLenguaje
+              type='radio'
+              name='lenguaje'
+              value='en'
+              onClick={(e) => {
+                handleLenguaje(e);
+              }}
+            />
             <TextLenguaje>English</TextLenguaje>
           </Lenguaje>
         </SwitchLenguaje>

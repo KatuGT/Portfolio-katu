@@ -10,6 +10,7 @@ import LogoVS from "../assets/imagenes/logo-vscode-small.webp";
 import LogoFigma from "../assets/imagenes/logo-figma-small.webp";
 import LogoPS from "../assets/imagenes/logo-ps-small.webp";
 import LogoAI from "../assets/imagenes/logo-ai-small.webp";
+import { useTranslation } from 'react-i18next';
 
 const WrapperTecnologias = styled.section`
  display: flex;
@@ -47,9 +48,11 @@ const NuevoTituloSeccion = styled(TituloSecciones)`
 `
 
 const Tecnologias = () => {
+  const  { t } = useTranslation(['tools'])
+
   return (
     <WrapperTecnologias id="tecno">
-      <TituloSecciones>Herramientas y Tecnologías</TituloSecciones>
+      <TituloSecciones>{t('toolsAndTech')}</TituloSecciones>
       <WrapperLogos>
         <Logo src={LogoHTML} alt="Logo HTML" />
         <Logo src={LogoCSS} alt="Logo CSS" />
@@ -62,10 +65,9 @@ const Tecnologias = () => {
         <Logo src={LogoPS} alt="Logo Photoshop" />
         <Logo src={LogoAI} alt="Logo Illustrator" />
       </WrapperLogos>
-      <NuevoTituloSeccion>Info extra</NuevoTituloSeccion>
+      <NuevoTituloSeccion>{t('extraInfo')}</NuevoTituloSeccion>
       <InfoExtra>
-        Poseo experiencia trabajando con la metodología ágil SCRUM y mi nivel de
-        inglés intermedio.
+      {t('scrumEnglish')}
       </InfoExtra>
     </WrapperTecnologias>
   );
