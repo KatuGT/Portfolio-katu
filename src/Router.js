@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Proyectos from './componentes/Proyectos';
+import Proyectos from './componentes/proyectos/Proyectos';
 import ProyectosEnGrupo from './componentes/ProyectosEnGrupo';
 import ProyectosIndividuales from './componentes/ProyectosIndividuales';
 

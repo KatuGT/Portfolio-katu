@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { useTranslation } from 'react-i18next';
 
-const WrapperSobreMi = styled.section`
+export const WrapperSobreMi = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,21 +8,21 @@ const WrapperSobreMi = styled.section`
   color: ${({ theme }) => theme.text};
 `;
 
-const WrapperTituloRedes = styled.div`
+export const WrapperTituloRedes = styled.div`
   margin-top: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const Titulo = styled.div`
+export const Titulo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   cursor: default;
 `;
-const Katu = styled.h1`
+export const Katu = styled.h1`
   font-size: 3em;
   margin-bottom: 0;
   span {
@@ -55,7 +54,7 @@ const Katu = styled.h1`
     font-size: 5em;
   }
 `;
-const FrontEnd = styled.h2`
+export const FrontEnd = styled.h2`
   margin-top: 0;
   color: var(--main-clr);
   font-size: 2em;
@@ -65,7 +64,7 @@ const FrontEnd = styled.h2`
   }
 `;
 
-const Redes = styled.div`
+export const Redes = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 2em;
@@ -113,7 +112,7 @@ const Redes = styled.div`
   }
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,58 +133,9 @@ const Link = styled.a`
   }
 `;
 
-const Presentacion = styled.p`
+export const Presentacion = styled.p`
   text-align: center;
   width: min(100%, 500px);
   font-size: 1.2em;
   margin: 0;
 `;
-
-const SobreMi = () => {
-  const { t } = useTranslation(['aboutMe'], { useSuspense: false })
-  return (
-    <WrapperSobreMi id="sobreMi">
-      <WrapperTituloRedes>
-        <Titulo>
-          <Katu>
-            {t("hiIam")} <span>Katu</span>
-          </Katu>
-          <FrontEnd>Front-end developer</FrontEnd>
-        </Titulo>
-      </WrapperTituloRedes>
-      <Presentacion>
-      {t("desc")}
-      </Presentacion>
-      <Redes>
-        <Link
-          href="https://www.linkedin.com/in/cintiajimenamartinez/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <i className="fa-brands fa-linkedin-in"></i>
-          <p>Linkedin</p>
-        </Link>
-        <Link
-          href="https://github.com/KatuGT"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <i className="fa-brands fa-github"></i>
-          <p>Github</p>
-        </Link>
-
-        <Link
-          href="https://drive.google.com/file/d/1Cw3je7nWwGJLA3Buh71opgU2zfYAKhix/view?usp=sharing"
-          target="_blank"
-          download="CV - Cintia Jimena Martinez"
-          rel="noreferrer noopener"
-        >
-          <i className="fa-solid fa-file"></i>
-          <p>CV</p>
-        </Link>
-      </Redes>
-    </WrapperSobreMi>
-  );
-};
-
-export default SobreMi;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Proyecto = styled.div`
+export const Proyecto = styled.div`
   text-align: center;
   margin-bottom: 5em;
   display: flex;
@@ -33,7 +33,7 @@ const Proyecto = styled.div`
   }
 `;
 
-const InfoProyecto = styled.div`
+export const InfoProyecto = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5em;
@@ -45,32 +45,32 @@ const InfoProyecto = styled.div`
     }
   }
 `;
-const TituloProyecto = styled.h3`
+export const TituloProyecto = styled.h3`
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 0;
   color: ${({ theme }) => theme.subText};
 `;
 
-const DescProyecto = styled.p`
+export const DescProyecto = styled.p`
   margin-top: 0.2em;
   margin-bottom: 0.4em;
 `;
 
-const VerEnGithub = styled.a`
+export const VerEnGithub = styled.a`
   color: inherit;
   text-decoration: none;
   margin-bottom: 0.3em;
 `;
 
-const LinkImagenes = styled.a`
+export const LinkImagenes = styled.a`
   position: relative;
   @media screen and (min-width: 700px) {
     height: 500px;
   }
 `;
 
-const ImgProyectoMobile = styled.img`
+export const ImgProyectoMobile = styled.img`
   border-radius: 1em;
   position: relative;
   width: 100%;
@@ -100,7 +100,7 @@ const ImgProyectoMobile = styled.img`
   }
 `;
 
-const ImgProyecto = styled.img`
+export const ImgProyecto = styled.img`
   display: none;
   @media screen and (min-width: 700px) {
     display: block;
@@ -113,49 +113,3 @@ const ImgProyecto = styled.img`
   @media screen and (min-width: 900px) {
   }
 `;
-
-const ProyectoTemplate = ({
-  titulo,
-  descripcion,
-  githubFront,
-  githubBack,
-  imgMobile,
-  altMobile,
-  imgDesktop,
-  altDesktop,
-  linkDeploy,
-  orderDos,
-  imgPsition,
-}) => {
-  return (    
-      <Proyecto>
-        <InfoProyecto className={orderDos}>
-          <TituloProyecto>{titulo}</TituloProyecto>
-          <DescProyecto>{descripcion}</DescProyecto>
-          <VerEnGithub href={githubFront} rel='noopener noreferrer' target='_blank'>
-            <i className='fa-brands fa-github'></i> Front-end
-          </VerEnGithub>
-          {githubBack && (
-            <VerEnGithub href={githubBack} rel='noopener noreferrer' target='_blank'>
-              <i className='fa-brands fa-github'></i> Back-end
-            </VerEnGithub>
-          )}
-        </InfoProyecto>
-        <LinkImagenes
-          href={linkDeploy}
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          <ImgProyectoMobile
-            src={imgMobile}
-            alt={altMobile}
-            className={imgPsition}
-          />
-          <ImgProyecto src={imgDesktop} alt={altDesktop} />
-        </LinkImagenes>
-      </Proyecto>
-    
-  );
-};
-
-export default ProyectoTemplate;

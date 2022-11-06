@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import { Outlet, NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-
 
 export const WrapperProyectos = styled.section`
   margin: 0 auto;
@@ -27,7 +24,7 @@ export const WrapperProyectos = styled.section`
   }
 `;
 
-const WrapperTipoProyecto = styled.div`
+export const WrapperTipoProyecto = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 2rem;
@@ -43,31 +40,3 @@ const WrapperTipoProyecto = styled.div`
     font-weight: 700;
   }
 `;
-
-const Proyectos = () => {
-  const  { t } = useTranslation(['projects'])
-
-  return (
-    <section id='proyectos'>
-      <WrapperTipoProyecto>
-        <NavLink
-          to={'/'}
-          className='linkProyectos'
-        >
-          {t('personalProjects')}
-        </NavLink>
-        <NavLink
-          to={'en-grupo'}
-          className='linkProyectos'
-        >
-          {t('groupProjects')}
-        </NavLink>
-      </WrapperTipoProyecto>
-      <WrapperProyectos>
-        <Outlet />
-      </WrapperProyectos>
-    </section>
-  );
-};
-
-export default Proyectos;

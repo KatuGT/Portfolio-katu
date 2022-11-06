@@ -1,16 +1,14 @@
-import  { Suspense  } from 'react';
+import { Suspense } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import Navbar from './componentes/Navbar';
-import SobreMi from './componentes/SobreMi';
-import Divisor from './componentes/Divisor';
-import Tecnologias from './componentes/Tecnologias';
-import Main from './componentes/Main';
-import Footer from './componentes/Footer';
+import Navbar from './componentes/navbar/Navbar';
+import SobreMi from './componentes/sobreMi/SobreMi';
+import Divisor from './componentes/divisor/Divisor';
+import Tecnologias from './componentes/tecnologias/Tecnologias';
+import Main from './componentes/main/Main';
+import Footer from './componentes/footer/Footer';
 import Themes from './componentes/Themes';
 import { useState } from 'react';
-import {
-  RouterProvider,
-} from "react-router-dom";
+import { RouterProvider } from 'react-router-dom';
 import Router from './Router';
 
 const MyGlobalStyle = createGlobalStyle`
@@ -21,15 +19,14 @@ const MyGlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('dark');
 
-  
   return (
     <Suspense fallback={null}>
       <ThemeProvider theme={Themes[theme]}>
         <MyGlobalStyle />
         <div className='App'>
-          <Navbar setTheme = { setTheme } theme = { theme }  />
+          <Navbar setTheme={setTheme} theme={theme} />
           <Main>
             <SobreMi />
             <Divisor />
