@@ -1,8 +1,16 @@
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FrontEnd, Katu, Link, Presentacion, Redes, Titulo, WrapperSobreMi, WrapperTituloRedes } from './sobreMi.styled';
 
 const SobreMi = () => {
-  const { t } = useTranslation(['aboutMe'], { useSuspense: false })
+  const { t } = useTranslation(['aboutMe'], { useSuspense: false });
+
+  const [lenguajeActual, setLenguajeActual] = useState()
+  const lenguaje = JSON.stringify(localStorage.getItem('i18nextLng'));
+  useEffect(() => {
+    setLenguajeActual(lenguaje)
+  }, [lenguaje]);
+
   return (
     <WrapperSobreMi id="sobreMi">
       <WrapperTituloRedes>
@@ -35,7 +43,7 @@ const SobreMi = () => {
         </Link>
 
         <Link
-          href="https://drive.google.com/file/d/1Cw3je7nWwGJLA3Buh71opgU2zfYAKhix/view?usp=sharing"
+          href={lenguajeActual === 'es' ? "https://drive.google.com/file/d/1Cw3je7nWwGJLA3Buh71opgU2zfYAKhix/view?usp=sharing" : "https://drive.google.com/file/d/1OGnPEXF2T9K6yMwojPhoNa5cT-HiDika/view?usp=share_link"}
           target="_blank"
           download="CV - Cintia Jimena Martinez"
           rel="noreferrer noopener"
