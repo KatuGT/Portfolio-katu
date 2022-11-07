@@ -8,7 +8,6 @@ import {
   Menu,
   MenuIconMobil,
   MenuItem,
-  // MenuLink,
   NavBar,
   SwitchInput,
   SwitchLabel,
