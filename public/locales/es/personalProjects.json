@@ -1,11 +1,11 @@
 {
     "interactiveCard" :{
-        "desc": "Este formulario de tarjeta le permite ver sus datos reflejados en tiempo real en ambos lados de la tarjeta. Herremiantas and librerias: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb"
+        "desc": "Este formulario de tarjeta le permite ver sus datos reflejados en tiempo real en ambos lados de la tarjeta. Herramientas y librerías: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb"
     },
     "moviePop" :{
-        "desc": "Catalogo de peliculas realizados como parte de una oportunidad laboral, usando la API TVmaze, estuve a cargo del front y back end."
+        "desc": "Catálogo de películas realizados como parte de una oportunidad laboral, usando la API TVmaze, estuve a cargo del front y back end."
     },
     "atlas" :{
-        "desc": "Otro catqlogo de pelicula realizados para una oportunidad laboral, esta vez solo se realizo el front end. "
+        "desc": "Otro Catálogo de películas realizados para una oportunidad laboral, esta vez solo se realizo el front end. "
     }
 }
