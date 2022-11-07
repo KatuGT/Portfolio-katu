@@ -1,30 +1,54 @@
-import { Outlet, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { WrapperProyectos, WrapperTipoProyecto } from './proyectos.styled';
+import {
+  InputTipoProyecto,
+  LabelSpan,
+  LabelTipoProyecto,
+  MainWrapperPruectos,
+  WrapperListaProductos,
+  WrapperProyectos,
+  WrapperTipoProyecto,
+} from './proyectos.styled';
+import ProyectosEnGrupo from '../ProyectosEnGrupo';
+import ProyectosIndividuales from '../ProyectosIndividuales';
+import { useState } from 'react';
 
 const Proyectos = () => {
-  const  { t } = useTranslation(['projects'])
+  const { t } = useTranslation(['projects']);
+
+  const [tipoProyecto, setTipoProyecto] = useState('');
 
   return (
-    <section id='proyectos'>
+    <MainWrapperPruectos id='proyectos'>
       <WrapperTipoProyecto>
-        <NavLink
-          to={'/'}
-          className='linkProyectos'
-        >
-          {t('personalProjects')}
-        </NavLink>
-        <NavLink
-          to={'en-grupo'}
-          className='linkProyectos'
-        >
-          {t('groupProjects')}
-        </NavLink>
+        <LabelTipoProyecto className='linkProyectos'>
+          <InputTipoProyecto
+            type='radio'
+            name='tipoProyecto'
+            value='proyectosIndivivuales'
+            onClick={(e) => setTipoProyecto(e.target.value)}
+          />
+          <LabelSpan>{t('personalProjects')}</LabelSpan>
+        </LabelTipoProyecto>
+        <LabelTipoProyecto className='linkProyectos'>
+          <InputTipoProyecto
+            type='radio'
+            name='tipoProyecto'
+            value='proyectoGrupales'
+            defaultChecked
+            onClick={(e) => setTipoProyecto(e.target.value)}
+          />
+          <LabelSpan>{t('groupProjects')}</LabelSpan>
+        </LabelTipoProyecto>
       </WrapperTipoProyecto>
-      <WrapperProyectos>
-        <Outlet />
+      <WrapperProyectos showProject={tipoProyecto}>
+        <WrapperListaProductos>
+          <ProyectosIndividuales/>
+        </WrapperListaProductos>
+        <WrapperListaProductos  hide='left'>
+          <ProyectosEnGrupo/>
+        </WrapperListaProductos>
       </WrapperProyectos>
-    </section>
+    </MainWrapperPruectos>
   );
 };
 
