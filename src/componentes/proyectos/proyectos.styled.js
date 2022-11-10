@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const MainWrapperPruectos = styled.section`
   width: 100%;
+  margin: 0 auto;
 `;
 
 export const WrapperProyectos = styled.section`
