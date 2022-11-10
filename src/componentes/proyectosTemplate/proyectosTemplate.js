@@ -5,6 +5,7 @@ export const Proyecto = styled.div`
   margin-bottom: 5em;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   @media screen and (min-width: 600px) {
     margin-bottom: 9em;
     width: 80%;
