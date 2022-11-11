@@ -8,6 +8,8 @@ import LogoVS from "../../assets/imagenes/logo-vscode-small.webp";
 import LogoFigma from "../../assets/imagenes/logo-figma-small.webp";
 import LogoPS from "../../assets/imagenes/logo-ps-small.webp";
 import LogoAI from "../../assets/imagenes/logo-ai-small.webp";
+import LogoSASS from "../../assets/imagenes/logo-sass-small.webp";
+import LogoRedux from "../../assets/imagenes/logo-redux-small.webp";
 import { useTranslation } from 'react-i18next';
 import { InfoExtra, Logo, NuevoTituloSeccion, WrapperLogos, WrapperTecnologias } from './tecnologias.styled';
 import { Titulo } from '../tituloSecciones/tituloSecciones';
@@ -29,6 +31,8 @@ const Tecnologias = () => {
         <Logo src={LogoFigma} alt="Logo Figma" />
         <Logo src={LogoPS} alt="Logo Photoshop" />
         <Logo src={LogoAI} alt="Logo Illustrator" />
+        <Logo src={LogoSASS} alt="Logo Illustrator" />
+        <Logo src={LogoRedux} alt="Logo Illustrator" />
       </WrapperLogos>
       <NuevoTituloSeccion>{t('extraInfo')}</NuevoTituloSeccion>
       <InfoExtra>
