@@ -8,8 +8,7 @@ import Main from './componentes/main/Main';
 import Footer from './componentes/footer/Footer';
 import Themes from './componentes/Themes';
 import { useState } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import Router from './Router';
+import Proyectos from './componentes/proyectos/Proyectos';
 
 const MyGlobalStyle = createGlobalStyle`
   body {
@@ -32,7 +31,8 @@ function App() {
             <Divisor />
             <Tecnologias />
             <Divisor />
-            <RouterProvider router={Router} />
+            <Proyectos/>
+            {/* <RouterProvider router={Router} /> */}
           </Main>
           <Footer />
         </div>
