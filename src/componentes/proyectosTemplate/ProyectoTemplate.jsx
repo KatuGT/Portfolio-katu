@@ -1,4 +1,4 @@
-import { DescProyecto, ImgProyecto, ImgProyectoMobile, InfoProyecto, LinkImagenes, Proyecto, TituloProyecto, VerEnGithub } from './proyectosTemplate';
+import { DescProyecto, ImgProyecto, ImgProyectoMobile, InfoProyecto, LinkImagenes, Proyecto, TituloProyecto, VerEnGithub } from './proyectosTemplate.styled';
 
 const ProyectoTemplate = ({
   titulo,

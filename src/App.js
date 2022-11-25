@@ -9,6 +9,7 @@ import Footer from './componentes/footer/Footer';
 import Themes from './componentes/Themes';
 import { useState } from 'react';
 import Proyectos from './componentes/proyectos/Proyectos';
+import ContactForm from './componentes/contactForm/contactForm';
 
 const MyGlobalStyle = createGlobalStyle`
   body {
@@ -32,7 +33,7 @@ function App() {
             <Tecnologias />
             <Divisor />
             <Proyectos/>
-            {/* <RouterProvider router={Router} /> */}
+            {/* <ContactForm/> */}
           </Main>
           <Footer />
         </div>
