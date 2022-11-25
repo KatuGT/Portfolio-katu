@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Header,
@@ -8,7 +8,6 @@ import {
   Menu,
   MenuIconMobil,
   MenuItem,
-  // MenuLink,
   NavBar,
   SwitchInput,
   SwitchLabel,
@@ -34,21 +33,20 @@ const Navbar = (props) => {
 
   let isChecked = useRef(false);
 
-  let navElement = useRef('');
-  let navHeight = navElement.current.offsetHeight;
-  document.documentElement.style.setProperty(
-    '--navigation-height',
-    navHeight + 'px'
-  );
 
   const { t, i18n } = useTranslation(['header']);
-
+  const [language, setLanguage] = useState('')
+  const currentLanguege = localStorage.getItem('i18nextLng')
+  useEffect(() => {
+    setLanguage(currentLanguege)
+  }, [currentLanguege])
+  console.log(language);
   const handleLenguaje = (e) => {
     const lenguaje = e.target.value;
     i18n.changeLanguage(lenguaje);
   };
   return (
-    <Header ref={navElement}>
+    <Header>
       <NavBar>
         <LogoContainer href='#sobreMi'>Katu</LogoContainer>
         <MenuIconMobil onClick={() => setShowMenu(!ShowMenu)}>
@@ -75,6 +73,7 @@ const Navbar = (props) => {
                   type='radio'
                   name='lenguaje'
                   value='en'
+                  defaultChecked
                   onClick={(e) => {
                     handleLenguaje(e);
                   }}
@@ -83,19 +82,39 @@ const Navbar = (props) => {
               </Lenguaje>
             </SwitchLenguajeMobile>
           </MenuItem>
+          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+            <Link
+              to='sobreMi'
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={100}
+            >
+              {t('aboutMe')}
+            </Link>
+          </MenuItem>
             <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-              <Link to='sobreMi' spy={true} smooth={true} offset={-150} duration={100}>{t('aboutMe')}</Link>
+              <Link
+                to='tecno'
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={100}
+              >
+                {t('toolsAndTech')}
+              </Link>
             </MenuItem>
-          <Link>
             <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-              <Link to='tecno' spy={true} smooth={true} offset={-150} duration={100}>{t('toolsAndTech')}</Link>
+              <Link
+                to='proyectos'
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={100}
+              >
+                {t('projects')}
+              </Link>
             </MenuItem>
-          </Link>
-          <Link>
-            <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-              <Link to='proyectos' spy={true} smooth={true} offset={-150} duration={100}>{t('projects')}</Link>
-            </MenuItem>
-          </Link>
         </Menu>
         <SwitchWrapper>
           <SwitchInput
@@ -123,6 +142,7 @@ const Navbar = (props) => {
               type='radio'
               name='lenguaje'
               value='en'
+              defaultChecked
               onClick={(e) => {
                 handleLenguaje(e);
               }}
