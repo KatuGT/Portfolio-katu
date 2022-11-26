@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const ContactoTitulo = styled.h3`
     margin: 0 auto;
     text-align: center;
+    color: var(--main-clr);
+    font-size: 2rem;
 `
 
 export const WrapperContact = styled.section`
