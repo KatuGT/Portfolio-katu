@@ -33,7 +33,8 @@ function App() {
             <Tecnologias />
             <Divisor />
             <Proyectos/>
-            {/* <ContactForm/> */}
+            <Divisor />
+            <ContactForm/>
           </Main>
           <Footer />
         </div>

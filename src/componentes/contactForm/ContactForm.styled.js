@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const ContactoTitulo = styled.h3`
+    margin: 0 auto;
+    text-align: center;
+`
+
+export const WrapperContact = styled.section`
+
+`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
@@ -8,11 +16,19 @@ export const Form = styled.form`
     color: #fff;
     gap: 2rem;
 `
+
+export const WrapperInput = styled.div``
 export const Label = styled.label`
     display: flex;
     flex-direction: column;
     position: relative;
 `
+
+export const ErrorMessage = styled.p`
+    color: red;
+    font-weight: lighter;
+`
+
 export const Input = styled.input`
     padding: 0.5rem;
     border-radius: 5px;
@@ -62,4 +78,9 @@ export const Button = styled.button`
     text-align: center;
     padding: 0.5rem;
     border-radius: 5px;
+    &:hover{
+        background-color: #fff ;
+        cursor: pointer;
+        color: var(--main-clr-dark);
+    }
 `
