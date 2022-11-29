@@ -1,11 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { Contacto, WrapperFooter } from './footer.styled';
+ import { Contacto, WrapperFooter } from './footer.styled';
 
 const Footer = () => {
-  const { t } = useTranslation(['footer'], { useSuspense: false })
   return (
     <WrapperFooter>
-      <p>{t('contact')}</p>
       <Contacto>
         <a
           href="https://github.com/KatuGT"
@@ -21,7 +18,6 @@ const Footer = () => {
         >
           <i className="fa-brands fa-linkedin-in"></i>
         </a>
-        <p>93katu@gmail.com</p>
       </Contacto>
     </WrapperFooter>
   );
