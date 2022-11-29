@@ -15,6 +15,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ContactForm = () => {
   const schema = yup
@@ -35,6 +37,9 @@ const ContactForm = () => {
   });
   const formulario = useRef();
 
+  const { t } = useTranslation(['contactForm'], { useSuspense: false });
+  const mensajeToast = t('toast');
+
   const onSubmit = () => {
     emailjs
       .sendForm(
@@ -43,18 +48,19 @@ const ContactForm = () => {
         formulario.current,
         'Vtothha2vQZzdv3Dk'
       )
-      .then((response) => console.log(response))
+      .then(({status}) => status === 200 && toast(mensajeToast))
       .catch((error) => console.error(error));
     reset();
   };
+
   return (
-    <WrapperContact>
-      <ContactoTitulo>Contact</ContactoTitulo>
+    <WrapperContact id='contacto'>
+      <ContactoTitulo>{t('contact')}</ContactoTitulo>
       <Form onSubmit={handleSubmit(onSubmit)} ref={formulario}>
         <WrapperInput>
           <Label>
             <Input type='text' placeholder=' ' {...register('name')} />
-            <Span>Nombre</Span>
+            <Span>{t('name')}</Span>
           </Label>
           {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
         </WrapperInput>
@@ -68,12 +74,25 @@ const ContactForm = () => {
         <WrapperInput>
           <Label>
             <TextArea placeholder=' ' rows='15' {...register('message')} />
-            <Span>Mensaje</Span>
+            <Span>{t('message')}</Span>
           </Label>
-          {errors.message && <ErrorMessage>{errors.message.message}</ErrorMessage>}
+          {errors.message && (
+            <ErrorMessage>{errors.message.message}</ErrorMessage>
+          )}
         </WrapperInput>
-        <Button type='submit'>Enviar</Button>
+        <Button type='submit'>{t('send')}</Button>
       </Form>
+      <Toaster
+        position='bottom-center'
+        toastOptions={{
+          className: '',
+          style: {
+            padding: '16px',
+            backgroundColor: 'var(--main-clr)',
+            color: '#000'
+          },
+        }}
+      />
     </WrapperContact>
   );
 };
