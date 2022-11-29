@@ -69,6 +69,7 @@ export const MenuItem = styled.li`
   font-weight: 700;
   scroll-behavior: smooth;
   text-align: center;
+  cursor: pointer;
   && a {
     display: flex;
     flex-direction: column;
