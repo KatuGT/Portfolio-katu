@@ -54,7 +54,7 @@ const ContactForm = () => {
   };
 
   return (
-    <WrapperContact>
+    <WrapperContact id='contacto'>
       <ContactoTitulo>{t('contact')}</ContactoTitulo>
       <Form onSubmit={handleSubmit(onSubmit)} ref={formulario}>
         <WrapperInput>
