@@ -15,7 +15,7 @@ export const Form = styled.form`
     flex-direction: column;
     width: min(500px, 100%);
     margin: 4rem auto;
-    color: #fff;
+    color: ${({ theme }) => theme.text};
     gap: 2rem;
 `
 
@@ -37,7 +37,7 @@ export const Input = styled.input`
     border: none;
     border-bottom: 1px solid var(--main-clr);
     background-color: transparent;
-    color: #fff;
+    color: ${({ theme }) => theme.text};
     &:focus{
         outline: none;
     }
@@ -48,7 +48,7 @@ export const TextArea = styled.textarea`
     border: none;
     border-bottom: 1px solid var(--main-clr);
     background-color: transparent;
-    color: #fff;
+    color: ${({ theme }) => theme.text};
     resize: none;
     &:focus{
         outline: none;
