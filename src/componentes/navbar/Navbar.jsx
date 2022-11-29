@@ -112,6 +112,17 @@ const Navbar = (props) => {
               {t('projects')}
             </Link>
           </MenuItem>
+          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+            <Link
+              to='contacto'
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={100}
+            >
+              {t('contact')}
+            </Link>
+          </MenuItem>
         </Menu>
         <SwitchWrapper>
           <SwitchInput
