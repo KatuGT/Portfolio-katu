@@ -1,17 +1,18 @@
 import React from 'react'
-import ProyectoTemplate from '../componentes/proyectosTemplate/ProyectoTemplate';
-import ImgPetSpaceMobile from '../assets/imagenes/pr-petSpaceMobile.webp';
-import ImgPetSpace from '../assets/imagenes/pr-petSpace.webp';
-import ImEstafaMLibre from '../assets/imagenes/pr-estafaMLibre.webp';
-import ImEstafaMLibreMobile from '../assets/imagenes/pr-estafaMLibreMobile.webp';
-import ImgRollflixMobile from '../assets/imagenes/pr-rollflixMobile.webp';
-import ImgRollflix from '../assets/imagenes/pr-rollflix.webp';
+import ImgPetSpaceMobile from '../../assets/imagenes/pr-petSpaceMobile.webp';
+import ImgPetSpace from '../../assets/imagenes/pr-petSpace.webp';
+import ImEstafaMLibre from '../../assets/imagenes/pr-estafaMLibre.webp';
+import ImEstafaMLibreMobile from '../../assets/imagenes/pr-estafaMLibreMobile.webp';
+import ImgRollflixMobile from '../../assets/imagenes/pr-rollflixMobile.webp';
+import ImgRollflix from '../../assets/imagenes/pr-rollflix.webp';
 import { useTranslation } from 'react-i18next';
+import { WrapperListaProyectos } from './listaProyecto.styled';
+import ProyectoTemplate from '../proyectosTemplate/ProyectoTemplate';
 
 const ProyectosEnGrupo = () => {
   const  { t } = useTranslation(['grupalProjects'])
   return (
-    <>
+    <WrapperListaProyectos>
       <ProyectoTemplate
         titulo='Pet Space'
         descripcion={t('petSpace.desc')}
@@ -47,7 +48,7 @@ const ProyectosEnGrupo = () => {
         linkDeploy='https://effortless-centaur-f31ca1.netlify.app/'
         imgPsition='left'
       />
-    </>
+    </WrapperListaProyectos>
   )
 }
 

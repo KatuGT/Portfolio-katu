@@ -12,7 +12,7 @@ export const WrapperProyectos = styled.section`
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   transition: 1s ease;
-  translate: -200%;
+  /* translate: -200%; */
   translate: ${(props) =>
     props.showProject === 'proyectosIndivivuales' ? '-200%' : '0'};
   @media screen and (min-width: 1400px) {

@@ -29,11 +29,8 @@ function App() {
           <Navbar setTheme={setTheme} theme={theme} />
           <Main>
             <SobreMi />
-            <Divisor />
             <Tecnologias />
-            <Divisor />
             <Proyectos/>
-            <Divisor />
             <ContactForm/>
           </Main>
           <Footer />

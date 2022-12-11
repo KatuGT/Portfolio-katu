@@ -1,17 +1,18 @@
-import ProyectoTemplate from '../componentes/proyectosTemplate/ProyectoTemplate';
-import ImgCardMobile from '../assets/imagenes/pr-interactiveCardMovile.webp';
-import ImgCard from '../assets/imagenes/pr-interactiveCard.webp';
-import ImgMoviePopMobile from '../assets/imagenes/pr-moviepopMobile.webp';
-import ImgMoviePop from '../assets/imagenes/pr-moviepop.webp';
-import ImgAtlasMobile from '../assets/imagenes/pr-atlasMobile.webp';
-import ImgAtlas from '../assets/imagenes/pr-atlas.webp';
+import ImgCardMobile from '../../assets/imagenes/pr-interactiveCardMovile.webp';
+import ImgCard from '../../assets/imagenes/pr-interactiveCard.webp';
+import ImgMoviePopMobile from '../../assets/imagenes/pr-moviepopMobile.webp';
+import ImgMoviePop from '../../assets/imagenes/pr-moviepop.webp';
+import ImgAtlasMobile from '../../assets/imagenes/pr-atlasMobile.webp';
+import ImgAtlas from '../../assets/imagenes/pr-atlas.webp';
 import { useTranslation } from 'react-i18next';
+import { WrapperListaProyectos } from './listaProyecto.styled';
+import ProyectoTemplate from '../proyectosTemplate/ProyectoTemplate';
 
 const ProyectosIndividuales = () => {
   const  { t } = useTranslation(['personalProjects'])
 
   return (
-    <>
+    <WrapperListaProyectos >
       <ProyectoTemplate
         titulo='Interactive Card'
         descripcion={t('interactiveCard.desc')}
@@ -47,7 +48,7 @@ const ProyectosIndividuales = () => {
         linkDeploy='https://helpful-fenglisu-56d94c.netlify.app/'
         imgPsition='left'
       />
-    </>
+    </WrapperListaProyectos>
   );
 };
 

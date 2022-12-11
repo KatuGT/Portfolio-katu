@@ -8,9 +8,10 @@ import {
   WrapperProyectos,
   WrapperTipoProyecto,
 } from './proyectos.styled';
-import ProyectosEnGrupo from '../ProyectosEnGrupo';
-import ProyectosIndividuales from '../ProyectosIndividuales';
+import ProyectosEnGrupo from '../listaProyectos/ProyectosEnGrupo';
+import ProyectosIndividuales from '../listaProyectos/ProyectosIndividuales';
 import { useState } from 'react';
+import Divisor from '../divisor/Divisor';
 
 const Proyectos = () => {
   const { t } = useTranslation(['projects']);
@@ -18,37 +19,40 @@ const Proyectos = () => {
   const [tipoProyecto, setTipoProyecto] = useState('');
 
   return (
-    <MainWrapperPruectos id='proyectos'>
-      <WrapperTipoProyecto>
-        <LabelTipoProyecto className='linkProyectos'>
-          <InputTipoProyecto
-            type='radio'
-            name='tipoProyecto'
-            value='proyectosIndivivuales'
-            onClick={(e) => setTipoProyecto(e.target.value)}
-          />
-          <LabelSpan>{t('personalProjects')}</LabelSpan>
-        </LabelTipoProyecto>
-        <LabelTipoProyecto className='linkProyectos'>
-          <InputTipoProyecto
-            type='radio'
-            name='tipoProyecto'
-            value='proyectoGrupales'
-            defaultChecked
-            onClick={(e) => setTipoProyecto(e.target.value)}
-          />
-          <LabelSpan>{t('groupProjects')}</LabelSpan>
-        </LabelTipoProyecto>
-      </WrapperTipoProyecto>
-      <WrapperProyectos showProject={tipoProyecto}>
-        <WrapperListaProductos>
-          <ProyectosIndividuales/>
-        </WrapperListaProductos>
-        <WrapperListaProductos  hide='left'>
-          <ProyectosEnGrupo/>
-        </WrapperListaProductos>
-      </WrapperProyectos>
-    </MainWrapperPruectos>
+    <>
+      <Divisor />
+      <MainWrapperPruectos id='proyectos'>
+        <WrapperTipoProyecto>
+          <LabelTipoProyecto className='linkProyectos'>
+            <InputTipoProyecto
+              type='radio'
+              name='tipoProyecto'
+              value='proyectosIndivivuales'
+              onClick={(e) => setTipoProyecto(e.target.value)}
+            />
+            <LabelSpan>{t('personalProjects')}</LabelSpan>
+          </LabelTipoProyecto>
+          <LabelTipoProyecto className='linkProyectos'>
+            <InputTipoProyecto
+              type='radio'
+              name='tipoProyecto'
+              value='proyectoGrupales'
+              defaultChecked
+              onClick={(e) => setTipoProyecto(e.target.value)}
+            />
+            <LabelSpan>{t('groupProjects')}</LabelSpan>
+          </LabelTipoProyecto>
+        </WrapperTipoProyecto>
+        <WrapperProyectos showProject={tipoProyecto}>
+          <WrapperListaProductos>
+            <ProyectosIndividuales />
+          </WrapperListaProductos>
+          <WrapperListaProductos hide='left'>
+            <ProyectosEnGrupo />
+          </WrapperListaProductos>
+        </WrapperProyectos>
+      </MainWrapperPruectos>
+    </>
   );
 };
 

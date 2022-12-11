@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WrapperFooter = styled.footer`
   background-color: #000;
-  padding: 2em;
+  padding: 4em;
   color: #fff;
   display: grid;
   place-items: center;
