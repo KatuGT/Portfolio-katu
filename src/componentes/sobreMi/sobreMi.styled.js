@@ -68,7 +68,7 @@ export const Redes = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 2em;
-  margin: 1em;
+  margin: 1em 1em 0 1em;
 
   i {
     margin-right: 0.5em;

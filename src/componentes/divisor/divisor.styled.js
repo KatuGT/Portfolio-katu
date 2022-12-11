@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WrapperLineas = styled.div`
-  margin: 3em 0;
+  padding: 3em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Navbar from './componentes/navbar/Navbar';
 import SobreMi from './componentes/sobreMi/SobreMi';
-import Divisor from './componentes/divisor/Divisor';
 import Tecnologias from './componentes/tecnologias/Tecnologias';
 import Main from './componentes/main/Main';
 import Footer from './componentes/footer/Footer';
@@ -29,11 +28,8 @@ function App() {
           <Navbar setTheme={setTheme} theme={theme} />
           <Main>
             <SobreMi />
-            <Divisor />
             <Tecnologias />
-            <Divisor />
             <Proyectos/>
-            <Divisor />
             <ContactForm/>
           </Main>
           <Footer />
