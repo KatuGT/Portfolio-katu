@@ -51,6 +51,7 @@ export const WrapperTipoProyecto = styled.div`
 
 export const LabelTipoProyecto = styled.label`
   cursor: pointer;
+  text-align: center;
 `;
 
 export const InputTipoProyecto = styled.input`
@@ -58,6 +59,7 @@ export const InputTipoProyecto = styled.input`
 `;
 
 export const LabelSpan = styled.span`
+  text-align: center;
   ${InputTipoProyecto}:checked + && {
     color: var(--main-clr);
     font-size: 2rem;

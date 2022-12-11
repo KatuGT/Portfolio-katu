@@ -15,7 +15,7 @@ export const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding-inline: 2rem;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 950px) {
     justify-content: space-around;
   }
 `;
@@ -26,7 +26,7 @@ export const LogoContainer = styled.a`
   font-size: 2em;
   font-weight: bolder;
   text-decoration: none;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 950px) {
     margin: 0;
   }
 `;
@@ -37,7 +37,7 @@ export const MenuIconMobil = styled.div`
   cursor: pointer;
   padding: 0.8em 1em;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 950px) {
     display: none;
   }
 `;
@@ -54,7 +54,7 @@ export const Menu = styled.ul`
   transition: left 0.5s ease-out;
   z-index: 20000;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 950px) {
     position: relative;
     display: flex;
     color: var(--main-clr);
@@ -150,7 +150,7 @@ export const SwitchLenguaje = styled.div`
   position: relative;
   display: flex;
   gap: 0.8rem;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 950px) {
     display: none;
   }
 `;
@@ -163,7 +163,7 @@ export const SwitchLenguajeMobile = styled.div`
   text-align: center;
   width: 100%;
   background-color: #000;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 950px) {
     display: none;
   }
 `;

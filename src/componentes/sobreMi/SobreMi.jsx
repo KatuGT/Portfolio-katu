@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   FrontEnd,
@@ -11,7 +12,20 @@ import {
 } from './sobreMi.styled';
 
 const SobreMi = () => {
-  const { t } = useTranslation(['aboutMe'], { useSuspense: false })
+  const { t } = useTranslation(['aboutMe'], { useSuspense: false });
+
+  
+  const [cvLink, setCvLink] = useState('');
+
+  const idioma = localStorage.getItem('i18nextLng');
+
+  useEffect(() => {
+    const link = (idioma === 'es'
+    ? 'https://drive.google.com/file/d/1lBSQJdwJapmV22w3OX-eeOlK01rWjgdS/view?usp=share_link'
+    : 'https://drive.google.com/file/d/10U4nVSUJq7ksbZ01YsBj2RQSHrXqQcx5/view?usp=share_link')
+    setCvLink(link)
+  }, [idioma]);
+  
   return (
     <WrapperSobreMi id='sobreMi'>
       <WrapperTituloRedes>
@@ -42,10 +56,10 @@ const SobreMi = () => {
         </Link>
 
         <Link
-          href="https://drive.google.com/file/d/1Cw3je7nWwGJLA3Buh71opgU2zfYAKhix/view?usp=sharing"
-          target="_blank"
-          download="CV - Cintia Jimena Martinez"
-          rel="noreferrer noopener"
+          href={cvLink}
+          target='_blank'
+          download='CV - Cintia Jimena Martinez'
+          rel='noreferrer noopener'
         >
           <i className='fa-solid fa-file'></i>
           <p>CV</p>

@@ -2,6 +2,7 @@
 
 :root {
   --main-clr: hsla(162, 51%, 65%);
+  --main-clr-dark: hsl(162, 28%, 38%);
 }
 
 html {
