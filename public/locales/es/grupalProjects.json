@@ -5,7 +5,7 @@
     "estafaMLibre" :{
         "desc": "Es la versión malvada de Mercado Libre. Creada por un equipo de 3/4 personas, mis tareas fueron maquetar el footer y landing page. Testing realizado al 80%.  Herramientas y librerías  usadas: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap"
     },
-    "rollflix" :{
-        "desc": "Solo un clon de Netflix, proyecto final para el curso full stack de 'Rolling Code School' usanado MERN stack"
+    "sinFronteras" :{
+        "desc": "Esta es a aplicación para celular desarrollada con React Native, En esta ocación fui parte de un grupo de nueve, de los cuales 4 eramos de front-end. Trabajamos durante cinco semanas, durantes las cuales yo fui responsable del desarrollo de la primera y segunda screen de registro, ademas estuve a cargo de refactorizar la screen 'Perfil profesional'"
     }
 }

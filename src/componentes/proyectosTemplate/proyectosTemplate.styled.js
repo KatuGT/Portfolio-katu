@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Proyecto = styled.div`
   text-align: center;
@@ -66,6 +66,28 @@ export const LinkImagenes = styled.a`
   position: relative;
   @media screen and (min-width: 700px) {
     height: 500px;
+  }
+`;
+
+export const WrapperImagenesMobile = styled.div`
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  @media screen and (min-width: 700px) {
+  }
+`;
+
+export const ImgProyectoMobileOnly = styled.img`
+  position: relative;
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  object-position: top center;
+  transition: width ease 1s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  &&:hover{
+    width: 200px;
   }
 `;
 

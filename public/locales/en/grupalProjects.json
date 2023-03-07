@@ -5,7 +5,7 @@
     "estafaMLibre" :{
         "desc": "This is the Mercado Libre´s evil version. Built by a team of 3/4 members, my tasks were to create the landing page and footer. Testing up to 80%. Tools and libraries used: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap."
     },
-    "rollflix" :{
-        "desc": "Just a Netflix clone, final project for the full stack course in 'Rolling Code School' using MERN stack."
+    "sinFronteras" :{
+        "desc": "This is a mobile app developed with React Native. On this occasion, I was part of a team of nine, with four members on the front-end team. We worked for five weeks, during which time I was responsible for developing the first and second screens for the registration section. Additionally, I refactored the 'Professional Profile' feature."
     }
 }
