@@ -21,8 +21,8 @@ const SobreMi = () => {
 
   useEffect(() => {
     const link = (idioma === 'es'
-    ? 'https://drive.google.com/file/d/1lBSQJdwJapmV22w3OX-eeOlK01rWjgdS/view?usp=share_link'
-    : 'https://drive.google.com/file/d/10U4nVSUJq7ksbZ01YsBj2RQSHrXqQcx5/view?usp=share_link')
+    ? 'https://drive.google.com/file/d/1MTTv0wRLhb7VfoAvHfv5Tn0EeflyVT3L/view?usp=share_link'
+    : 'https://drive.google.com/file/d/1AtAZ4A-csmhIoAz9UPkC-EAYBT9RQPIJ/view?usp=share_link')
     setCvLink(link)
   }, [idioma]);
   
