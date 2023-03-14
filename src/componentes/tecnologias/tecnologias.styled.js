@@ -10,7 +10,7 @@ export const WrapperTecnologias = styled.section`
 export const WrapperLogos = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 1em;
   justify-content: center;
   margin-bottom: 4em;
 
