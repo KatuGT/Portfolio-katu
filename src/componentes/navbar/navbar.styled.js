@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Header = styled.header`
   position: fixed;
@@ -6,17 +6,19 @@ export const Header = styled.header`
   width: 100%;
   z-index: 30000;
   scroll-behavior: smooth;
+  background-color: #000;
 `;
 
 export const NavBar = styled.nav`
-  background-color: #000;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 2rem;
+  width: 100%;
+  margin: 0 auto;
   @media screen and (min-width: 950px) {
-    justify-content: space-around;
+    width: 66%;
+    justify-content: space-between;
   }
 `;
 
@@ -49,7 +51,7 @@ export const Menu = styled.ul`
   padding: 0;
   position: absolute;
   top: 100%;
-  left: ${({ open }) => (open ? '0' : '-100%')};
+  left: ${({ open }) => (open ? "0" : "-100%")};
   background-color: var(--main-clr);
   transition: left 0.5s ease-out;
   z-index: 20000;
@@ -70,6 +72,7 @@ export const MenuItem = styled.li`
   scroll-behavior: smooth;
   text-align: center;
   cursor: pointer;
+  color: #fff;
   && a {
     display: flex;
     flex-direction: column;
@@ -79,14 +82,11 @@ export const MenuItem = styled.li`
     font-size: 1.5em;
     color: inherit;
 
-    &:hover {
-      background-color: #000;
-      color: #fff;
-    }
-
+    &:hover,
     &.active {
       background-color: #000;
-      color: #fff;
+      color: var(--main-clr);
+      font-weight: bold;
     }
 
     @media screen and (min-width: 600px) {
@@ -111,7 +111,7 @@ export const SwitchLabel = styled.label`
   position: relative;
   cursor: pointer;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 2.5em;
     width: 2.5em;
@@ -124,11 +124,11 @@ export const SwitchLabel = styled.label`
   }
 
   &::after {
-    content: '${({ theme }) => theme.icon}';
-    font-family: 'Font Awesome 5 Free';
+    content: "${({ theme }) => theme.icon}";
+    font-family: "Font Awesome 5 Free";
     font-size: 1.7em;
-    top: ${({ isChecked }) => (isChecked.current.checked ? '.07em' : '0')};
-    left: ${({ isChecked }) => (isChecked.current.checked ? '.37em' : '.25em')};
+    top: ${({ isChecked }) => (isChecked.current.checked ? ".07em" : "0")};
+    left: ${({ isChecked }) => (isChecked.current.checked ? ".37em" : ".25em")};
     position: absolute;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -137,11 +137,11 @@ export const SwitchLabel = styled.label`
 `;
 export const SwitchInput = styled.input`
   display: none;
-  &[type='checkbox']:checked + ${SwitchLabel}::before {
+  &[type="checkbox"]:checked + ${SwitchLabel}::before {
     background-color: var(--main-clr);
     transform: translateX(100%);
   }
-  &[type='checkbox']:checked + ${SwitchLabel}::after {
+  &[type="checkbox"]:checked + ${SwitchLabel}::after {
     transform: translateX(135%) rotate(0.5turn);
   }
 `;
@@ -149,6 +149,7 @@ export const SwitchInput = styled.input`
 export const SwitchLenguaje = styled.div`
   position: relative;
   display: flex;
+  align-items: center;
   gap: 0.8rem;
   @media screen and (max-width: 950px) {
     display: none;
@@ -183,10 +184,10 @@ export const TextLenguaje = styled.p`
   display: flex;
   gap: 0.8rem;
   font-weight: 300;
-  color: var(--main-clr);
+  color: #fff;
   &&:hover,
   ${InputLenguaje}:checked + && {
     font-weight: 700;
-    color: #fff;
+    color: var(--main-clr);
   }
 `;
