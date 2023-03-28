@@ -43,7 +43,7 @@ const SobreMi = () => {
           target='_blank'
           rel='noreferrer noopener'
         >
-          <i className='fa-brands fa-linkedin-in'></i>
+          <i class="fa-brands fa-linkedin"></i>
           <p>Linkedin</p>
         </Link>
         <Link
