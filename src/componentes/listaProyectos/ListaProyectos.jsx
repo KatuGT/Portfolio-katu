@@ -25,7 +25,7 @@ import ProyectoTemplate from "../proyectosTemplate/ProyectoTemplate";
 import ProyectoMobileTemplate from "../proyectosTemplate/ProyectoMobileTemplate";
 
 const ListaProyectos = () => {
-  const { t } = useTranslation(["projectsDesc"]);
+  const { t } = useTranslation(["projectsDesc", "projects"]);
   const [verMas, setVerMas] = useState(false);
 
   return (
@@ -123,7 +123,7 @@ const ListaProyectos = () => {
         </ProyectosSecundarios>
         <VerMasWrapper>
           <VerMasText>
-            {!verMas ? "Ver más proyectos" : "Ver menos proyectos"}
+            {!verMas ? t("projects:showMore") : t("projects:showLess")}
           </VerMasText>
           <VerMasCheckbox
             defaultChecked={verMas}

@@ -25,10 +25,10 @@ export const VerMasWrapper = styled.label`
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const ArrowIcon = styled.i`
-  color: #fff;
   font-size: 1.5rem;
   animation-name: ${ArrowMovement};
   animation-duration: 1s;
@@ -38,7 +38,6 @@ export const ArrowIcon = styled.i`
 
 export const VerMasText = styled.span`
   font-size: 20px;
-  color: #fff;
 `;
 
 
