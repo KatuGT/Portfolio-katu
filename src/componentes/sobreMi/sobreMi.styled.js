@@ -34,7 +34,7 @@ export const Katu = styled.h1`
     content: "Katu";
     position: absolute;
     -webkit-text-stroke: 0;
-  color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.text};
     left: 5%;
     top: -5%;
     z-index: -100;
@@ -72,8 +72,10 @@ export const Redes = styled.div`
   align-items: center;
   font-size: 2em;
   margin: 1em 1em 0 1em;
+  color: ${({ theme }) => theme.text};
   i {
-    color: #fff;
+    color: ${({ theme }) => theme.text};
+
     margin-right: 5px;
   }
 

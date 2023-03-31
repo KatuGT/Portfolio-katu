@@ -1,0 +1,26 @@
+{
+  "petSpace": {
+    "desc": "Website created with the aim of reuniting lost pets with their owners. Tools and libraries used: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios.",
+    "typeText": "Group project"
+  },
+  "estafaMLibre": {
+    "desc": "E-commerce website created consuming the Mercado Libre API. Testing completed up to 80%. Tools and libraries used: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap.",
+    "typeText": "Group project"
+  },
+  "sinFronteras": {
+    "desc": "Mobile application developed with React Native. I was in charge of screens 1 and 2 of the registration process, as well as refactoring the professional profile screen.",
+    "typeText": "Group project"
+  },
+  "interactiveCard": {
+    "desc": "This card form allows you to see your data reflected in real time on both sides of the card. Tools and libraries used: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb",
+    "typeText": "Individual  project"
+  },
+  "moviePop": {
+    "desc": "Movie Catalogue made as part of a job opportunity, using the TVmaze API, back and front end were realiced by me.",
+    "typeText": "Individual  project"
+  },
+  "atlas": {
+    "desc": "Movie Catalogue made for a job opportunity, this time just front end was made,with the themoviedb API ",
+    "typeText": "Individual  project"
+  }
+}

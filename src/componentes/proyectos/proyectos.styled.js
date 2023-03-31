@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MainWrapperPruectos = styled.section`
   width: 100%;
@@ -12,61 +12,18 @@ export const WrapperProyectos = styled.section`
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   transition: 1s ease;
-  /* translate: -200%; */
-  translate: ${(props) =>
-    props.showProject === 'proyectosIndivivuales' ? '-200%' : '0'};
-  @media screen and (min-width: 1400px) {
-    width: 90%;
-  }
-
-  @media screen and (min-width: 1500px) {
-    width: 85%;
-  }
-
-  @media screen and (min-width: 1600px) {
-    width: 80%;
-  }
-
-  @media screen and (min-width: 1800px) {
-    width: 65%;
-  }
 `;
 
 export const WrapperTipoProyecto = styled.div`
   display: flex;
   justify-content: space-evenly;
+`;
+
+export const LabelSpan = styled.p`
   margin-bottom: 2rem;
-  && .linkProyectos {
-    color: ${({ theme }) => theme.textProject};
-    font-size: 2rem;
-    font-weight: 300;
-  }
-
-  && .linkProyectos.active {
-    color: var(--main-clr);
-    font-size: 2rem;
-    font-weight: 700;
-  }
-`;
-
-export const LabelTipoProyecto = styled.label`
-  cursor: pointer;
+  color: var(--main-clr);
+  font-size: 3rem;
+  font-weight: 500;
   text-align: center;
-`;
-
-export const InputTipoProyecto = styled.input`
-  display: none;
-`;
-
-export const LabelSpan = styled.span`
-  text-align: center;
-  ${InputTipoProyecto}:checked + && {
-    color: var(--main-clr);
-    font-size: 2rem;
-    font-weight: 700;
-  }
-`;
-
-export const WrapperListaProductos = styled.div`
-  translate: ${(props) => (props.hide === 'left' ? '-100%' : '200%')};
+  cursor: context-menu;
 `;

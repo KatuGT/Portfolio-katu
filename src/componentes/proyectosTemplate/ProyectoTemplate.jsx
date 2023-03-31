@@ -1,4 +1,14 @@
-import { DescProyecto, ImgProyecto, ImgProyectoMobile, InfoProyecto, LinkImagenes, Proyecto, TituloProyecto, VerEnGithub } from './proyectosTemplate.styled';
+import {
+  DescProyecto,
+  ImgProyecto,
+  ImgProyectoMobile,
+  InfoProyecto,
+  LinkImagenes,
+  Proyecto,
+  TipoProyecto,
+  TituloProyecto,
+  VerEnGithub,
+} from "./proyectosTemplate.styled";
 
 const ProyectoTemplate = ({
   titulo,
@@ -12,35 +22,49 @@ const ProyectoTemplate = ({
   linkDeploy,
   orderDos,
   imgPsition,
+  esGrupal,
+  tipoProyectoTexto,
+  isOdd
 }) => {
-  return (    
-      <Proyecto>
-        <InfoProyecto className={orderDos}>
-          <TituloProyecto>{titulo}</TituloProyecto>
-          <DescProyecto>{descripcion}</DescProyecto>
-          <VerEnGithub href={githubFront} rel='noopener noreferrer' target='_blank'>
-            <i className='fa-brands fa-github'></i> Front-end
-          </VerEnGithub>
-          {githubBack && (
-            <VerEnGithub href={githubBack} rel='noopener noreferrer' target='_blank'>
-              <i className='fa-brands fa-github'></i> Back-end
-            </VerEnGithub>
+  return (
+    <Proyecto isOdd={isOdd}>
+      <InfoProyecto className={orderDos}>
+        <TituloProyecto>{titulo}</TituloProyecto>
+        <TipoProyecto>
+          {esGrupal ? (
+            <i class="fa-solid fa-people-group"></i>
+          ) : (
+            <i class="fa-solid fa-person"></i>
           )}
-        </InfoProyecto>
-        <LinkImagenes
-          href={linkDeploy}
-          rel='noopener noreferrer'
-          target='_blank'
+          <small>{tipoProyectoTexto}</small>
+        </TipoProyecto>
+        <DescProyecto>{descripcion}</DescProyecto>
+        <VerEnGithub
+          href={githubFront}
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          <ImgProyectoMobile
-            src={imgMobile}
-            alt={altMobile}
-            className={imgPsition}
-          />
-          <ImgProyecto src={imgDesktop} alt={altDesktop} />
-        </LinkImagenes>
-      </Proyecto>
-    
+          <i className="fa-brands fa-github"></i> Front-end
+        </VerEnGithub>
+        {githubBack && (
+          <VerEnGithub
+            href={githubBack}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i className="fa-brands fa-github"></i> Back-end
+          </VerEnGithub>
+        )}
+      </InfoProyecto>
+      <LinkImagenes href={linkDeploy} rel="noopener noreferrer" target="_blank">
+        <ImgProyectoMobile
+          src={imgMobile}
+          alt={altMobile}
+          className={imgPsition}
+        />
+        <ImgProyecto src={imgDesktop} alt={altDesktop} />
+      </LinkImagenes>
+    </Proyecto>
   );
 };
 

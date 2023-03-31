@@ -77,7 +77,10 @@ const Navbar = (props) => {
               </Lenguaje>
             </SwitchLenguajeMobile>
           </MenuItem>
-          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+          <MenuItem
+            className="firstChild"
+            onClick={() => setShowMenu(!ShowMenu)}
+          >
             <Link
               to="sobreMi"
               spy={true}
@@ -90,17 +93,6 @@ const Navbar = (props) => {
           </MenuItem>
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
             <Link
-              to="tecno"
-              spy={true}
-              smooth={true}
-              offset={-150}
-              duration={100}
-            >
-              {t("toolsAndTech")}
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
-            <Link
               to="proyectos"
               spy={true}
               smooth={true}
@@ -108,6 +100,17 @@ const Navbar = (props) => {
               duration={100}
             >
               {t("projects")}
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={() => setShowMenu(!ShowMenu)}>
+            <Link
+              to="tecno"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={100}
+            >
+              {t("toolsAndTech")}
             </Link>
           </MenuItem>
           <MenuItem onClick={() => setShowMenu(!ShowMenu)}>

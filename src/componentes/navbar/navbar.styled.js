@@ -12,13 +12,12 @@ export const Header = styled.header`
 export const NavBar = styled.nav`
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
   @media screen and (min-width: 950px) {
-    width: 66%;
     justify-content: space-between;
+    margin: 0 2rem;
   }
 `;
 
@@ -73,6 +72,7 @@ export const MenuItem = styled.li`
   text-align: center;
   cursor: pointer;
   color: #fff;
+  
   && a {
     display: flex;
     flex-direction: column;
@@ -88,13 +88,16 @@ export const MenuItem = styled.li`
       color: var(--main-clr);
       font-weight: bold;
     }
-
+    
     @media screen and (min-width: 600px) {
       width: initial;
       font-size: 1.3em;
       font-weight: normal;
       padding: 0.99em 0.5em;
     }
+  }
+  &.firstChild > a{
+   padding-left: 0;
   }
 `;
 

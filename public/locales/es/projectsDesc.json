@@ -1,0 +1,26 @@
+{
+  "petSpace": {
+    "desc": "Sitio web realizado con el objetivo de reunir a las mascotas perdidas con sus dueños. Estuve a cargo de todo el front-end. Herramientas y librerías usadas: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios",
+    "typeText": "Proyecto grupal"
+  },
+  "estafaMLibre": {
+    "desc": "E-commerce realizada consumiendo la API de Mercado Libre. Testing realizado al 80%. Herramientas y librerías usadas: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap",
+    "typeText": "Proyecto grupal"
+  },
+  "sinFronteras": {
+    "desc": "Aplicación de celular desarrollada con React Native, me encargué de las pantallas 1 y 2 de registro, además de refactorizar la pantalla de Perfil profesional",
+    "typeText": "Proyecto grupal"
+  },
+  "interactiveCard": {
+    "desc": "Este formulario de tarjeta le permite ver sus datos reflejados en tiempo real en ambos lados de la tarjeta. Herramientas y librerías: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb",
+    "typeText": "Proyecto individual"
+  },
+  "moviePop": {
+    "desc": "Catálogo de películas realizados como parte de una oportunidad laboral, usando la API TVmaze, estuve a cargo del front y back end.",
+    "typeText": "Proyecto individual"
+  },
+  "atlas": {
+    "desc": "Otro Catálogo de películas realizados para una oportunidad laboral, esta vez solo se realizo el front end.",
+    "typeText": "Proyecto individual"
+  }
+}

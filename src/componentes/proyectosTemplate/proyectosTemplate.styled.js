@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Proyecto = styled.div`
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -17,7 +17,7 @@ export const Proyecto = styled.div`
     gap: 2em;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    &:nth-child(even) {
+    &:nth-child(${props => props.isOdd ? 'odd' : 'even'}) {
       grid-template-columns: 2fr 1fr;
     }
   }
@@ -51,9 +51,19 @@ export const TituloProyecto = styled.h3`
   color: ${({ theme }) => theme.subText};
 `;
 
+export const TipoProyecto = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  color: var(--main-clr-dark);
+`;
+
 export const DescProyecto = styled.p`
   margin-top: 0.2em;
   margin-bottom: 0.4em;
+  text-align: left;
 `;
 
 export const VerEnGithub = styled.a`
@@ -65,13 +75,13 @@ export const VerEnGithub = styled.a`
 export const LinkImagenes = styled.a`
   position: relative;
   @media screen and (min-width: 700px) {
-    height: 500px;
+    height: 400px;
   }
 `;
 
 export const WrapperImagenesMobile = styled.div`
   position: relative;
-  height: 500px;
+  height: 400px;
   width: 100%;
   display: flex;
   @media screen and (min-width: 700px) {
@@ -86,7 +96,7 @@ export const ImgProyectoMobileOnly = styled.img`
   object-position: top center;
   transition: width ease 1s;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  &&:hover{
+  &&:hover {
     width: 200px;
   }
 `;
@@ -129,8 +139,5 @@ export const ImgProyecto = styled.img`
     height: 100%;
     object-fit: cover;
     object-position: top left;
-  }
-
-  @media screen and (min-width: 900px) {
   }
 `;
