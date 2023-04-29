@@ -3,6 +3,7 @@ import LogoCSS from '../../assets/imagenes/logo-css3-small.webp';
 import LogoJS from '../../assets/imagenes/logo-js-small.webp';
 import LogoBoots from '../../assets/imagenes/logo-bootstrap-small.webp';
 import LogoReact from '../../assets/imagenes/logo-react-small.webp';
+import LogoNext from '../../assets/imagenes/logo-next-small.webp';
 import LogoReactNative from '../../assets/imagenes/logo-reactNative-small.webp';
 import LogoStyled from '../../assets/imagenes/logo-styledcomp-small.webp';
 import LogoVS from '../../assets/imagenes/logo-vscode-small.webp';
@@ -35,6 +36,7 @@ const Tecnologias = () => {
           <Logo src={LogoCSS} alt='Logo CSS' />
           <Logo src={LogoJS} alt='Logo Javascript' />
           <Logo src={LogoBoots} alt='Logo Bootstrap' />
+          <Logo src={LogoNext} alt='Logo Next' />
           <Logo src={LogoReact} alt='Logo React' />
           <Logo src={LogoReactNative} alt='Logo React Native' />
           <Logo src={LogoStyled} alt='Logo styled Components' />
