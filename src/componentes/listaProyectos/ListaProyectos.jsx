@@ -1,11 +1,12 @@
 import { useState } from "react";
-import ImgPetSpaceMobile from "../../assets/imagenes/pr-petSpaceMobile.webp";
-import ImgPetSpace from "../../assets/imagenes/pr-petSpace.webp";
 import ImEstafaMLibre from "../../assets/imagenes/pr-estafaMLibre.webp";
 import ImEstafaMLibreMobile from "../../assets/imagenes/pr-estafaMLibreMobile.webp";
 import ImgSinFronteras1 from "../../assets/imagenes/SinFronterasImg1.webp";
 import ImgSinFronteras2 from "../../assets/imagenes/SinFronterasImg2.webp";
 import ImgSinFronteras3 from "../../assets/imagenes/SinFronterasImg3.webp";
+import imgPayfriend1 from "../../assets/imagenes/PayfriendImg1.webp";
+import imgPayfriend2 from "../../assets/imagenes/PayfriendImg2.webp";
+import imgPayfriend3 from "../../assets/imagenes/PayfriendImg3.webp";
 import ImgCardMobile from "../../assets/imagenes/pr-interactiveCardMovile.webp";
 import ImgCard from "../../assets/imagenes/pr-interactiveCard.webp";
 import ImgMoviePopMobile from "../../assets/imagenes/pr-moviepopMobile.webp";
@@ -32,6 +33,20 @@ const ListaProyectos = () => {
     <>
       <WrapperListaProyectos>
         <div>
+        <ProyectoMobileTemplate
+            titulo="Payfriend"
+            descripcion={t("payFriend.desc")}
+            githubFront="https://github.com/No-Country/s8-15-t-reactnative"
+            imgUno={imgPayfriend1}
+            altImgUno="Captura de pantalla de inicio"
+            imgDos={imgPayfriend2}
+            altImgDos="Captura de pantalla de comprobande te pago"
+            imgTres={imgPayfriend3}
+            altImgTres="Captura de pantalla de transferencia de cryptomonedas"
+            imgPsition="left"
+            esGrupal={true}
+            tipoProyectoTexto={t("payFriend.typeText")}
+            />
           <ProyectoMobileTemplate
             titulo="Sin fronteras"
             descripcion={t("sinFronteras.desc")}
@@ -43,25 +58,12 @@ const ListaProyectos = () => {
             imgTres={ImgSinFronteras3}
             altImgTres="Captura de pantalla de registro paso 1"
             linkApk="https://expo.dev/artifacts/eas/sTt11ytpqRLC3DrS2dFpHE.apk"
-            imgPsition="left"
-            esGrupal={true}
-            tipoProyectoTexto={t("sinFronteras.typeText")}
-          />
-          <ProyectoTemplate
-            titulo="Pet Space"
-            descripcion={t("petSpace.desc")}
-            githubFront="https://github.com/No-Country/C7-G35"
-            imgMobile={ImgPetSpaceMobile}
-            altMobile="Caputa de pantalla de celular sitio Pet Space"
-            imgDesktop={ImgPetSpace}
-            altDesktop="Caputa de pantalla de escritorio sitio Pet Space"
-            linkDeploy="https://petspace-frontend-nine.vercel.app/"
             imgPsition="right"
             orderDos="order-dos"
             esGrupal={true}
             tipoProyectoTexto={t("sinFronteras.typeText")}
-            ladoInicial={true}
           />
+          
           <ProyectoTemplate
             titulo="Estafa MLibre"
             descripcion={t("estafaMLibre.desc")}

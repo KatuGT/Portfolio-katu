@@ -1,6 +1,6 @@
 {
-  "petSpace": {
-    "desc": "Sitio web realizado con el objetivo de reunir a las mascotas perdidas con sus dueños. Estuve a cargo de todo el front-end. Herramientas y librerías usadas: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios",
+  "payFriend": {
+    "desc": "Aplicación de celular realizada con React Native. La app es una billetera virtual con la cual también puedes manejar tus criptomonedas. Otras herramientas que utilicé son NativeWind, React Navigation, React Hook Form, Victory y Redux Toolkit. Las pantallas a mi cargo fueron Home, Transferencia y Gráfica de Criptos, Pago de Facturas, Comprobante de Pago e Historial de Movimientos de la Cuenta. Además, refactoricé el estilo de varias pantallas de otros compañeros..",
     "typeText": "Proyecto grupal"
   },
   "estafaMLibre": {

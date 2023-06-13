@@ -3,6 +3,7 @@ import {
   ImgProyectoMobileOnly,
   InfoProyecto,
   Proyecto,
+  TipoProyecto,
   TituloProyecto,
   VerEnGithub,
   WrapperImagenesMobile,
@@ -22,11 +23,21 @@ const ProyectoMobileTemplate = ({
   linkDeploy,
   orderDos,
   linkApk,
+  esGrupal,
+  tipoProyectoTexto,
 }) => {
   return (
     <Proyecto>
       <InfoProyecto className={orderDos}>
         <TituloProyecto>{titulo}</TituloProyecto>
+        <TipoProyecto>
+          {esGrupal ? (
+            <i class="fa-solid fa-people-group"></i>
+          ) : (
+            <i class="fa-solid fa-person"></i>
+          )}
+          <small>{tipoProyectoTexto}</small>
+        </TipoProyecto>
         <DescProyecto>{descripcion}</DescProyecto>
         <VerEnGithub
           href={githubFront}
@@ -35,9 +46,9 @@ const ProyectoMobileTemplate = ({
         >
           <i className="fa-brands fa-github"></i> Monorepo
         </VerEnGithub>
-        <VerEnGithub href={linkApk} rel="noopener noreferrer" target="_blank">
+        {linkApk && <VerEnGithub href={linkApk} rel="noopener noreferrer" target="_blank">
           <i class="fa-solid fa-file-arrow-down"></i> Descarga archivo .apk
-        </VerEnGithub>
+        </VerEnGithub>}
         {githubBack && (
           <VerEnGithub
             href={githubBack}

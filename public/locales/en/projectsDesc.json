@@ -1,6 +1,6 @@
 {
-  "petSpace": {
-    "desc": "Website created with the aim of reuniting lost pets with their owners. Tools and libraries used: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios.",
+  "payFriend": {
+    "desc": "Mobile application developed with React Native. The app is a virtual wallet that also allows you to manage your cryptocurrencies. Other tools used include NativeWind, React Navigation, React Hook Form, Victory, and Redux Toolkit. The screens I was responsible for were Home, Transfer, Crypto Graph, Bill Payment, Payment Receipt, and Account Transaction History. Additionally, I refactored the style of several screens created by my colleagues.",
     "typeText": "Group project"
   },
   "estafaMLibre": {
