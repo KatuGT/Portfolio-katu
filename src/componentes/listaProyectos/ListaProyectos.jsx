@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ImEstafaMLibre from "../../assets/imagenes/pr-estafaMLibre.webp";
-import ImEstafaMLibreMobile from "../../assets/imagenes/pr-estafaMLibreMobile.webp";
+import ImgSizeMatch from "../../assets/imagenes/pr-sizeMatch.webp";
+import ImgSizeMatchMobile from "../../assets/imagenes/pr-sizeMatchMobile.webp";
 import ImgSinFronteras1 from "../../assets/imagenes/SinFronterasImg1.webp";
 import ImgSinFronteras2 from "../../assets/imagenes/SinFronterasImg2.webp";
 import ImgSinFronteras3 from "../../assets/imagenes/SinFronterasImg3.webp";
@@ -33,7 +33,23 @@ const ListaProyectos = () => {
     <>
       <WrapperListaProyectos>
         <div>
-        <ProyectoMobileTemplate
+          <ProyectoTemplate
+            titulo="Size Match"
+            descripcion={t("sizeMatch.desc")}
+            githubFront="https://github.com/KatuGT/sizematch"
+            githubBack="https://github.com/KatuGT/sizematch"
+            imgMobile={ImgSizeMatchMobile}
+            altMobile="Caputa de pantalla de celular sitio SizeMatch"
+            imgDesktop={ImgSizeMatch}
+            altDesktop="Caputa de pantalla de escritorio sitio SizeMatch"
+            linkDeploy="https://sizematch.net/"
+            imgPsition="right"
+            esGrupal={false}
+            orderDos={"order-dos"}
+            isOdd={true}
+            tipoProyectoTexto={t("sizeMatch.typeText")}
+          />
+          <ProyectoMobileTemplate
             titulo="Payfriend"
             descripcion={t("payFriend.desc")}
             githubFront="https://github.com/No-Country/s8-15-t-reactnative"
@@ -45,8 +61,10 @@ const ListaProyectos = () => {
             altImgTres="Captura de pantalla de transferencia de cryptomonedas"
             imgPsition="left"
             esGrupal={true}
+            isOdd={true}
+
             tipoProyectoTexto={t("payFriend.typeText")}
-            />
+          />
           <ProyectoMobileTemplate
             titulo="Sin fronteras"
             descripcion={t("sinFronteras.desc")}
@@ -61,21 +79,8 @@ const ListaProyectos = () => {
             imgPsition="right"
             orderDos="order-dos"
             esGrupal={true}
+            isOdd={true}
             tipoProyectoTexto={t("sinFronteras.typeText")}
-          />
-          
-          <ProyectoTemplate
-            titulo="Estafa MLibre"
-            descripcion={t("estafaMLibre.desc")}
-            githubFront="https://github.com/agustingu20/estafa-mlibre"
-            imgMobile={ImEstafaMLibreMobile}
-            altMobile="Caputa de pantalla de celular sitio MoviePop"
-            imgDesktop={ImEstafaMLibre}
-            altDesktop="Caputa de pantalla de escritorio sitio MoviePop"
-            linkDeploy="https://estafa-mlibre.vercel.app/"
-            imgPsition="left"
-            esGrupal={true}
-            tipoProyectoTexto={t("estafaMLibre.typeText")}
           />
         </div>
 

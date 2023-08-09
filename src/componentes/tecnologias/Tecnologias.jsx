@@ -1,6 +1,7 @@
 import LogoHTML from "../../assets/imagenes/logo-html-small.webp";
 import LogoCSS from "../../assets/imagenes/logo-css3-small.webp";
 import LogoJS from "../../assets/imagenes/logo-js-small.webp";
+import LogoTS from "../../assets/imagenes/logo-ts-small.webp";
 import LogoBoots from "../../assets/imagenes/logo-bootstrap-small.webp";
 import LogoTailwind from "../../assets/imagenes/logo-tailwind-small.webp";
 import LogoReact from "../../assets/imagenes/logo-react-small.webp";
@@ -36,6 +37,7 @@ const Tecnologias = () => {
           <Logo src={LogoHTML} alt="Logo HTML" />
           <Logo src={LogoCSS} alt="Logo CSS" />
           <Logo src={LogoJS} alt="Logo Javascript" />
+          <Logo src={LogoTS} alt="Logo Javascript" />
           <Logo src={LogoBoots} alt="Logo Bootstrap" />
           <Logo src={LogoTailwind} alt="Logo Tailwind css" />
           <Logo src={LogoNext} alt="Logo Next"/>

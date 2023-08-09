@@ -25,9 +25,10 @@ const ProyectoMobileTemplate = ({
   linkApk,
   esGrupal,
   tipoProyectoTexto,
+  isOdd
 }) => {
   return (
-    <Proyecto>
+    <Proyecto isOdd={isOdd}>
       <InfoProyecto className={orderDos}>
         <TituloProyecto>{titulo}</TituloProyecto>
         <TipoProyecto>
