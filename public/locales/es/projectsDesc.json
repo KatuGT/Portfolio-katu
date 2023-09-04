@@ -1,11 +1,11 @@
 {
-  "petSpace": {
-    "desc": "Sitio web realizado con el objetivo de reunir a las mascotas perdidas con sus dueños. Estuve a cargo de todo el front-end. Herramientas y librerías usadas: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios",
+  "payFriend": {
+    "desc": "Aplicación de celular realizada con React Native. La app es una billetera virtual con la cual también puedes manejar tus criptomonedas. Otras herramientas que utilicé son NativeWind, React Navigation, React Hook Form, Victory y Redux Toolkit. Las pantallas a mi cargo fueron Home, Transferencia y Gráfica de Criptos, Pago de Facturas, Comprobante de Pago e Historial de Movimientos de la Cuenta. Además, refactoricé el estilo de varias pantallas de otros compañeros..",
     "typeText": "Proyecto grupal"
   },
-  "estafaMLibre": {
-    "desc": "E-commerce realizada consumiendo la API de Mercado Libre. Testing realizado al 80%. Herramientas y librerías usadas: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap",
-    "typeText": "Proyecto grupal"
+  "sizeMatch": {
+    "desc": "Buscador de repuestos según su medida (para motocicletas). Muchas marcas ofrecen buscadores pero según el modelo de moto, pero esto no es siempre útil. He reunido data de varias marcas y repuestos que, en mi experiencia, son de los mas solicitados. Herramientas y librerías usadas: Redux Toolkit, tailwind, React Hook Form, Yup, eslint, swr. Lenguaje TypeScript",
+    "typeText": "Proyecto individual"
   },
   "sinFronteras": {
     "desc": "Aplicación de celular desarrollada con React Native, me encargué de las pantallas 1 y 2 de registro, además de refactorizar la pantalla de Perfil profesional",

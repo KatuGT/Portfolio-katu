@@ -1,11 +1,11 @@
 {
-  "petSpace": {
-    "desc": "Website created with the aim of reuniting lost pets with their owners. Tools and libraries used: useContext, Leaflet map, React Hook Form, Yup, styled Component, eslint, lodash, react router dom, axios.",
+  "payFriend": {
+    "desc": "Mobile application developed with React Native. The app is a virtual wallet that also allows you to manage your cryptocurrencies. Other tools used include NativeWind, React Navigation, React Hook Form, Victory, and Redux Toolkit. The screens I was responsible for were Home, Transfer, Crypto Graph, Bill Payment, Payment Receipt, and Account Transaction History. Additionally, I refactored the style of several screens created by my colleagues.",
     "typeText": "Group project"
   },
-  "estafaMLibre": {
-    "desc": "E-commerce website created consuming the Mercado Libre API. Testing completed up to 80%. Tools and libraries used: Redux Toolkit, classnames, React Hook Form, Yup, eslint, react router dom, axios, bootstrap.",
-    "typeText": "Group project"
+  "sizeMatch": {
+    "desc": "Parts Finder by Measurement (for motorcycles). Many brands offer search tools based on the motorcycle model, but this isn't always helpful. I've gathered data from various brands and parts that, in my experience, are the most requested. Tools and libraries used: Redux Toolkit, Tailwind, React Hook Form, Yup, eslint, swr. Build with TypeScript",
+    "typeText": "Individual  project"
   },
   "sinFronteras": {
     "desc": "Mobile application developed with React Native. I was in charge of screens 1 and 2 of the registration process, as well as refactoring the professional profile screen.",

@@ -1,11 +1,12 @@
 import { useState } from "react";
-import ImgPetSpaceMobile from "../../assets/imagenes/pr-petSpaceMobile.webp";
-import ImgPetSpace from "../../assets/imagenes/pr-petSpace.webp";
-import ImEstafaMLibre from "../../assets/imagenes/pr-estafaMLibre.webp";
-import ImEstafaMLibreMobile from "../../assets/imagenes/pr-estafaMLibreMobile.webp";
+import ImgSizeMatch from "../../assets/imagenes/pr-sizeMatch.webp";
+import ImgSizeMatchMobile from "../../assets/imagenes/pr-sizeMatchMobile.webp";
 import ImgSinFronteras1 from "../../assets/imagenes/SinFronterasImg1.webp";
 import ImgSinFronteras2 from "../../assets/imagenes/SinFronterasImg2.webp";
 import ImgSinFronteras3 from "../../assets/imagenes/SinFronterasImg3.webp";
+import imgPayfriend1 from "../../assets/imagenes/PayfriendImg1.webp";
+import imgPayfriend2 from "../../assets/imagenes/PayfriendImg2.webp";
+import imgPayfriend3 from "../../assets/imagenes/PayfriendImg3.webp";
 import ImgCardMobile from "../../assets/imagenes/pr-interactiveCardMovile.webp";
 import ImgCard from "../../assets/imagenes/pr-interactiveCard.webp";
 import ImgMoviePopMobile from "../../assets/imagenes/pr-moviepopMobile.webp";
@@ -25,13 +26,44 @@ import ProyectoTemplate from "../proyectosTemplate/ProyectoTemplate";
 import ProyectoMobileTemplate from "../proyectosTemplate/ProyectoMobileTemplate";
 
 const ListaProyectos = () => {
-  const { t } = useTranslation(["projectsDesc"]);
+  const { t } = useTranslation(["projectsDesc", "projects"]);
   const [verMas, setVerMas] = useState(false);
 
   return (
     <>
       <WrapperListaProyectos>
         <div>
+          <ProyectoTemplate
+            titulo="Size Match"
+            descripcion={t("sizeMatch.desc")}
+            githubFront="https://github.com/KatuGT/sizematch"
+            githubBack="https://github.com/KatuGT/sizematch"
+            imgMobile={ImgSizeMatchMobile}
+            altMobile="Caputa de pantalla de celular sitio SizeMatch"
+            imgDesktop={ImgSizeMatch}
+            altDesktop="Caputa de pantalla de escritorio sitio SizeMatch"
+            linkDeploy="https://sizematch.net/"
+            imgPsition="right"
+            esGrupal={false}
+            orderDos={"order-dos"}
+            isOdd={true}
+            tipoProyectoTexto={t("sizeMatch.typeText")}
+          />
+          <ProyectoMobileTemplate
+            titulo="Payfriend"
+            descripcion={t("payFriend.desc")}
+            githubFront="https://github.com/No-Country/s8-15-t-reactnative"
+            imgUno={imgPayfriend1}
+            altImgUno="Captura de pantalla de inicio"
+            imgDos={imgPayfriend2}
+            altImgDos="Captura de pantalla de comprobande te pago"
+            imgTres={imgPayfriend3}
+            altImgTres="Captura de pantalla de transferencia de cryptomonedas"
+            imgPsition="left"
+            esGrupal={true}
+            isOdd={true}
+            tipoProyectoTexto={t("payFriend.typeText")}
+          />
           <ProyectoMobileTemplate
             titulo="Sin fronteras"
             descripcion={t("sinFronteras.desc")}
@@ -43,37 +75,11 @@ const ListaProyectos = () => {
             imgTres={ImgSinFronteras3}
             altImgTres="Captura de pantalla de registro paso 1"
             linkApk="https://expo.dev/artifacts/eas/sTt11ytpqRLC3DrS2dFpHE.apk"
-            imgPsition="left"
-            esGrupal={true}
-            tipoProyectoTexto={t("sinFronteras.typeText")}
-          />
-          <ProyectoTemplate
-            titulo="Pet Space"
-            descripcion={t("petSpace.desc")}
-            githubFront="https://github.com/No-Country/C7-G35"
-            imgMobile={ImgPetSpaceMobile}
-            altMobile="Caputa de pantalla de celular sitio Pet Space"
-            imgDesktop={ImgPetSpace}
-            altDesktop="Caputa de pantalla de escritorio sitio Pet Space"
-            linkDeploy="https://petspace-frontend-nine.vercel.app/"
             imgPsition="right"
             orderDos="order-dos"
             esGrupal={true}
+            isOdd={true}
             tipoProyectoTexto={t("sinFronteras.typeText")}
-            ladoInicial={true}
-          />
-          <ProyectoTemplate
-            titulo="Estafa MLibre"
-            descripcion={t("estafaMLibre.desc")}
-            githubFront="https://github.com/agustingu20/estafa-mlibre"
-            imgMobile={ImEstafaMLibreMobile}
-            altMobile="Caputa de pantalla de celular sitio MoviePop"
-            imgDesktop={ImEstafaMLibre}
-            altDesktop="Caputa de pantalla de escritorio sitio MoviePop"
-            linkDeploy="https://estafa-mlibre.vercel.app/"
-            imgPsition="left"
-            esGrupal={true}
-            tipoProyectoTexto={t("estafaMLibre.typeText")}
           />
         </div>
 
@@ -88,9 +94,8 @@ const ListaProyectos = () => {
             altDesktop="Caputa de pantalla de escritorio sitio Interactive Card"
             linkDeploy="https://interactive-card-challange.vercel.app/"
             imgPsition="right"
-            orderDos="order-dos"
             tipoProyectoTexto={t("interactiveCard.typeText")}
-            isOdd={true}
+            isOdd={false}
           />
           <ProyectoTemplate
             titulo="MoviePop"
@@ -104,7 +109,8 @@ const ListaProyectos = () => {
             linkDeploy="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
             imgPsition="left"
             tipoProyectoTexto={t("moviePop.typeText")}
-            isOdd={true}
+            orderDos="order-dos"
+            isOdd={false}
           />
           <ProyectoTemplate
             titulo="Atlas"
@@ -116,14 +122,13 @@ const ListaProyectos = () => {
             altDesktop="Caputa de pantalla de escritorio sitio Atlas"
             linkDeploy="https://helpful-fenglisu-56d94c.netlify.app/"
             imgPsition="right"
-            orderDos="order-dos"
             tipoProyectoTexto={t("atlas.typeText")}
-            isOdd={true}
+            isOdd={false}
           />
         </ProyectosSecundarios>
         <VerMasWrapper>
           <VerMasText>
-            {!verMas ? "Ver más proyectos" : "Ver menos proyectos"}
+            {!verMas ? t("projects:showMore") : t("projects:showLess")}
           </VerMasText>
           <VerMasCheckbox
             defaultChecked={verMas}
