@@ -62,7 +62,6 @@ const ListaProyectos = () => {
             imgPsition="left"
             esGrupal={true}
             isOdd={true}
-
             tipoProyectoTexto={t("payFriend.typeText")}
           />
           <ProyectoMobileTemplate
@@ -95,9 +94,8 @@ const ListaProyectos = () => {
             altDesktop="Caputa de pantalla de escritorio sitio Interactive Card"
             linkDeploy="https://interactive-card-challange.vercel.app/"
             imgPsition="right"
-            orderDos="order-dos"
             tipoProyectoTexto={t("interactiveCard.typeText")}
-            isOdd={true}
+            isOdd={false}
           />
           <ProyectoTemplate
             titulo="MoviePop"
@@ -111,7 +109,8 @@ const ListaProyectos = () => {
             linkDeploy="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
             imgPsition="left"
             tipoProyectoTexto={t("moviePop.typeText")}
-            isOdd={true}
+            orderDos="order-dos"
+            isOdd={false}
           />
           <ProyectoTemplate
             titulo="Atlas"
@@ -123,9 +122,8 @@ const ListaProyectos = () => {
             altDesktop="Caputa de pantalla de escritorio sitio Atlas"
             linkDeploy="https://helpful-fenglisu-56d94c.netlify.app/"
             imgPsition="right"
-            orderDos="order-dos"
             tipoProyectoTexto={t("atlas.typeText")}
-            isOdd={true}
+            isOdd={false}
           />
         </ProyectosSecundarios>
         <VerMasWrapper>
