@@ -93,7 +93,7 @@ const ListaProyectos = () => {
             imgDesktop={ImgCard}
             altDesktop="Caputa de pantalla de escritorio sitio Interactive Card"
             linkDeploy="https://interactive-card-challange.vercel.app/"
-            imgPsition="right"
+            imgPsition="left"
             tipoProyectoTexto={t("interactiveCard.typeText")}
             isOdd={false}
           />
@@ -107,7 +107,7 @@ const ListaProyectos = () => {
             imgDesktop={ImgMoviePop}
             altDesktop="Caputa de pantalla de escritorio sitio MoviePop"
             linkDeploy="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
-            imgPsition="left"
+            imgPsition="right"
             tipoProyectoTexto={t("moviePop.typeText")}
             orderDos="order-dos"
             isOdd={false}
@@ -121,7 +121,7 @@ const ListaProyectos = () => {
             imgDesktop={ImgAtlas}
             altDesktop="Caputa de pantalla de escritorio sitio Atlas"
             linkDeploy="https://helpful-fenglisu-56d94c.netlify.app/"
-            imgPsition="right"
+            imgPsition="left"
             tipoProyectoTexto={t("atlas.typeText")}
             isOdd={false}
           />
