@@ -9,8 +9,9 @@ import imgPayfriend2 from "../../assets/imagenes/PayfriendImg2.webp";
 import imgPayfriend3 from "../../assets/imagenes/PayfriendImg3.webp";
 import ImgCardMobile from "../../assets/imagenes/pr-interactiveCardMovile.webp";
 import ImgCard from "../../assets/imagenes/pr-interactiveCard.webp";
-import ImgMoviePopMobile from "../../assets/imagenes/pr-moviepopMobile.webp";
-import ImgMoviePop from "../../assets/imagenes/pr-moviepop.webp";
+import ImgDishDetective1 from "../../assets/imagenes/DishDetectiveImg1.webp";
+import ImgDishDetective2 from "../../assets/imagenes/DishDetectiveImg2.webp";
+import ImgDishDetective3 from "../../assets/imagenes/DishDetectiveImg3.webp";
 import ImgAtlasMobile from "../../assets/imagenes/pr-atlasMobile.webp";
 import ImgAtlas from "../../assets/imagenes/pr-atlas.webp";
 import { useTranslation } from "react-i18next";
@@ -74,7 +75,6 @@ const ListaProyectos = () => {
             altImgDos="Captura de pantalla de Info profesional"
             imgTres={ImgSinFronteras3}
             altImgTres="Captura de pantalla de registro paso 1"
-            linkApk="https://expo.dev/artifacts/eas/sTt11ytpqRLC3DrS2dFpHE.apk"
             imgPsition="right"
             orderDos="order-dos"
             esGrupal={true}
@@ -97,20 +97,21 @@ const ListaProyectos = () => {
             tipoProyectoTexto={t("interactiveCard.typeText")}
             isOdd={false}
           />
-          <ProyectoTemplate
-            titulo="MoviePop"
-            descripcion={t("moviePop.desc")}
-            githubFront="https://github.com/KatuGT/MoviePop-front"
-            githubBack="https://github.com/KatuGT/MoviePop-back"
-            imgMobile={ImgMoviePopMobile}
-            altMobile="Caputa de pantalla de celular sitio MoviePop"
-            imgDesktop={ImgMoviePop}
-            altDesktop="Caputa de pantalla de escritorio sitio MoviePop"
-            linkDeploy="https://incandescent-taffy-ad42eb.netlify.app/peliculas"
+          <ProyectoMobileTemplate
+            titulo="Dish Detective"
+            descripcion={t("dishDetective.desc")}
+            githubFront="https://github.com/No-Country/s10-21-react-native"
+            imgUno={ImgDishDetective1}
+            altImgUno="Captura de pantalla inicio"
+            imgDos={ImgDishDetective2}
+            altImgDos="Captura de pantalla seleccionando imagen para receta"
+            imgTres={ImgDishDetective3}
+            altImgTres="Captura de pantalla de detalles de receta elegida"
             imgPsition="right"
-            tipoProyectoTexto={t("moviePop.typeText")}
             orderDos="order-dos"
+            esGrupal={true}
             isOdd={false}
+            tipoProyectoTexto={t("dishDetective.typeText")}
           />
           <ProyectoTemplate
             titulo="Atlas"
