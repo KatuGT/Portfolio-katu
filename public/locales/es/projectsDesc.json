@@ -1,14 +1,14 @@
 {
-  "atlas": {
-    "desc": "Otro Catálogo de películas realizados para una oportunidad laboral, esta vez solo se realizo el front end.",
-    "typeText": "Proyecto individual"
+  "bertoli": {
+    "desc": "E-commerce dirigido al sector 'agro', teniendo como particularidad que se aceptan canjes de cereales como medio de pago. Desarrollado con Next.js 13, RTQ Query, Redux toolkit, Tailwind, login con Google disponible.",
+    "typeText": "Proyecto grupal"
   },
   "dishDetective": {
     "desc": "Aplicación de celular desarrollada con React Native, buscador de recetas que entrega una amplia lista de datos nutricionales, además de ingredientes e instrucciones, claro. Se usó Zod, React Hook Form, SWR y TypeScript en su desarrollo.",
     "typeText": "Proyecto grupal"
   },
-  "interactiveCard": {
-    "desc": "Este formulario de tarjeta le permite ver sus datos reflejados en tiempo real en ambos lados de la tarjeta. Herramientas y librerías: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb",
+  "chimpance": {
+    "desc": "Landing page realizada para Chimpancé Digital, empresa de diseño y desarrollo. Desarrollado con Next.js 13, GSAP y Swiper. Verificación ReCaptcha V3 de Google en el formulario.",
     "typeText": "Proyecto individual"
   },
   "payFriend": {
