@@ -24,7 +24,7 @@ const ProyectoTemplate = ({
   imgPsition,
   esGrupal,
   tipoProyectoTexto,
-  isOdd
+  isOdd,
 }) => {
   return (
     <Proyecto isOdd={isOdd}>
@@ -39,13 +39,15 @@ const ProyectoTemplate = ({
           <small>{tipoProyectoTexto}</small>
         </TipoProyecto>
         <DescProyecto>{descripcion}</DescProyecto>
-        <VerEnGithub
-          href={githubFront}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i className="fa-brands fa-github"></i> Front-end
-        </VerEnGithub>
+        {githubFront && (
+          <VerEnGithub
+            href={githubFront}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i className="fa-brands fa-github"></i> Front-end
+          </VerEnGithub>
+        )}
         {githubBack && (
           <VerEnGithub
             href={githubBack}

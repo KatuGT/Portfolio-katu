@@ -1,14 +1,14 @@
 {
-  "atlas": {
-    "desc": "Movie Catalogue made for a job opportunity, this time just front end was made,with the themoviedb API ",
-    "typeText": "Individual  project"
+  "bertoli": {
+    "desc": "An e-commerce platform targeted at the agricultural sector, with the particularity that it accepts grain bartering as a form of payment. Developed with Next.js 13, RTQ Query, Redux toolkit, Tailwind, and Google login available.",
+    "typeText": "Group project"
   },
   "dishDetective": {
     "desc": "Mobile application developed with React Native, a recipe finder that provides a comprehensive list of nutritional data, as well as ingredients and instructions, of course. Zod, React Hook Form, SWR, and TypeScript were used in its development.",
     "typeText": "Group project"
   },
-  "interactiveCard": {
-    "desc": "This card form allows you to see your data reflected in real time on both sides of the card. Tools and libraries used: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb",
+  "chimpance": {
+    "desc": "Landing page created for Chimpancé Digital, a design and development company. Developed with Next.js 13, GSAP, and Swiper. Google ReCaptcha V3 verification in the form.",
     "typeText": "Individual  project"
   },
   "payFriend": {
