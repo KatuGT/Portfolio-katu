@@ -73,7 +73,7 @@ const ListaProyectos = () => {
             altMobile="Caputa de pantalla de celular sitio SizeMatch"
             imgDesktop={ImgSizeMatch}
             altDesktop="Caputa de pantalla de escritorio sitio SizeMatch"
-            linkDeploy="https://sizematch.net/"
+            linkDeploy="https://sizematch.vercel.app/"
             imgPsition="left"
             esGrupal={false}
             isOdd={false}
