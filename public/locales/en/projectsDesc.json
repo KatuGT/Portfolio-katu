@@ -1,14 +1,14 @@
 {
-  "atlas": {
-    "desc": "Movie Catalogue made for a job opportunity, this time just front end was made,with the themoviedb API ",
-    "typeText": "Individual  project"
+  "bertoli": {
+    "desc": "An e-commerce platform targeted at the agricultural sector, with the particularity that it accepts grain bartering as a form of payment. Developed with Next.js 13, RTQ Query, Redux toolkit, Tailwind, and Google login available.",
+    "typeText": "Group project"
   },
   "dishDetective": {
     "desc": "Mobile application developed with React Native, a recipe finder that provides a comprehensive list of nutritional data, as well as ingredients and instructions, of course. Zod, React Hook Form, SWR, and TypeScript were used in its development.",
     "typeText": "Group project"
   },
-  "interactiveCard": {
-    "desc": "This card form allows you to see your data reflected in real time on both sides of the card. Tools and libraries used: React Hook Form, Yup, Scss, lodash, classnames, eslint airbnb",
+  "chimpance": {
+    "desc": "Landing page created for Chimpancé Digital, a design and development company. Developed with Next.js 13, GSAP, and Swiper. Google ReCaptcha V3 verification in the form.",
     "typeText": "Individual  project"
   },
   "payFriend": {
@@ -19,8 +19,8 @@
     "desc": "Mobile application developed with React Native. I was in charge of screens 1 and 2 of the registration process, as well as refactoring the professional profile screen.",
     "typeText": "Group project"
   },
-  "sizeMatch": {
-    "desc": "Parts Finder by Measurement (for motorcycles). Many brands offer search tools based on the motorcycle model, but this isn't always helpful. I've gathered data from various brands and parts that, in my experience, are the most requested. Tools and libraries used: Redux Toolkit, Tailwind, React Hook Form, Yup, eslint, swr. Build with TypeScript",
-    "typeText": "Individual  project"
+  "zonaInmo": {
+    "desc": "On Zona Inmo, you can search for or list properties for sale or rent in Paraguay. While listing your properties is free, users have the option to enhance the visibility of their listings by upgrading their plan. The site was developed with Next.js, and some of the technologies used include SwiperJS, CKEditor, Google reCAPTCHA V2, Redux Toolkit, Redux Query, and Tailwind, among others.",
+    "typeText": "Group project"
   }
 }

@@ -1,19 +1,20 @@
 import { useState } from "react";
-import ImgSizeMatch from "../../assets/imagenes/pr-sizeMatch.webp";
-import ImgSizeMatchMobile from "../../assets/imagenes/pr-sizeMatchMobile.webp";
+import ImgZonaInmo from "../../assets/imagenes/pr-zonaInmo.webp";
+import ImgZonaInmoMobile from "../../assets/imagenes/pr-zonaInmoMobile.webp";
 import ImgSinFronteras1 from "../../assets/imagenes/SinFronterasImg1.webp";
 import ImgSinFronteras2 from "../../assets/imagenes/SinFronterasImg2.webp";
 import ImgSinFronteras3 from "../../assets/imagenes/SinFronterasImg3.webp";
 import imgPayfriend1 from "../../assets/imagenes/PayfriendImg1.webp";
 import imgPayfriend2 from "../../assets/imagenes/PayfriendImg2.webp";
 import imgPayfriend3 from "../../assets/imagenes/PayfriendImg3.webp";
-import ImgCardMobile from "../../assets/imagenes/pr-interactiveCardMovile.webp";
-import ImgCard from "../../assets/imagenes/pr-interactiveCard.webp";
 import ImgDishDetective1 from "../../assets/imagenes/DishDetectiveImg1.webp";
 import ImgDishDetective2 from "../../assets/imagenes/DishDetectiveImg2.webp";
 import ImgDishDetective3 from "../../assets/imagenes/DishDetectiveImg3.webp";
-import ImgAtlasMobile from "../../assets/imagenes/pr-atlasMobile.webp";
-import ImgAtlas from "../../assets/imagenes/pr-atlas.webp";
+import ImgBertoliMobile from "../../assets/imagenes/pr-bertoliMobile.webp";
+import ImgBertoli from "../../assets/imagenes/pr-bertoli.webp";
+import ImgChimpaMobile from "../../assets/imagenes/pr-chimpaMobile.webp";
+import ImgChimpa from "../../assets/imagenes/pr-chimpa.webp";
+
 import { useTranslation } from "react-i18next";
 import {
   ArrowIcon,
@@ -35,21 +36,50 @@ const ListaProyectos = () => {
       <WrapperListaProyectos>
         <div>
           <ProyectoTemplate
-            titulo="Size Match"
-            descripcion={t("sizeMatch.desc")}
-            githubFront="https://github.com/KatuGT/sizematch"
-            githubBack="https://github.com/KatuGT/sizematch"
-            imgMobile={ImgSizeMatchMobile}
-            altMobile="Caputa de pantalla de celular sitio SizeMatch"
-            imgDesktop={ImgSizeMatch}
-            altDesktop="Caputa de pantalla de escritorio sitio SizeMatch"
-            linkDeploy="https://sizematch.net/"
-            imgPsition="right"
+            titulo="Chimpancé digital"
+            descripcion={t("chimpance.desc")}
+            imgMobile={ImgChimpaMobile}
+            altMobile="Caputa de pantalla de celular sitio Chimpance Digital"
+            imgDesktop={ImgChimpa}
+            altDesktop="Caputa de pantalla de escritorio sitio Chimpance Digital"
+            linkDeploy="https://agenciaweb.chimpance.digital/"
+            imgPsition="left"
             esGrupal={false}
-            orderDos={"order-dos"}
-            isOdd={true}
-            tipoProyectoTexto={t("sizeMatch.typeText")}
+            isOdd={false}
+            tipoProyectoTexto={t("chimpance.typeText")}
           />
+
+          <ProyectoTemplate
+            titulo="Bertoli Varrone"
+            descripcion={t("bertoli.desc")}
+            imgMobile={ImgBertoliMobile}
+            altMobile="Caputa de pantalla de celular sitio Bertoli Varrone"
+            imgDesktop={ImgBertoli}
+            altDesktop="Caputa de pantalla de escritorio sitio Bertoli Varrone"
+            linkDeploy="https://bv-ecom-fe.vercel.app/"
+            imgPsition="right"
+            esGrupal={true}
+            orderDos={"order-dos"}
+            isOdd={false}
+            tipoProyectoTexto={t("bertoli.typeText")}
+          />
+
+          <ProyectoTemplate
+            titulo="Zona Inmo"
+            descripcion={t("zonaInmo.desc")}  
+            imgMobile={ImgZonaInmoMobile}
+            altMobile="Caputa de pantalla de celular sitio Zona Inmo"
+            imgDesktop={ImgZonaInmo}
+            altDesktop="Caputa de pantalla de escritorio sitio Zona Inmo"
+            linkDeploy="https://zona-inmo-front-develop.vercel.app/"
+            imgPsition="left"
+            esGrupal={true}
+            isOdd={false}
+            tipoProyectoTexto={t("zonaInmo.typeText")}
+          />
+        </div>
+
+        <ProyectosSecundarios show={verMas}>
           <ProyectoMobileTemplate
             titulo="Payfriend"
             descripcion={t("payFriend.desc")}
@@ -60,11 +90,13 @@ const ListaProyectos = () => {
             altImgDos="Captura de pantalla de comprobande te pago"
             imgTres={imgPayfriend3}
             altImgTres="Captura de pantalla de transferencia de cryptomonedas"
-            imgPsition="left"
-            esGrupal={true}
-            isOdd={true}
             tipoProyectoTexto={t("payFriend.typeText")}
+            esGrupal={true}
+            imgPsition="left"
+            orderDos="order-dos"
+            isOdd={true}
           />
+
           <ProyectoMobileTemplate
             titulo="Sin fronteras"
             descripcion={t("sinFronteras.desc")}
@@ -75,27 +107,10 @@ const ListaProyectos = () => {
             altImgDos="Captura de pantalla de Info profesional"
             imgTres={ImgSinFronteras3}
             altImgTres="Captura de pantalla de registro paso 1"
-            imgPsition="right"
-            orderDos="order-dos"
+            tipoProyectoTexto={t("sinFronteras.typeText")}
+            imgPsition="left"
             esGrupal={true}
             isOdd={true}
-            tipoProyectoTexto={t("sinFronteras.typeText")}
-          />
-        </div>
-
-        <ProyectosSecundarios show={verMas}>
-          <ProyectoTemplate
-            titulo="Interactive Card"
-            descripcion={t("interactiveCard.desc")}
-            githubFront="https://github.com/KatuGT/interactive-card-challange"
-            imgMobile={ImgCardMobile}
-            altMobile="Caputa de pantalla de celular sitio Interactive Card"
-            imgDesktop={ImgCard}
-            altDesktop="Caputa de pantalla de escritorio sitio Interactive Card"
-            linkDeploy="https://interactive-card-challange.vercel.app/"
-            imgPsition="left"
-            tipoProyectoTexto={t("interactiveCard.typeText")}
-            isOdd={false}
           />
           <ProyectoMobileTemplate
             titulo="Dish Detective"
@@ -107,24 +122,11 @@ const ListaProyectos = () => {
             altImgDos="Captura de pantalla seleccionando imagen para receta"
             imgTres={ImgDishDetective3}
             altImgTres="Captura de pantalla de detalles de receta elegida"
-            imgPsition="right"
-            orderDos="order-dos"
-            esGrupal={true}
-            isOdd={false}
             tipoProyectoTexto={t("dishDetective.typeText")}
-          />
-          <ProyectoTemplate
-            titulo="Atlas"
-            descripcion={t("atlas.desc")}
-            githubFront="https://github.com/KatuGT/atlas-cine"
-            imgMobile={ImgAtlasMobile}
-            altMobile="Caputa de pantalla de celular sitio MoviePop"
-            imgDesktop={ImgAtlas}
-            altDesktop="Caputa de pantalla de escritorio sitio Atlas"
-            linkDeploy="https://helpful-fenglisu-56d94c.netlify.app/"
+            esGrupal={true}
             imgPsition="left"
-            tipoProyectoTexto={t("atlas.typeText")}
-            isOdd={false}
+            orderDos="order-dos"
+            isOdd={true}
           />
         </ProyectosSecundarios>
         <VerMasWrapper>
