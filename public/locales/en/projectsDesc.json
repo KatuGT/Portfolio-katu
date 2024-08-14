@@ -19,8 +19,8 @@
     "desc": "Mobile application developed with React Native. I was in charge of screens 1 and 2 of the registration process, as well as refactoring the professional profile screen.",
     "typeText": "Group project"
   },
-  "sizeMatch": {
-    "desc": "Parts Finder by Measurement (for motorcycles). Many brands offer search tools based on the motorcycle model, but this isn't always helpful. I've gathered data from various brands and parts that, in my experience, are the most requested. Tools and libraries used: Redux Toolkit, Tailwind, React Hook Form, Yup, eslint, swr. Build with TypeScript",
-    "typeText": "Individual  project"
+  "zonaInmo": {
+    "desc": "On Zona Inmo, you can search for or list properties for sale or rent in Paraguay. While listing your properties is free, users have the option to enhance the visibility of their listings by upgrading their plan. The site was developed with Next.js, and some of the technologies used include SwiperJS, CKEditor, Google reCAPTCHA V2, Redux Toolkit, Redux Query, and Tailwind, among others.",
+    "typeText": "Group project"
   }
 }

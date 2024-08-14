@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ImgSizeMatch from "../../assets/imagenes/pr-sizeMatch.webp";
-import ImgSizeMatchMobile from "../../assets/imagenes/pr-sizeMatchMobile.webp";
+import ImgZonaInmo from "../../assets/imagenes/pr-zonaInmo.webp";
+import ImgZonaInmoMobile from "../../assets/imagenes/pr-zonaInmoMobile.webp";
 import ImgSinFronteras1 from "../../assets/imagenes/SinFronterasImg1.webp";
 import ImgSinFronteras2 from "../../assets/imagenes/SinFronterasImg2.webp";
 import ImgSinFronteras3 from "../../assets/imagenes/SinFronterasImg3.webp";
@@ -65,19 +65,17 @@ const ListaProyectos = () => {
           />
 
           <ProyectoTemplate
-            titulo="Size Match"
-            descripcion={t("sizeMatch.desc")}
-            githubFront="https://github.com/KatuGT/sizematch"
-            githubBack="https://github.com/KatuGT/sizematch"
-            imgMobile={ImgSizeMatchMobile}
-            altMobile="Caputa de pantalla de celular sitio SizeMatch"
-            imgDesktop={ImgSizeMatch}
-            altDesktop="Caputa de pantalla de escritorio sitio SizeMatch"
-            linkDeploy="https://sizematch.net/"
+            titulo="Zona Inmo"
+            descripcion={t("zonaInmo.desc")}  
+            imgMobile={ImgZonaInmoMobile}
+            altMobile="Caputa de pantalla de celular sitio Zona Inmo"
+            imgDesktop={ImgZonaInmo}
+            altDesktop="Caputa de pantalla de escritorio sitio Zona Inmo"
+            linkDeploy="https://zona-inmo-front-develop.vercel.app/"
             imgPsition="left"
-            esGrupal={false}
+            esGrupal={true}
             isOdd={false}
-            tipoProyectoTexto={t("sizeMatch.typeText")}
+            tipoProyectoTexto={t("zonaInmo.typeText")}
           />
         </div>
 
