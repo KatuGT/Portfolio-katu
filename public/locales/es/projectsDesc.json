@@ -19,8 +19,8 @@
     "desc": "Aplicación de celular desarrollada con React Native, me encargué de las pantallas 1 y 2 de registro, además de refactorizar la pantalla de Perfil profesional",
     "typeText": "Proyecto grupal"
   },
-  "sizeMatch": {
-    "desc": "Buscador de repuestos según su medida (para motocicletas). Muchas marcas ofrecen buscadores pero según el modelo de moto, pero esto no es siempre útil. He reunido data de varias marcas y repuestos que, en mi experiencia, son de los mas solicitados. Herramientas y librerías usadas: Redux Toolkit, tailwind, React Hook Form, Yup, eslint, swr. Lenguaje TypeScript",
-    "typeText": "Proyecto individual"
+  "zonaInmo": {
+    "desc": "En Zona Inmo, puedes buscar o publicar propiedades para venta o alquiler en Paraguay. Aunque la publicación de propiedades es gratuita, los usuarios tienen la opción de mejorar la visibilidad de sus anuncios mediante la actualización de su plan. El sitio fue desarrollado con Next.js, y algunas de las tecnologías utilizadas incluyen SwiperJS, CKEditor, Google reCAPTCHA V2, Redux Toolkit, Redux Query, y Tailwind, entre otras.",
+    "typeText": "Proyecto grupal"
   }
 }
