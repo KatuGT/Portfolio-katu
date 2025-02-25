@@ -22,5 +22,17 @@
   "zonaInmo": {
     "desc": "En Zona Inmo, puedes buscar o publicar propiedades para venta o alquiler en Paraguay. Aunque la publicación de propiedades es gratuita, los usuarios tienen la opción de mejorar la visibilidad de sus anuncios mediante la actualización de su plan. El sitio fue desarrollado con Next.js, y algunas de las tecnologías utilizadas incluyen SwiperJS, CKEditor, Google reCAPTCHA V2, Redux Toolkit, Redux Query, y Tailwind, entre otras.",
     "typeText": "Proyecto grupal"
+  },
+  "aapresid": {
+    "desc": "En este gran proyecto, estuve a cargo del desarrollo de las secciones 'Asociate', 'Levantando la perdiz' y 'Prospectiva', además de colaborar en un par más. Para el desarrollo de este sitio, se destacan librerías como GSAP, ya que las animaciones eran un punto clave en el diseño, además de Swiper para las galerías de imágenes y videos, y, por supuesto, Tailwind para el diseño responsivo.",
+    "typeText": "Proyecto grupal"
+  },
+  "repower": {
+    "desc": "Este es el sitio institucional de la empresa Repowerlab, cuyo trabajo principal es la generación de energía renovable. El sitio fue desarrollado con Next.js, y algunas de las tecnologías utilizadas incluyen Framer motion, Swiper, y Tailwind, entre otras.",
+    "typeText": "Proyecto grupal"
+  },
+  "ebookAgro": {
+    "desc": "Pequeña landing realizada con el objetivo especifico  de promocionar una campaña para hacernos conocer mas ampliamente en el mundo del Agro.",
+    "typeText": "Proyecto individual"
   }
 }
