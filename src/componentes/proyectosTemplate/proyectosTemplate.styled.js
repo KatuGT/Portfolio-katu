@@ -137,7 +137,7 @@ export const ImgProyecto = styled.img`
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top left;
+    object-fit: contain;
+    object-position: center;
   }
 `;
