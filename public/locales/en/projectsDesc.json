@@ -33,6 +33,10 @@
   },
   "ebookAgro": {
     "desc": "Small landing page created with the specific goal of promoting a campaign to expand our recognition in the agricultural sector.",
-    "typeText": "Proyecto individual"
+    "typeText": "Individual project"
+  },
+  "aapreCongreso": {
+    "desc": "Website developed for the prestigious Aapresid Congress, an international reference event that for over three decades has connected agricultural innovation, technology, and knowledge under the motto 'with the strength of Expoagro'. This project features 15 complete pages, translation system with i18next, and is developed with TypeScript. The development utilizes libraries such as Framer Motion for smooth animations, SwiperJS for multimedia galleries, and Tailwind for responsive design.",
+    "typeText": "Individual project"
   }
 }
