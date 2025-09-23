@@ -4,10 +4,6 @@ import ImgZonaInmoMobile from "../../assets/imagenes/pr-zonaInmoMobile.webp";
 import imgAgroMobile from "../../assets/imagenes/pr-chimpaAgroMobile.webp";
 import imgAapreMobile from "../../assets/imagenes/pr-aapreMobile.webp";
 import imgRepowerMobile from "../../assets/imagenes/pr-repowerMobile.webp";
-
-import imgPayfriend1 from "../../assets/imagenes/PayfriendImg1.webp";
-import imgPayfriend2 from "../../assets/imagenes/PayfriendImg2.webp";
-import imgPayfriend3 from "../../assets/imagenes/PayfriendImg3.webp";
 import imgAgro from "../../assets/imagenes/pr-chimpaAgro.webp";
 import imgAapre from "../../assets/imagenes/pr-aapre.webp";
 import imgRepower from "../../assets/imagenes/pr-repower.webp";
@@ -15,6 +11,8 @@ import ImgBertoliMobile from "../../assets/imagenes/pr-bertoliMobile.webp";
 import ImgBertoli from "../../assets/imagenes/pr-bertoli.webp";
 import ImgChimpaMobile from "../../assets/imagenes/pr-chimpaMobile.webp";
 import ImgChimpa from "../../assets/imagenes/pr-chimpa.webp";
+import ImgaApreCongreso from "../../assets/imagenes/pr-aapreCongreso.webp";
+import ImgaApreCongresoMobile from "../../assets/imagenes/pr-aapreCongresoMobile.webp";
 
 import { useTranslation } from "react-i18next";
 import {
@@ -26,7 +24,6 @@ import {
   WrapperListaProyectos,
 } from "./listaProyecto.styled";
 import ProyectoTemplate from "../proyectosTemplate/ProyectoTemplate";
-import ProyectoMobileTemplate from "../proyectosTemplate/ProyectoMobileTemplate";
 
 const ListaProyectos = () => {
   const { t } = useTranslation(["projectsDesc", "projects"]);
@@ -37,6 +34,20 @@ const ListaProyectos = () => {
       <WrapperListaProyectos>
         <div>
           <ProyectoTemplate
+            titulo="Congreso Aapresid"
+            descripcion={t("aapreCongreso.desc")}
+            imgMobile={ImgaApreCongresoMobile}
+            altMobile="Caputa de pantalla de celular sitio Congreso Aapresid"
+            imgDesktop={ImgaApreCongreso}
+            altDesktop="Caputa de pantalla de escritorio sitio Congreso Aapresid"
+            linkDeploy="https://congreso.aapresid.org.ar/es"
+            imgPsition="left"
+            esGrupal={true}
+            isOdd={false}
+            // orderDos={"order-dos"}
+            tipoProyectoTexto={t("aapreCongreso.typeText")}
+          />
+          <ProyectoTemplate
             titulo="Aapresid - asociate"
             descripcion={t("aapresid.desc")}
             imgMobile={imgAapreMobile}
@@ -44,9 +55,10 @@ const ListaProyectos = () => {
             imgDesktop={imgAapre}
             altDesktop="Caputa de pantalla de escritorio sitio Aapresid"
             linkDeploy="https://www.aapresid.org.ar/es/asociate"
-            imgPsition="left"
+            imgPsition="right"
             esGrupal={true}
-            isOdd={false}
+            orderDos={"order-dos"}
+            // isOdd={true}
             tipoProyectoTexto={t("aapresid.typeText")}
           />
 
@@ -56,12 +68,12 @@ const ListaProyectos = () => {
             imgMobile={imgRepowerMobile}
             altMobile="Caputa de pantalla de celular sitio RepowerLab"
             imgDesktop={imgRepower}
-            altDesktop="Caputa de pantalla de escritorio sitio Zona Inmo"
+            altDesktop="Caputa de pantalla de escritorio sitio RepowerLab"
             linkDeploy="https://repowerlab.com/"
-            imgPsition="right"
+            imgPsition="left"
             esGrupal={true}
             isOdd={false}
-            orderDos={"order-dos"}
+            // orderDos={"order-dos"}
             tipoProyectoTexto={t("repower.typeText")}
           />
           <ProyectoTemplate
@@ -72,11 +84,15 @@ const ListaProyectos = () => {
             imgDesktop={ImgChimpa}
             altDesktop="Caputa de pantalla de escritorio sitio Chimpance Digital"
             linkDeploy="https://www.chimpance.digital/agenciaweb"
-            imgPsition="left"
+            imgPsition="right"
             esGrupal={false}
             isOdd={false}
+            orderDos={"order-dos"}
             tipoProyectoTexto={t("chimpance.typeText")}
           />
+        </div>
+
+        <ProyectosSecundarios show={verMas}>
           <ProyectoTemplate
             titulo="Chimpancé digital - e Book Agro"
             descripcion={t("ebookAgro.desc")}
@@ -85,15 +101,12 @@ const ListaProyectos = () => {
             imgDesktop={imgAgro}
             altDesktop="Caputa de pantalla de escritorio sitio Zona Inmo"
             linkDeploy="https://www.chimpance.digital/e-book-agro"
-            imgPsition="right"
+            imgPsition="left"
             esGrupal={false}
             isOdd={false}
-            orderDos={"order-dos"}
+            // orderDos={"order-dos"}
             tipoProyectoTexto={t("ebookAgro.typeText")}
           />
-        </div>
-
-        <ProyectosSecundarios show={verMas}>
           <ProyectoTemplate
             titulo="Bertoli Varrone"
             descripcion={t("bertoli.desc")}
@@ -102,9 +115,10 @@ const ListaProyectos = () => {
             imgDesktop={ImgBertoli}
             altDesktop="Caputa de pantalla de escritorio sitio Bertoli Varrone"
             linkDeploy="https://bv-ecom-fe.vercel.app/"
-            imgPsition="left"
+            imgPsition="right"
             esGrupal={true}
             isOdd={false}
+            orderDos={"order-dos"}
             tipoProyectoTexto={t("bertoli.typeText")}
           />
 
@@ -116,27 +130,11 @@ const ListaProyectos = () => {
             imgDesktop={ImgZonaInmo}
             altDesktop="Caputa de pantalla de escritorio sitio Zona Inmo"
             linkDeploy="https://www.zonainmo.com.py/"
-            imgPsition="right"
-            orderDos={"order-dos"}
+            imgPsition="left"
+            // orderDos={"order-dos"}
             esGrupal={true}
             isOdd={false}
             tipoProyectoTexto={t("zonaInmo.typeText")}
-          />
-          <ProyectoMobileTemplate
-            titulo="Payfriend"
-            descripcion={t("payFriend.desc")}
-            githubFront="https://github.com/No-Country/s8-15-t-reactnative"
-            imgUno={imgPayfriend1}
-            altImgUno="Captura de pantalla de inicio"
-            imgDos={imgPayfriend2}
-            altImgDos="Captura de pantalla de comprobande te pago"
-            imgTres={imgPayfriend3}
-            altImgTres="Captura de pantalla de transferencia de cryptomonedas"
-            tipoProyectoTexto={t("payFriend.typeText")}
-            esGrupal={true}
-            imgPsition="right"
-            // orderDos="order-dos"
-            isOdd={false}
           />
         </ProyectosSecundarios>
         <VerMasWrapper>
