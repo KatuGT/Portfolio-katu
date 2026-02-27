@@ -1,0 +1,54 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import { projects } from "../lib/projects";
+import { useTranslations } from "../lib/i18n";
+
+interface Props {
+  id: string;
+  title: string;
+  subtitle?: string;
+  category: "real" | "practice";
+}
+
+const { id, title, subtitle, category } = Astro.props;
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
+const { projectsDesc, projects: projectsLabels } = t;
+
+const filteredProjects = projects.filter((p) => p.category === category);
+---
+
+<section id={id} class="py-24 px-6 max-w-7xl mx-auto space-y-16">
+  <div class="space-y-4 text-center">
+    <h2
+      class="text-4xl md:text-6xl font-black neon-text-gradient uppercase tracking-tighter"
+    >
+      {title}
+    </h2>
+    {
+      subtitle && (
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto font-medium">
+          {subtitle}
+        </p>
+      )
+    }
+    <div
+      class="h-1 w-20 bg-gradient-to-r from-neon-violet to-neon-cyan mx-auto rounded-full"
+    >
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      filteredProjects.map((project) => (
+        <ProjectCard
+          project={project}
+          description={(projectsDesc as any)[project.id].desc}
+          typeText={(projectsDesc as any)[project.id].typeText}
+          readMoreLabel={projectsLabels.readMore}
+          readLessLabel={projectsLabels.readLess}
+        />
+      ))
+    }
+  </div>
+</section>

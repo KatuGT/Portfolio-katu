@@ -1,8 +1,4 @@
 {
-  "bertoli": {
-    "desc": "An e-commerce platform targeted at the agricultural sector, with the particularity that it accepts grain bartering as a form of payment. Developed with Next.js 13, RTQ Query, Redux toolkit, Tailwind, and Google login available.",
-    "typeText": "Group project"
-  },
   "dishDetective": {
     "desc": "Mobile application developed with React Native, a recipe finder that provides a comprehensive list of nutritional data, as well as ingredients and instructions, of course. Zod, React Hook Form, SWR, and TypeScript were used in its development.",
     "typeText": "Group project"
@@ -36,7 +32,15 @@
     "typeText": "Individual project"
   },
   "aapreCongreso": {
-    "desc": "Website developed for the prestigious Aapresid Congress, an international reference event that for over three decades has connected agricultural innovation, technology, and knowledge under the motto 'with the strength of Expoagro'. This project features 15 complete pages, translation system with i18next, and is developed with TypeScript. The development utilizes libraries such as Framer Motion for smooth animations, SwiperJS for multimedia galleries, and Tailwind for responsive design.",
+    "desc": "Website developed for the prestigious Aapresid Congress, an international reference event that for over three decades has connected agricultural innovation, technology, and knowledge under the motto 'con la fuerza de Expoagro'. This project features 15 complete pages, translation system with i18next, and is developed with TypeScript. The development utilizes libraries such as Framer Motion for smooth animations, SwiperJS for multimedia galleries, and Tailwind for responsive design.",
     "typeText": "Individual project"
+  },
+  "diapason": {
+    "desc": "Choral resources store and e-commerce specialized in sheet music. Supports payments via PayPal and Mercado Pago. Developed almost entirely using V0 for a modern and efficient interface.",
+    "typeText": "Group project / V0"
+  },
+  "sizeMatch": {
+    "desc": "Web tool designed for motorcyclists to simplify the search for technical spare parts (such as brake discs or sprockets) using exact measurements. It allows users to quickly find the perfect part code, eliminating the frustration of endless searches.",
+    "typeText": "Individual project / Web Tool"
   }
 }

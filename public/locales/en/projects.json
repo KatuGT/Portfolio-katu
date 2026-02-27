@@ -1,5 +1,9 @@
 {
     "projects": "Selected projects",
+    "projectsSubtitle": "Real solutions for real clients",
+    "labSubtitle": "Experimental space exploring new technologies and frameworks",
     "showMore": "Show more projects",
-    "showLess": "Show less projects"
+    "showLess": "Show less projects",
+    "readMore": "Read more",
+    "readLess": "Read less"
 }
