@@ -1,0 +1,66 @@
+---
+import { useTranslations } from "../lib/i18n";
+
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
+const { header } = t;
+
+const navItems = [
+  { name: header.projects, href: "#proyectos" },
+  { name: header.lab, href: "#laboratorio" },
+  { name: header.toolsAndTech, href: "#tecnologias" },
+  { name: header.contact, href: "#contacto" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+  <div
+    class="max-w-7xl mx-auto flex items-center justify-between glass-card px-8 py-3 ring-1 ring-white/10 shadow-2xl shadow-neon-violet/10"
+  >
+    <a href="/" class="text-2xl font-black neon-text-gradient tracking-tighter">
+      KATU<span class="text-white">.</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-300 relative group"
+            >
+              {item.name}
+              <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-neon-violet to-neon-cyan transition-all duration-300 group-hover:w-full" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <!-- Language Toggle -->
+      <a
+        href={locale === "es" ? "/en" : "/"}
+        class="text-xs font-bold px-2 py-1 rounded border border-white/20 hover:border-neon-cyan transition-colors"
+      >
+        {locale === "es" ? "EN" : "ES"}
+      </a>
+
+      <button class="md:hidden text-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

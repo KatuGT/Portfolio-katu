@@ -1,8 +1,4 @@
 {
-  "bertoli": {
-    "desc": "E-commerce dirigido al sector 'agro', teniendo como particularidad que se aceptan canjes de cereales como medio de pago. Desarrollado con Next.js 13, RTQ Query, Redux toolkit, Tailwind, login con Google disponible.",
-    "typeText": "Proyecto grupal"
-  },
   "dishDetective": {
     "desc": "Aplicación de celular desarrollada con React Native, buscador de recetas que entrega una amplia lista de datos nutricionales, además de ingredientes e instrucciones, claro. Se usó Zod, React Hook Form, SWR y TypeScript en su desarrollo.",
     "typeText": "Proyecto grupal"
@@ -37,6 +33,14 @@
   },
   "aapreCongreso": {
     "desc": "Sitio web desarrollado para el prestigioso Congreso Aapresid, evento de referencia internacional que desde hace más de tres décadas conecta innovación, tecnología y conocimiento agrícola con el lema 'con la fuerza de Expoagro'. Este proyecto cuenta con 15 páginas completas, sistema de traducción con i18next, y está desarrollado con TypeScript. Para el desarrollo se utilizaron librerías como Framer Motion para animaciones fluidas, SwiperJS para galerías multimedia, y Tailwind para diseño responsivo.",
+    "typeText": "Proyecto individual"
+  },
+  "diapason": {
+    "desc": "Tienda de recursos corales y e-commerce especializado en partituras. Permite pagos a través de PayPal y Mercado Pago. Desarrollado casi íntegramente utilizando V0 para una interfaz moderna y eficiente.",
+    "typeText": "Proyecto grupal / V0"
+  },
+  "sizeMatch": {
+    "desc": "Herramienta web diseñada para motociclistas que facilita la búsqueda de repuestos técnicos (como discos de freno o piñones) mediante medidas exactas. Permite filtrar y encontrar el código de pieza perfecto de forma rápida, eliminando la frustración de las búsquedas interminables.",
     "typeText": "Proyecto individual"
   }
 }
