@@ -1,0 +1,142 @@
+---
+import { Image } from "astro:assets";
+import type { Project } from "../lib/projects";
+
+interface Props {
+  project: Project;
+  description: string;
+  typeText: string;
+  readMoreLabel: string;
+  readLessLabel: string;
+}
+
+const { project, description, typeText, readMoreLabel, readLessLabel } =
+  Astro.props;
+
+// Dynamically import images for Astro optimization
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/imagenes/*.{jpeg,jpg,png,gif,webp}",
+);
+const desktopImgPath = project.imgDesktop;
+
+if (!images[desktopImgPath])
+  throw new Error(
+    `"${desktopImgPath}" does not exist in glob: "src/assets/imagenes/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+---
+
+<div
+  class="group relative flex flex-col glass-card overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neon-cyan/20"
+>
+  <!-- Image Container -->
+  <div class="relative aspect-video overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60"
+    >
+    </div>
+    <Image
+      src={images[desktopImgPath]()}
+      alt={project.title}
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+    />
+
+    <!-- Badges -->
+    <div class="absolute top-4 right-4 z-20 flex gap-2">
+      <span
+        class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-neon-cyan"
+      >
+        {typeText}
+      </span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-6 flex flex-col flex-grow">
+    <h3
+      class="text-2xl font-bold mb-3 group-hover:text-neon-cyan transition-colors duration-300"
+    >
+      {project.title}
+    </h3>
+
+    <div
+      class="description-container relative overflow-hidden transition-all duration-500 max-h-[4.5rem]"
+    >
+      <p class="description-text text-gray-400 text-sm leading-relaxed mb-6">
+        {description}
+      </p>
+    </div>
+
+    {
+      description.length > 100 && (
+        <button
+          class="toggle-description text-xs font-bold uppercase tracking-widest text-neon-cyan hover:text-white transition-colors mb-4 self-start"
+          data-more={readMoreLabel}
+          data-less={readLessLabel}
+        >
+          {readMoreLabel}
+        </button>
+      )
+    }
+
+    <div class="mt-auto flex items-center justify-between">
+      <div class="flex items-center gap-3"></div>
+
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-neon-cyan transition-colors group/link"
+      >
+        Live Demo
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="w-4 h-4 transition-transform group-hover/link:translate-x-1"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hover Border Effect -->
+  <div
+    class="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-neon-cyan/30 pointer-events-none transition-colors duration-500"
+  >
+  </div>
+</div>
+
+<script>
+  function setupDescriptionToggles() {
+    const toggles = document.querySelectorAll(".toggle-description");
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const container = toggle.parentElement?.querySelector(
+          ".description-container",
+        ) as HTMLElement;
+        const isExpanded =
+          container.style.maxHeight === "none" ||
+          container.style.maxHeight === "500px";
+
+        if (isExpanded) {
+          container.style.maxHeight = "4.5rem";
+          toggle.textContent = toggle.getAttribute("data-more");
+        } else {
+          container.style.maxHeight = "500px"; // Arbitrary large value or 'none' with transition caveat
+          toggle.textContent = toggle.getAttribute("data-less");
+        }
+      });
+    });
+  }
+
+  // Run on initial load and on navigation
+  setupDescriptionToggles();
+  document.addEventListener("astro:after-swap", setupDescriptionToggles);
+</script>

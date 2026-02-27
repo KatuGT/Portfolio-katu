@@ -1,0 +1,35 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="py-12 px-6 border-t border-white/5 bg-black/20 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="space-y-2 text-center md:text-left">
+      <h3 class="text-xl font-black neon-text-gradient uppercase tracking-tighter">KATU.</h3>
+      <p class="text-sm text-gray-500">© {year} - Cintia Jimena Martínez. All rights reserved.</p>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <a
+        href="https://github.com/KatuGT"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="text-gray-400 hover:text-white transition-colors text-2xl"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/cintiajimenamartinez/"
+        target="_blank"
+        rel="noreferrer noopener"
+        class="text-gray-400 hover:text-white transition-colors text-2xl"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+    
+    <div class="text-xs text-gray-600 font-mono">
+      Built with Astro + Tailwind
+    </div>
+  </div>
+</footer>

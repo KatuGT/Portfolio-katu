@@ -1,0 +1,50 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Technologies from "../components/Technologies.astro";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer.astro";
+import { useTranslations } from "../lib/i18n";
+
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
+const { header } = t;
+---
+
+<MainLayout title="KATU | Front-end Developer">
+	<Navbar />
+	<main class="relative overflow-hidden">
+		<!-- Background Glows -->
+		<div
+			class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-neon-violet/20 blur-[120px] rounded-full pointer-events-none -z-10"
+		>
+		</div>
+		<div
+			class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-neon-cyan/20 blur-[120px] rounded-full pointer-events-none -z-10"
+		>
+		</div>
+		<div
+			class="fixed top-[40%] right-[-10%] w-[30%] h-[30%] bg-neon-violet/10 blur-[120px] rounded-full pointer-events-none -z-10"
+		>
+		</div>
+
+		<Hero />
+		<Projects
+			id="proyectos"
+			title={header.projects}
+			subtitle={t.projects.projectsSubtitle}
+			category="real"
+		/>
+		<Projects
+			id="laboratorio"
+			title={header.lab}
+			subtitle={t.projects.labSubtitle}
+			category="practice"
+		/>
+		<Technologies />
+		<ContactForm client:load t={t.contact} />
+	</main>
+	<Footer />
+</MainLayout>
