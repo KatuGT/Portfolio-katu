@@ -15,7 +15,7 @@ const { project, description, typeText, readMoreLabel, readLessLabel } =
 
 // Dynamically import images for Astro optimization
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/imagenes/*.{jpeg,jpg,png,gif,webp}",
+  "/src/assets/imagenes/**/*.{jpeg,jpg,png,gif,webp}",
 );
 const desktopImgPath = project.imgDesktop;
 

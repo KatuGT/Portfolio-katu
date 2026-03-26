@@ -7,9 +7,9 @@
     "desc": "Landing page created for Chimpancé Digital, a design and development company. Developed with Next.js 13, GSAP, and Swiper. Google ReCaptcha V3 verification in the form.",
     "typeText": "Individual  project"
   },
-  "payFriend": {
-    "desc": "Mobile application developed with React Native. The app is a virtual wallet that also allows you to manage your cryptocurrencies. Other tools used include NativeWind, React Navigation, React Hook Form, Victory, and Redux Toolkit. The screens I was responsible for were Home, Transfer, Crypto Graph, Bill Payment, Payment Receipt, and Account Transaction History. Additionally, I refactored the style of several screens created by my colleagues.",
-    "typeText": "Group project"
+  "wakarimasuka": {
+    "desc": "Wakarimasuka? is a premium platform designed to improve Japanese listening comprehension through real-world content such as anime, songs, and news. It features synchronized smart transcriptions, real-time morphological analysis using Kuromoji, and an integrated feedback system. Japanese to Spanish translation is powered by Gemini AI integration, ensuring accuracy and fluency.",
+    "typeText": "Individual project"
   },
   "sinFronteras": {
     "desc": "Mobile application developed with React Native. I was in charge of screens 1 and 2 of the registration process, as well as refactoring the professional profile screen.",

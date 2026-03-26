@@ -1,55 +1,90 @@
 ---
-import { Image } from 'astro:assets';
-import { useTranslations } from '../lib/i18n';
+import { Image } from "astro:assets";
+import { useTranslations } from "../lib/i18n";
 
 const locale = Astro.currentLocale;
 const t = useTranslations(locale);
 const { tools } = t;
 
 const techStack = [
-  { name: 'React', icon: '/src/assets/imagenes/logo-react-small.webp' },
-  { name: 'Next.js', icon: '/src/assets/imagenes/logo-next-small.webp' },
-  { name: 'TypeScript', icon: '/src/assets/imagenes/logo-ts-small.webp' },
-  { name: 'JavaScript', icon: '/src/assets/imagenes/logo-js-small.webp' },
-  { name: 'Tailwind', icon: '/src/assets/imagenes/logo-tailwind-small.webp' },
-  { name: 'Redux', icon: '/src/assets/imagenes/logo-redux-small.webp' },
-  { name: 'Git', icon: '/src/assets/imagenes/logo-git-small.webp' },
-  { name: 'Figma', icon: '/src/assets/imagenes/logo-figma-small.webp' },
-  { name: 'Sass', icon: '/src/assets/imagenes/logo-sass-small.webp' },
-  { name: 'CSS3', icon: '/src/assets/imagenes/logo-css3-small.webp' },
-  { name: 'HTML5', icon: '/src/assets/imagenes/logo-html-small.webp' },
-  { name: 'VS Code', icon: '/src/assets/imagenes/logo-vscode-small.webp' },
+  { name: "React", icon: "/src/assets/imagenes/logos/logo-react-small.webp" },
+  { name: "Next.js", icon: "/src/assets/imagenes/logos/logo-next-small.webp" },
+  {
+    name: "React Native",
+    icon: "/src/assets/imagenes/logos/logo-reactNative-small.webp",
+  },
+  {
+    name: "Angular",
+    icon: "/src/assets/imagenes/logos/logo-angular.webp",
+  },
+  { name: "Zustand", icon: "/src/assets/imagenes/logos/logo-zustand.webp" },
+  { name: "TypeScript", icon: "/src/assets/imagenes/logos/logo-ts-small.webp" },
+  { name: "JavaScript", icon: "/src/assets/imagenes/logos/logo-js-small.webp" },
+  {
+    name: "Tailwind",
+    icon: "/src/assets/imagenes/logos/logo-tailwind-small.webp",
+  },
+  { name: "Redux", icon: "/src/assets/imagenes/logos/logo-redux-small.webp" },
+  { name: "Git", icon: "/src/assets/imagenes/logos/logo-git-small.webp" },
+  { name: "Figma", icon: "/src/assets/imagenes/logos/logo-figma-small.webp" },
+  { name: "Sass", icon: "/src/assets/imagenes/logos/logo-sass-small.webp" },
+  { name: "CSS3", icon: "/src/assets/imagenes/logos/logo-css3-small.webp" },
+  { name: "HTML5", icon: "/src/assets/imagenes/logos/logo-html-small.webp" },
+  {
+    name: "Antigravity",
+    icon: "/src/assets/imagenes/logos/logo-antigravity.webp",
+  },
+  {
+    name: "VS Code",
+    icon: "/src/assets/imagenes/logos/logo-vscode-small.webp",
+  },
+  {
+    name: "Illustrator",
+    icon: "/src/assets/imagenes/logos/logo-ai-small.webp",
+  },
+  { name: "Photoshop", icon: "/src/assets/imagenes/logos/logo-ps-small.webp" },
 ];
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/imagenes/*.{jpeg,jpg,png,gif,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/imagenes/**/*.{jpeg,jpg,png,gif,webp}",
+);
 ---
 
 <section id="tecnologias" class="py-24 px-6 max-w-7xl mx-auto space-y-16">
   <div class="space-y-4 text-center">
-    <h2 class="text-4xl md:text-6xl font-black neon-text-gradient uppercase tracking-tighter">
+    <h2
+      class="text-4xl md:text-6xl font-black neon-text-gradient uppercase tracking-tighter"
+    >
       {tools.toolsAndTech}
     </h2>
-    <div class="h-1 w-20 bg-gradient-to-r from-neon-violet to-neon-cyan mx-auto rounded-full"></div>
+    <div
+      class="h-1 w-20 bg-gradient-to-r from-neon-violet to-neon-cyan mx-auto rounded-full"
+    >
+    </div>
   </div>
 
   <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-    {techStack.map((tech) => (
-      <div class="group flex flex-col items-center justify-center p-6 glass-card border border-white/5 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-300">
-        <div class="w-12 h-12 mb-4 relative transition-transform duration-300 group-hover:scale-110">
-          <Image 
-            src={images[tech.icon]()} 
-            alt={tech.name} 
-            class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-          />
+    {
+      techStack.map((tech) => (
+        <div class="group flex flex-col items-center justify-center p-6 glass-card border border-white/5 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-300">
+          <div class="w-12 h-12 mb-4 relative transition-transform duration-300 group-hover:scale-110">
+            <Image
+              src={images[tech.icon]()}
+              alt={tech.name}
+              class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+          </div>
+          <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+            {tech.name}
+          </span>
         </div>
-        <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
-          {tech.name}
-        </span>
-      </div>
-    ))}
+      ))
+    }
   </div>
 
-  <div class="max-w-3xl mx-auto p-8 glass-card border-l-4 border-neon-violet bg-neon-violet/5">
+  <div
+    class="max-w-3xl mx-auto p-8 glass-card border-l-4 border-neon-violet bg-neon-violet/5"
+  >
     <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
       <i class="fa-solid fa-circle-info text-neon-violet"></i>
       {tools.extraInfo}
