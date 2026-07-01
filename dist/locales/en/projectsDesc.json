@@ -3,21 +3,21 @@
     "desc": "Mobile application developed with React Native, a recipe finder that provides a comprehensive list of nutritional data, as well as ingredients and instructions, of course. Zod, React Hook Form, SWR, and TypeScript were used in its development.",
     "typeText": "Group project"
   },
-  "chimpance": {
-    "desc": "Landing page created for Chimpancé Digital, a design and development company. Developed with Next.js 13, GSAP, and Swiper. Google ReCaptcha V3 verification in the form.",
-    "typeText": "Individual  project"
-  },
-  "payFriend": {
-    "desc": "Mobile application developed with React Native. The app is a virtual wallet that also allows you to manage your cryptocurrencies. Other tools used include NativeWind, React Navigation, React Hook Form, Victory, and Redux Toolkit. The screens I was responsible for were Home, Transfer, Crypto Graph, Bill Payment, Payment Receipt, and Account Transaction History. Additionally, I refactored the style of several screens created by my colleagues.",
+  "aapreCongreso2026": {
+    "desc": "Website developed for the 34th edition of the prestigious Aapresid Congress 2026, the region's most prominent international agricultural knowledge event, held under the motto \"Our soil, our voice\". Built with Next.js (App Router), TypeScript, and Tailwind CSS v4, the project features 9 complete sections and a robust internationalization (i18n) system using next-intl for full multilingual support. Premium libraries such as HeroUI were implemented for polished interface components, GSAP and Framer Motion for high-performance animations and micro-interactions, SwiperJS for dynamic galleries, and Google Maps API integration.",
     "typeText": "Group project"
+  },
+  "wakarimasuka": {
+    "desc": "Wakarimasuka? is a premium platform designed to improve Japanese listening comprehension through real-world content such as anime, songs, and news. It features synchronized smart transcriptions, real-time morphological analysis using Kuromoji, and an integrated feedback system. Japanese to Spanish translation is powered by Gemini AI integration, ensuring accuracy and fluency.",
+    "typeText": "Individual project"
   },
   "sinFronteras": {
     "desc": "Mobile application developed with React Native. I was in charge of screens 1 and 2 of the registration process, as well as refactoring the professional profile screen.",
     "typeText": "Group project"
   },
-  "zonaInmo": {
-    "desc": "On Zona Inmo, you can search for or list properties for sale or rent in Paraguay. While listing your properties is free, users have the option to enhance the visibility of their listings by upgrading their plan. The site was developed with Next.js, and some of the technologies used include SwiperJS, CKEditor, Google reCAPTCHA V2, Redux Toolkit, Redux Query, and Tailwind, among others.",
-    "typeText": "Group project"
+  "provinciaMicro": {
+    "desc": "Institutional website developed for Provincia Microcréditos, a leading financial entity dedicated to supporting entrepreneurs and independent workers in the Province of Buenos Aires. The project implements a server-first architecture integrated with institutional REST APIs, featuring an interactive loan simulator, a dynamic branch locator using Google Maps with marker clustering, and secure forms protected by reCAPTCHA. Developed with Next.js 15 (App Router), React 19, and TypeScript, the platform utilizes HeroUI and Tailwind CSS v4 for a modern UI, Framer Motion for micro-animations, and Sentry for error tracking.",
+    "typeText": "Individual project"
   },
   "aapresid": {
     "desc": "In this major project, I was responsible for developing the 'Asóciate,' 'Levantando la Perdiz,' and 'Prospectiva' sections, as well as collaborating on a couple more. The development of this site highlights libraries such as GSAP, as animations were a key aspect of the design, along with Swiper for image and video galleries, and, of course, Tailwind for responsive design.",

@@ -3,9 +3,9 @@
     "desc": "Aplicación de celular desarrollada con React Native, buscador de recetas que entrega una amplia lista de datos nutricionales, además de ingredientes e instrucciones, claro. Se usó Zod, React Hook Form, SWR y TypeScript en su desarrollo.",
     "typeText": "Proyecto grupal"
   },
-  "chimpance": {
-    "desc": "Landing page realizada para Chimpancé Digital, empresa de diseño y desarrollo. Desarrollado con Next.js 13, GSAP y Swiper. Verificación ReCaptcha V3 de Google en el formulario.",
-    "typeText": "Proyecto individual"
+  "aapreCongreso2026": {
+    "desc": "Sitio web desarrollado para la 34° edición del prestigioso Congreso Aapresid 2026, el evento de conocimiento agropecuario y referencia internacional más destacado de la región, bajo el lema \"Nuestro suelo, nuestra voz\". Este proyecto cuenta con 9 páginas/secciones completas estructuradas bajo el App Router de Next.js, sistema de traducción integrado con next-intl para soporte multilingüe y está desarrollado con TypeScript. Para el diseño y desarrollo se implementó Tailwind CSS v4 junto a HeroUI para componentes de interfaz premium, GSAP y Framer Motion para lograr animaciones fluidas de alto rendimiento, SwiperJS para galerías multimedia e integración interactiva con la API de Google Maps.",
+    "typeText": "Proyecto grupal"
   },
   "wakarimasuka": {
     "desc": "Wakarimasuka? es una plataforma premium diseñada para mejorar la comprensión auditiva del idioma japonés a través de contenido real como anime, canciones y noticias. Cuenta con transcripciones inteligentes sincronizadas, análisis morfológico en tiempo real con Kuromoji y un sistema de feedback integrado. La traducción de japonés a español se realiza mediante la integración de Gemini AI, garantizando precisión y fluidez.",
@@ -15,9 +15,9 @@
     "desc": "Aplicación de celular desarrollada con React Native, me encargué de las pantallas 1 y 2 de registro, además de refactorizar la pantalla de Perfil profesional",
     "typeText": "Proyecto grupal"
   },
-  "zonaInmo": {
-    "desc": "En Zona Inmo, puedes buscar o publicar propiedades para venta o alquiler en Paraguay. Aunque la publicación de propiedades es gratuita, los usuarios tienen la opción de mejorar la visibilidad de sus anuncios mediante la actualización de su plan. El sitio fue desarrollado con Next.js, y algunas de las tecnologías utilizadas incluyen SwiperJS, CKEditor, Google reCAPTCHA V2, Redux Toolkit, Redux Query, y Tailwind, entre otras.",
-    "typeText": "Proyecto grupal"
+  "provinciaMicro": {
+    "desc": "Sitio web institucional desarrollado para Provincia Microcréditos, entidad financiera líder en el apoyo a emprendedores y trabajadores independientes de la Provincia de Buenos Aires. El proyecto implementa una arquitectura server-first integrada con APIs REST institucionales, que incluye un simulador de préstamos interactivo, un buscador de sucursales dinámico basado en Google Maps con agrupación de marcadores (clustering) y formularios protegidos por reCAPTCHA. Desarrollada con Next.js 15 (App Router), React 19 y TypeScript, la plataforma utiliza HeroUI y Tailwind CSS v4 para una interfaz moderna, Framer Motion para microanimaciones y Sentry para monitoreo de errores.",
+    "typeText": "Proyecto individual"
   },
   "aapresid": {
     "desc": "En este gran proyecto, estuve a cargo del desarrollo de las secciones 'Asociate', 'Levantando la perdiz' y 'Prospectiva', además de colaborar en un par más. Para el desarrollo de este sitio, se destacan librerías como GSAP, ya que las animaciones eran un punto clave en el diseño, además de Swiper para las galerías de imágenes y videos, y, por supuesto, Tailwind para el diseño responsivo.",
