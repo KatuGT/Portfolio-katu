@@ -1,71 +1,120 @@
 ---
-import { useTranslations } from '../lib/i18n';
+import { useTranslations } from "../lib/i18n";
 
 const locale = Astro.currentLocale;
 const t = useTranslations(locale);
 const { about } = t;
 
 const socialLinks = [
-  { name: 'Linkedin', href: 'https://www.linkedin.com/in/cintiajimenamartinez/', icon: 'fa-brands fa-linkedin' },
-  { name: 'Github', href: 'https://github.com/KatuGT', icon: 'fa-brands fa-github' },
-  { name: 'CV', href: locale === 'es' ? 'https://drive.google.com/file/d/1MTTv0wRLhb7VfoAvHfv5Tn0EeflyVT3L/view?usp=share_link' : 'https://drive.google.com/file/d/1AtAZ4A-csmhIoAz9UPkC-EAYBT9RQPIJ/view?usp=share_link', icon: 'fa-solid fa-file' },
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/cintiajimenamartinez/",
+    icon: "fa-brands fa-linkedin",
+  },
+  {
+    name: "Github",
+    href: "https://github.com/KatuGT",
+    icon: "fa-brands fa-github",
+  },
+  {
+    name: "CV",
+    href:
+      locale === "es"
+        ? "https://drive.google.com/file/d/1do_VG7d_jVhNdrO1ZdQagv1Ya1rB3hVT/view?usp=sharing"
+        : "https://drive.google.com/file/d/1i-XQOHHUYbTnWRHmZpfXx_bCT-JzYeUw/view?usp=sharing",
+    icon: "fa-solid fa-file",
+  },
 ];
 ---
 
-<section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+<section
+  class="min-h-screen flex flex-col items-center justify-center px-6 pt-20"
+>
   <div class="max-w-4xl w-full text-center space-y-8">
     <!-- Header Badge -->
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-neon-cyan animate-fade-in">
+    <div
+      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-neon-cyan animate-fade-in"
+    >
       <span class="relative flex h-2 w-2">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-cyan opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-neon-cyan"></span>
+        <span
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-cyan opacity-75"
+        ></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-neon-cyan"
+        ></span>
       </span>
-      {locale === 'es' ? 'Disponible para proyectos' : 'Available for projects'}
+      {locale === "es" ? "Disponible para proyectos" : "Available for projects"}
     </div>
 
     <!-- Title Wrap -->
     <div class="space-y-4">
       <h1 class="text-5xl md:text-8xl font-black tracking-tight leading-none">
-        {about.hiIam} <span class="neon-text-gradient font-black">KATU</span>
+        {about.hiIam}
+        <span class="neon-text-gradient font-black">KATU</span>
       </h1>
-      <p class="text-xl md:text-2xl font-bold text-white/60 font-['Orbitron'] tracking-widest uppercase">
+      <p
+        class="text-xl md:text-2xl font-bold text-white/60 font-['Orbitron'] tracking-widest uppercase"
+      >
         Front-end developer
       </p>
     </div>
 
     <!-- Description -->
-    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+    <p
+      class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
+    >
       {about.desc}
     </p>
 
     <!-- Social Links -->
     <div class="flex flex-wrap items-center justify-center gap-4 pt-8">
-      {socialLinks.map((link) => (
-        <a 
-          href={link.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-neon-violet hover:bg-white/10 transition-all duration-300 group shadow-lg hover:shadow-neon-violet/20"
-        >
-          <i class={`${link.icon} text-lg group-hover:text-neon-violet transition-colors`}></i>
-          <span class="font-medium">{link.name}</span>
-        </a>
-      ))}
+      {
+        socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-neon-violet hover:bg-white/10 transition-all duration-300 group shadow-lg hover:shadow-neon-violet/20"
+          >
+            <i
+              class={`${link.icon} text-lg group-hover:text-neon-violet transition-colors`}
+            />
+            <span class="font-medium">{link.name}</span>
+          </a>
+        ))
+      }
     </div>
   </div>
-  
+
   <!-- Scroll Indicator -->
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+  <div
+    class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"></path>
     </svg>
   </div>
 </section>
 
 <style>
   @keyframes fade-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .animate-fade-in {
     animation: fade-in 1s ease-out forwards;

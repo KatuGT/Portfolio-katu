@@ -10,6 +10,24 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'aapreCongreso2026',
+        title: 'Congreso Aapresid 2026',
+        link: 'https://congreso.aapresid.org.ar/es',
+        imgDesktop: '/src/assets/imagenes/proyectos/pr-aapreCongreso2026.webp',
+        imgMobile: '/src/assets/imagenes/proyectos/pr-aapreCongreso2026Mobile.webp',
+        esGrupal: true,
+        category: 'real'
+    },
+    {
+        id: 'provinciaMicro',
+        title: 'Provincia Microcréditos',
+        link: 'https://www.provinciamicrocreditos.com.ar/',
+        imgDesktop: '/src/assets/imagenes/proyectos/pr-provinciaMicro.webp',
+        imgMobile: '/src/assets/imagenes/proyectos/pr-provinciaMicroMobile.webp',
+        esGrupal: false,
+        category: 'real'
+    },
+    {
         id: 'diapason',
         title: 'Diapasón',
         link: 'https://diapasón.com/',
@@ -42,24 +60,6 @@ export const projects: Project[] = [
         link: 'https://repowerlab.com/',
         imgDesktop: '/src/assets/imagenes/proyectos/pr-repower.webp',
         imgMobile: '/src/assets/imagenes/proyectos/pr-repowerMobile.webp',
-        esGrupal: true,
-        category: 'real'
-    },
-    {
-        id: 'chimpance',
-        title: 'Chimpancé digital',
-        link: 'https://www.chimpance.digital/agenciaweb',
-        imgDesktop: '/src/assets/imagenes/proyectos/pr-chimpa.webp',
-        imgMobile: '/src/assets/imagenes/proyectos/pr-chimpaMobile.webp',
-        esGrupal: true,
-        category: 'real'
-    },
-    {
-        id: 'zonaInmo',
-        title: 'Zona Inmo',
-        link: 'https://www.zonainmo.com.py/',
-        imgDesktop: '/src/assets/imagenes/proyectos/pr-zonaInmo.webp',
-        imgMobile: '/src/assets/imagenes/proyectos/pr-zonaInmoMobile.webp',
         esGrupal: true,
         category: 'real'
     },
